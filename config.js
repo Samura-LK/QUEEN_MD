@@ -67,6 +67,10 @@ ANTI_VV: process.env.ANTI_VV || "true",
 // true for anti once view 
 ANTI_DEL_PATH: process.env.ANTI_DEL_PATH || "log", 
 // change it to 'same' if you want to resend deleted message in same chat 
-AUTO_RECORDING: process.env.AUTO_RECORDING || "false"
+AUTO_RECORDING: process.env.AUTO_RECORDING || "false",
 // make it true for auto recoding 
+N_JID: process.env.N_JID=== undefined ? '‌': process.env.N_JID,
+// make jid movie
+POSTGRESQL_URL: process.env.POSTGRESQL_URL === undefined ? 'postgres://vajiratech_user:oSIFl2xmSojMZ0rkzdd0g0W6msuVTpNN@dpg-cpd7fjv109ks73e5gtig-a.frankfurt-postgres.render.com/vajiratech' : process.env.POSTGRESQL_URL
+// make data url
 };
