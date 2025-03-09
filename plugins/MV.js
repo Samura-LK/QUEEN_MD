@@ -2,7 +2,7 @@ const config = require("../config");
 const {
   cmd,
   commands
-} = require("../lib/command");
+} = require("../command");
 const {
   getBuffer,
   getGroupAdmins,
