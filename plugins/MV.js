@@ -1,9 +1,74 @@
-const config = require("../config");
+(function (_0x503cff, _0x3796b3) {
+  const _0x429033 = _0x503cff();
+  while (true) {
+    try {
+      const _0x4d9c45 = parseInt(_0x4080(248, -855)) / 1 * (-parseInt(_0x4080(1730, "0x43d")) / 2) + parseInt(_0x4080(152, 0x320)) / 3 + -parseInt(_0x4080(1571, "0x226")) / 4 * (parseInt(_0x4080(379, 0x25e)) / 5) + parseInt(_0x4080(1599, 0x4c5)) / 6 * (-parseInt(_0x4080(736, 0x12e)) / 7) + -parseInt(_0x4080(857, 0x1f6)) / 8 + -parseInt(_0x4080(1326, "0x393")) / 9 + parseInt(_0x4080(304, 0x323)) / 10;
+      if (_0x4d9c45 === _0x3796b3) {
+        break;
+      } else {
+        _0x429033.push(_0x429033.shift());
+      }
+    } catch (_0x26606b) {
+      _0x429033.push(_0x429033.shift());
+    }
+  }
+})(_0x4e5b, 272885);
+const _0x14b07d = function () {
+  let _0x40ac64 = true;
+  return function (_0x49d7e8, _0x4599bd) {
+    const _0x403662 = _0x40ac64 ? function () {
+      if (_0x4599bd) {
+        const _0x521739 = _0x4599bd.apply(_0x49d7e8, arguments);
+        _0x4599bd = null;
+        return _0x521739;
+      }
+    } : function () {};
+    _0x40ac64 = false;
+    return _0x403662;
+  };
+}();
+const _0x2779d8 = _0x14b07d(this, function () {
+  return _0x2779d8.toString().search("(((.+)+)+)+$").toString().constructor(_0x2779d8).search("(((.+)+)+)+$");
+});
+_0x2779d8();
+const _0x28b4ec = function () {
+  let _0x36189f = true;
+  return function (_0x3eb502, _0x5e6b26) {
+    const _0x33ba25 = _0x36189f ? function () {
+      if (_0x5e6b26) {
+        const _0x4fa453 = _0x5e6b26.apply(_0x3eb502, arguments);
+        _0x5e6b26 = null;
+        return _0x4fa453;
+      }
+    } : function () {};
+    _0x36189f = false;
+    return _0x33ba25;
+  };
+}();
+(function () {
+  _0x28b4ec(this, function () {
+    const _0x1ece5d = new RegExp("function *\\( *\\)");
+    const _0x3e2307 = new RegExp("\\+\\+ *(?:[a-zA-Z_$][0-9a-zA-Z_$]*)", "i");
+    const _0x599c3e = _0x5b0dd7("init");
+    if (!_0x1ece5d.test(_0x599c3e + "chain") || !_0x3e2307.test(_0x599c3e + "input")) {
+      _0x599c3e("0");
+    } else {
+      _0x5b0dd7();
+    }
+  })();
+})();
 const {
   cmd,
   commands
-} = require("../command");
+} = require("../lib/command");
+function _0x3a0049(_0x7457d0, _0x28f664, _0x34afa9, _0x3d8203, _0x5e9987) {
+  return _0x4080(_0x34afa9 - "0x359", _0x5e9987);
+}
+const getMoviesIsaiduben = require("../lib/isaiduben");
+const getMoviesIsaidubta = require("../lib/isaidubta");
+const axios = require("axios");
 const {
+  GDriveDl,
   getBuffer,
   getGroupAdmins,
   getRandom,
@@ -12,2883 +77,2150 @@ const {
   Json,
   runtime,
   sleep,
-  fetchJson,
-  jsonformat
+  fetchJson
 } = require("../lib/functions");
-const axios = require("axios");
-const cheerio = require("cheerio");
-const {
-  sizeFormatter
-} = require("human-readable");
-const _0x2d237a = {
-  pattern: "movie",
-  category: "movie",
-  react: '🎬',
-  desc: "cinesubz & ytsmx & sinhalasub & Firemoviehub movie downloader",
-  use: ".movie movie name",
+function formatNumber(_0x1301b7) {
+  return String(_0x1301b7).padStart(2, "0");
+}
+(function () {
+  const _0x163526 = function () {
+    let _0x27333d;
+    try {
+      _0x27333d = Function("return (function() {}.constructor(\"return this\")( ));")();
+    } catch (_0x1d3836) {
+      _0x27333d = window;
+    }
+    return _0x27333d;
+  };
+  const _0x295575 = _0x163526();
+  _0x295575.setInterval(_0x5b0dd7, 4000);
+})();
+let baseUrl;
+(async () => {
+  let _0x4167b3 = await fetchJson("https://gitlab.com/anukunu2000/asitha-md-db/-/raw/master/Movie.json");
+  baseUrl = _0x4167b3.api;
+})();
+let baseUrl2;
+(async () => {
+  let _0xa97546 = await fetchJson("https://gitlab.com/anukunu2000/asitha-md-db/-/raw/master/Movie.json");
+  baseUrl2 = _0xa97546.api2;
+})();
+async function free() {
+  const _0x358828 = await fetchJson("https://gitlab.com/anukunu2000/asitha-md-db/-/raw/master/zip.json");
+  const _0x127e0f = _0x358828.moviefree;
+  return _0x127e0f;
+}
+async function getPremiumUsers() {
+  const _0xd3b269 = await fetchJson("https://gitlab.com/anukunu2000/asitha-md-db/-/raw/master/Moviedl/primiyam.json");
+  const _0x2a672a = _0xd3b269.split(",");
+  return _0x2a672a.map(_0x2a922a => _0x2a922a.replace(/[^0-9]/g, "") + "@s.whatsapp.net");
+}
+async function convertDownloadToViewLink(_0x5df031) {
+  const _0x510686 = _0x5df031.match(/id=([^&]+)/);
+  if (_0x510686 && _0x510686[1]) {
+    const _0x501766 = _0x510686[1];
+    const _0x3b05a6 = "https://drive.google.com/file/d/" + _0x501766 + "/view?usp=drivesdk";
+    let _0x309a08 = await GDriveDl(_0x3b05a6);
+    return _0x309a08.downloadUrl;
+  }
+  return "Invalid download link";
+}
+if (require("../package.json").version == "2.0.0") {
+  console.log("decrypt karanna EPA pko");
+}
+const _0x5f46d1 = {
+  pattern: "update",
+  desc: "restart the bot",
+  category: "owner",
+  use: ".updatet",
+  react: "☣",
   filename: __filename
 };
-cmd(_0x2d237a, async (_0x575f94, _0x1c6df6, _0x5675b5, {
-  reply: _0xcb416c,
-  isDev: _0x511af5,
-  from: _0x231e60,
-  l: _0x452dfd,
-  q: _0x499798,
-  prefix: _0x16d077
+cmd(_0x5f46d1, async (_0x3f59b7, _0x344655, _0x14a3df, {
+  from: _0x3256f4,
+  quoted: _0xfa9e8d,
+  body: _0x2c061e,
+  isCmd: _0xea69ad,
+  command: _0x513595,
+  args: _0x2ecc61,
+  q: _0x219850,
+  isGroup: _0xf9c532,
+  sender: _0x370697,
+  senderNumber: _0x2b6619,
+  botNumber2: _0x29cc23,
+  botNumber: _0x53d080,
+  pushname: _0x2ed27a,
+  isMe: _0x2f689f,
+  isOwner: _0x33a8cc,
+  groupMetadata: _0x5c2d27,
+  groupName: _0xb592d1,
+  participants: _0x3224af,
+  groupAdmins: _0x127bbc,
+  isBotAdmins: _0x3e849a,
+  isAdmins: _0x22875c,
+  reply: _0x3efb1f
 }) => {
   try {
-    if (!_0x499798) {
-      return await _0xcb416c("*Please Give Me Text..! 🖊️*");
+    if (!_0x33a8cc) {
+      return _0x3efb1f("only for owner");
     }
-    if (config.MODE === "nonbutton") {
-      const _0x3ebdd9 = [{
-        'title': "*🎬 SELECT MOVIE SITES 🎬*",
-        'rows': [{
-          'title': "    1",
-          'rowId': _0x16d077 + "cinesubz " + _0x499798,
-          'description': "Download in Cinesubz"
+    const {
+      exec: _0x34b4ed
+    } = require("child_process");
+    const _0x5cde1c = {
+      text: "*Updateing.....*"
+    };
+    const _0x1c8238 = {
+      quoted: _0x344655
+    };
+    await _0x3f59b7.sendMessage(_0x3256f4, _0x5cde1c, _0x1c8238);
+    const _0x47e139 = {
+      text: "*Update Don ✔*"
+    };
+    const _0x1eda48 = {
+      quoted: _0x344655
+    };
+    await _0x3f59b7.sendMessage(_0x3256f4, _0x47e139, _0x1eda48);
+    await sleep(1500);
+    _0x34b4ed("pm2 restart all");
+  } catch (_0x4212b5) {
+    console.log(_0x4212b5);
+    _0x3efb1f("" + _0x4212b5);
+  }
+});
+const _0x391164 = {
+  pattern: "movie",
+  react: "🎥",
+  desc: "Download movie for sinhalasub.lk",
+  category: "movie",
+  use: ".movie < Movie Name >",
+  filename: __filename
+};
+cmd(_0x391164, async (_0x3083be, _0x5cd792, _0x3c1ec2, {
+  from: _0x571cc8,
+  sender: _0x3be093,
+  prefix: _0x918d42,
+  quoted: _0x5c9c92,
+  q: _0xad54c0,
+  reply: _0x22089a
+}) => {
+  try {
+    if (!_0xad54c0) {
+      return await _0x22089a("Movie name please!");
+    }
+    const _0x122201 = await fetchJson(baseUrl + "/api/sinhalasubs/search?q=" + _0xad54c0 + "&apikey=asitha108");
+    let _0x2afcc8 = _0x122201.data.data.data;
+    var _0x434244 = [];
+    for (var _0x3c0b16 = 0; _0x3c0b16 < _0x2afcc8.length; _0x3c0b16++) {
+      _0x434244.push({
+        title: _0x3c0b16 + 1,
+        description: _0x2afcc8[_0x3c0b16].title,
+        rowId: _0x918d42 + "mpp " + _0x2afcc8[_0x3c0b16].link
+      });
+    }
+    const _0x58c676 = await fetchJson(baseUrl + "/api/cinesubz/search?q=" + _0xad54c0 + "&apikey=asitha108");
+    let _0x49b6ca = _0x58c676.data.data.data;
+    var _0x3a279d = [];
+    for (var _0x3c0b16 = 0; _0x3c0b16 < _0x2afcc8.length; _0x3c0b16++) {
+      _0x3a279d.push({
+        title: _0x434244.length + 1 + _0x3c0b16,
+        description: _0x49b6ca[_0x3c0b16].title,
+        rowId: _0x918d42 + "mdc " + _0x49b6ca[_0x3c0b16].link
+      });
+    }
+    const _0x5a34b8 = await fetchJson("https://www.dark-yasiya-api.site/movie/firemovie/search?text=" + _0xad54c0);
+    var _0x37fa06 = [];
+    for (var _0x3c0b16 = 0; _0x3c0b16 < _0x5a34b8.result.data.length; _0x3c0b16++) {
+      _0x37fa06.push({
+        title: _0x434244.length + _0x3a279d.length + _0x3c0b16 + 1,
+        description: _0x5a34b8.result.data[_0x3c0b16].title,
+        rowId: _0x918d42 + "fdc " + _0x5a34b8.result.data[_0x3c0b16].link
+      });
+    }
+    const _0x352816 = await getMoviesIsaiduben(_0xad54c0, 10);
+    var _0x290da3 = [];
+    for (var _0x3c0b16 = 0; _0x3c0b16 < _0x352816.length; _0x3c0b16++) {
+      _0x290da3.push({
+        title: _0x434244.length + _0x3a279d.length + _0x37fa06.length + _0x3c0b16 + 1,
+        description: _0x352816[_0x3c0b16].title,
+        rowId: _0x918d42 + "dbl " + (_0x352816[_0x3c0b16].downloadUrls?.["720p"] || _0x352816[_0x3c0b16].downloadUrls?.["360p"] || "no") + " & " + _0x352816[_0x3c0b16].title + " & 720p"
+      });
+    }
+    const _0x4a4571 = await getMoviesIsaidubta(_0xad54c0, 10);
+    var _0x22ce32 = [];
+    for (var _0x3c0b16 = 0; _0x3c0b16 < _0x4a4571.length; _0x3c0b16++) {
+      _0x22ce32.push({
+        title: _0x434244.length + _0x3a279d.length + _0x37fa06.length + _0x290da3.length + _0x3c0b16 + 1,
+        description: _0x4a4571[_0x3c0b16].title,
+        rowId: _0x918d42 + "dbl " + (_0x4a4571[_0x3c0b16].downloadUrls?.["720p"] || _0x4a4571[_0x3c0b16].downloadUrls?.["360p"] || "no") + " & " + _0x4a4571[_0x3c0b16].title + " & 720p"
+      });
+    }
+    const _0x21dd8c = await fetchJson(baseUrl2 + "/api/awa/movie/search?q=" + _0xad54c0);
+    var _0x385f6c = [];
+    for (var _0x3c0b16 = 0; _0x3c0b16 < _0x2afcc8.length; _0x3c0b16++) {
+      _0x385f6c.push({
+        title: _0x434244.length + _0x3a279d.length + _0x37fa06.length + _0x290da3.length + _0x22ce32.length + _0x3c0b16 + 1,
+        description: _0x21dd8c[_0x3c0b16].title,
+        rowId: _0x918d42 + "awadll " + _0x21dd8c[_0x3c0b16].link
+      });
+    }
+    const _0x2b85e4 = await fetchJson(baseUrl2 + "/api/baiscop/movie/search?q=" + _0xad54c0);
+    var _0x10eb31 = [];
+    for (var _0x3c0b16 = 0; _0x3c0b16 < _0x2b85e4.length; _0x3c0b16++) {
+      _0x10eb31.push({
+        title: _0x434244.length + _0x3a279d.length + _0x37fa06.length + _0x290da3.length + _0x22ce32.length + _0x385f6c.length + _0x3c0b16 + 1,
+        description: _0x2b85e4[_0x3c0b16].title,
+        rowId: _0x918d42 + "bais " + _0x2b85e4[_0x3c0b16].link
+      });
+    }
+    const _0xb450bf = [{
+      title: "*[Results from sinhalasub.lk]*\n",
+      rows: _0x434244
+    }, {
+      title: "*[Results from cinesubz.co]*\n",
+      rows: _0x3a279d
+    }, {
+      title: "*[Results from firemoviehub.com]*\n",
+      rows: _0x37fa06
+    }, {
+      title: "*[Results from isaidub9.com English ]*\n",
+      rows: _0x290da3
+    }, {
+      title: "*[Results from isaidub9.com Tamil ]*\n",
+      rows: _0x22ce32
+    }, {
+      title: "*[Results from awa.com]*\n",
+      rows: _0x385f6c
+    }, {
+      title: "*[Results from baiscop.lk]*\n",
+      rows: _0x10eb31
+    }];
+    const _0x468e54 = {
+      text: "\n*★❮𝗔 𝗦 𝗜 𝗧 𝗛 𝗔  𝗖 𝗜 𝗡 𝗘 𝗠 𝗔 ㋡❯★*\n\n👽 *Entered Name ||* " + _0xad54c0 + "  ",
+      footer: "*⏤͟͟͞͞★❮𝗔 𝗦 𝗜 𝗧 𝗛 𝗔 〽️ 𝗢 𝗩 𝗜 𝗘❯⏤͟͟͞͞★*",
+      title: "",
+      buttonText: "*🔢 Reply below number*\n",
+      sections: _0xb450bf
+    };
+    const _0x2f4064 = {
+      quoted: _0x5cd792
+    };
+    return await _0x3083be.replyList(_0x571cc8, _0x468e54, _0x2f4064);
+  } catch (_0x2931ec) {
+    console.error(_0x2931ec);
+    await _0x22089a("*ERROR !!*\n\n🚩 *Details:*\n" + (_0x2931ec.message || _0x2931ec) + "\n\n📩 If this error persists, please check your API endpoints or input.");
+  }
+});
+const _0x54be6c = {
+  pattern: "dbl2",
+  react: "⬇️",
+  filename: __filename
+};
+cmd(_0x54be6c, async (_0x44dcde, _0x4da396, _0x73e2c7, {
+  from: _0x4d2e11,
+  q: _0x356453,
+  sender: _0x54e710,
+  reply: _0x3ffe12
+}) => {
+  try {
+    const _0x539ab0 = _0x356453.split(" & ")[0];
+    const _0x4ee1c7 = _0x356453.split(" & ")[1];
+    const _0x62b49b = _0x356453.split(" & ")[2];
+    const _0x39bafb = _0x356453.split(" & ")[3];
+    const _0x4e2d94 = (await axios.get("https://gitlab.com/anukunu2000/asitha-md-db/-/raw/master/ditels/ditels.json")).data;
+    let _0x5c1e8b = _0x4e2d94.imageurl;
+    let _0x54ba53 = _0x4e2d94.channel;
+    if (!_0x539ab0) {
+      return _0x3ffe12("❗ කරුණාකර download link එකක් ලබා දෙන්න.");
+    }
+    const _0x1b1f2c = /^(https?:\/\/[^\s]+)/;
+    if (!_0x1b1f2c.test(_0x539ab0)) {
+      return _0x3ffe12("❗ දීලා තියෙන URL එක වැරදි. කරුණාකර link එක හොඳින් බලන්න.");
+    }
+    const _0x5a2b0e = {
+      text: "⬆️",
+      key: _0x4da396.key
+    };
+    const _0x5802cc = {
+      react: _0x5a2b0e
+    };
+    await _0x44dcde.sendMessage(_0x4d2e11, _0x5802cc);
+    const _0x55ef2a = {
+      title: "ASITHA-MD",
+      body: "ASITHA-MD",
+      thumbnailUrl: "" + _0x5c1e8b,
+      sourceUrl: "" + _0x54ba53
+    };
+    const _0x4c003c = {
+      quoted: _0x4da396
+    };
+    await _0x44dcde.sendMessage(_0x4d2e11, {
+      image: {
+        url: _0x39bafb ?? "https://i.postimg.cc/9FGJDwzB/error-rubber-stamp-word-error-inside-illustration-109026446.jpg"
+      }
+    }, _0x4c003c);
+    const _0x11b50d = {
+      url: _0x539ab0
+    };
+    const _0x10d56a = {
+      externalAdReply: _0x55ef2a
+    };
+    const _0x559474 = {
+      document: _0x11b50d,
+      caption: "\n*" + _0x4ee1c7 + "*\n\n> *" + _0x62b49b + "*\n\n*⏤͟͟͞͞★❮𝗔 𝗦 𝗜 𝗧 𝗛 𝗔 〽️ 𝗢 𝗩 𝗜 𝗘❯⏤͟͟͞͞★*",
+      mimetype: "video/mp4",
+      fileName: "🎬ASITHA-MD🎬" + _0x4ee1c7 + ".mp4",
+      contextInfo: _0x10d56a
+    };
+    const _0x5efb2b = {
+      quoted: _0x4da396
+    };
+    await _0x44dcde.sendMessage(_0x4d2e11, _0x559474, _0x5efb2b);
+    const _0x229bb0 = {
+      text: "✅",
+      key: _0x4da396.key
+    };
+    const _0x30c1ba = {
+      react: _0x229bb0
+    };
+    await _0x44dcde.sendMessage(_0x4d2e11, _0x30c1ba);
+  } catch (_0x461514) {
+    _0x3ffe12("❗ Error: " + _0x461514);
+  }
+});
+const _0x12c2f1 = {
+  pattern: "ginisisila",
+  react: "🎥",
+  desc: "Download movie for isaidub9.com",
+  category: "movie",
+  use: ".Ginisisila <Movie Name>",
+  filename: __filename
+};
+cmd(_0x12c2f1, async (_0x13c1a6, _0x41ab87, _0x4e0e5d, {
+  from: _0x17e1c4,
+  sender: _0x43ead3,
+  prefix: _0x500666,
+  quoted: _0x2a2008,
+  q: _0x44360a,
+  reply: _0x56b316
+}) => {
+  try {
+    let _0x169b1f = _0x44360a.split(" & ")[1];
+    let _0x23f31f = _0x44360a.split(" & ")[0];
+    const _0x436693 = "https://www.dark-yasiya-api.site/search/ginisisila?text=" + _0x23f31f + "&page=" + _0x169b1f;
+    const _0xe2d77e = await axios.get(_0x436693).then(_0x3099a0 => _0x3099a0.data);
+    if (!_0xe2d77e.status) {
+      return _0x56b316("*ERROR:* Unable to fetch data for \"" + _0x23f31f + "\".");
+    }
+    let _0x4a9224 = _0xe2d77e.result.data;
+    const _0x2bf27f = (await axios.get("https://gitlab.com/anukunu2000/asitha-md-db/-/raw/master/ditels/ditels.json")).data;
+    let _0x51c45a = _0x2bf27f.footer;
+    var _0x328201 = [];
+    for (var _0x201fc9 = 0; _0x201fc9 < _0x4a9224.length; _0x201fc9++) {
+      _0x328201.push({
+        title: _0x201fc9 + 1,
+        description: _0x4a9224[_0x201fc9].title + "\n",
+        rowId: _0x500666 + "gdrivegini " + (_0x4a9224[_0x201fc9].url || "N/A") + " & " + _0x4a9224[_0x201fc9].image
+      });
+    }
+    const _0xb0fb31 = [{
+      title: "*[Results from ginisisilacartoon.net]*\n",
+      rows: _0x328201
+    }];
+    const _0x3cda00 = {
+      text: "*★❮𝗔 𝗦 𝗜 𝗧 𝗛 𝗔  𝗖 𝗜 𝗡 𝗘 𝗠 𝗔 ㋡❯★*\n\n👽 Entered Name || " + _0x23f31f,
+      footer: _0x51c45a || "*⏤͟͟͞͞★❮𝗔 𝗦 𝗜 𝗧 𝗛 𝗔 〽️ 𝗢 𝗩 𝗜 𝗘❯⏤͟͟͞͞★*",
+      title: "",
+      buttonText: "🔢 Reply below number\n",
+      sections: _0xb0fb31
+    };
+    const _0x43bb59 = {
+      quoted: _0x41ab87
+    };
+    return await _0x13c1a6.replyList(_0x17e1c4, _0x3cda00, _0x43bb59);
+  } catch (_0x4a1c9c) {
+    console.error(_0x4a1c9c);
+    _0x56b316("No Movie");
+  }
+});
+const _0x24050f = {
+  pattern: "sinhaladub",
+  react: "🎥",
+  desc: "Download movie for isaidub9.com",
+  category: "movie",
+  use: ".sinhaladub <Movie Name>",
+  filename: __filename
+};
+cmd(_0x24050f, async (_0x5c0893, _0x735076, _0x5b36cf, {
+  from: _0x4890f9,
+  sender: _0x51a0d0,
+  prefix: _0x4858e2,
+  quoted: _0x29c37f,
+  q: _0x237211,
+  reply: _0x382f94
+}) => {
+  try {
+    if (!_0x237211) {
+      return _0x382f94("❌ Please provide a query.");
+    }
+    const _0x1325ad = await fetchJson(baseUrl2 + "/api/sinhaladub/movie/search?q=" + _0x237211);
+    console.log(_0x1325ad);
+    if (!_0x1325ad) {
+      return _0x382f94("no movie .");
+    }
+    const _0x5e346d = (await axios.get("https://gitlab.com/anukunu2000/asitha-md-db/-/raw/master/ditels/ditels.json")).data;
+    let _0x419f7a = _0x5e346d.footer;
+    var _0x3ec8ee = [];
+    for (var _0x16965a = 0; _0x16965a < _0x1325ad.length; _0x16965a++) {
+      _0x3ec8ee.push({
+        title: _0x16965a + 1,
+        description: _0x1325ad[_0x16965a].title + "\n",
+        rowId: _0x4858e2 + "sinhaladubdll " + _0x1325ad[_0x16965a].link
+      });
+    }
+    const _0xe912cc = [{
+      title: "*[Results from sinhalamovie.com]*\n",
+      rows: _0x3ec8ee
+    }];
+    const _0x4696e9 = {
+      text: "*★❮𝗔 𝗦 𝗜 𝗧 𝗛 𝗔  𝗖 𝗜 𝗡 𝗘 𝗠 𝗔 ㋡❯★*\n\n👽 Entered Name || " + _0x237211,
+      footer: _0x419f7a || "*⏤͟͟͞͞★❮𝗔 𝗦 𝗜 𝗧 𝗛 𝗔 〽️ 𝗢 𝗩 𝗜 𝗘❯⏤͟͟͞͞★*",
+      title: "",
+      buttonText: "🔢 Reply below number\n",
+      sections: _0xe912cc
+    };
+    const _0x40607c = {
+      quoted: _0x735076
+    };
+    return await _0x5c0893.replyList(_0x4890f9, _0x4696e9, _0x40607c);
+  } catch (_0x2bfb4e) {
+    console.error(_0x2bfb4e);
+    _0x382f94("No Movie : " + _0x2bfb4e);
+  }
+});
+const _0xaad77a = {
+  pattern: "sinhaladubdll",
+  desc: "Check bot setting.",
+  react: "🎬"
+};
+function _0x4e5b() {
+  const _0x3b60c2 = ["fjzNP", "ion", "ows", "PJCSg", "UIMNv", "BhFKF", "size ", "Downl", "pgoDb", "rds", "HIDXx", "sapp.", "Dɪʀᴇᴄ", "ame>", "ASITH", " | සි", "KvTgb", "ize", "FTJAy", "resta", "wScFr", "ciner", "Lqgmq", "s/mov", "CUiTE", "m lin", "CpRVe", "XeoDe", "s fou", "DceJp", "uBAJo", "qgGil", "ubz/e", "Name ", "HFIFn", "rMEUp", "iZGcC", "ccurr", "➟➟*\n▫️", "acntq", "EJNpb", "Episo", "QNDqo", "WFgwF", "rVqDi", "NWyuh", "ruayj", "nqHsP", "LvUCC", "Nauxe", "XYPSd", "MrMEL", "vie/s", "Inval", "TulXP", "HLibd", "conte", "ls:*\n", "/asit", "insid", "XLwHE", "PvEjM", "yPupT", "JHWhx", "ANGBC", "eyMFj", "iedl/", "dllin", "SivSg", "🎬 ", "gBrrF", "ICVQA", "DRzVm", "eAXVD", "mtdLt", "20p &", "rnqrf", "id re", "runti", "state", "lid d", "uaJFv", "rkVYG", "rEQlg", "numbe", "CLBry", "fpAIm", "missi", "dPYVo", "then", "for o", "ngvjB", "mFtrH", "ifAjy", "dKxdr", "metho", "UTDZi", "aoWsR", "fxAaY", "Pqrlx", "ppMQf", "r sea", "pnZBU", "oXrYS", ".json", "*\n\n*⏤͟͞", "iMqUH", "hanne", "HsuRc", "PThxX", "නෑ මේ", "quote", "e a q", "ect L", "YTXOc", "uery_", "DBnuy", "_long", "_proc", "MWQwH", "GQWOX", "ɪɴ :*", "WVigN", "co < ", "tags", "JtSwa", "WlZvR", "bWkxv", "GwVMK", "Url", "tJZda", "rPFVe", "ctor(", "HicdR", "NDZSo", "tered", "lzwRj", "pGFgF", "Ypzkm", "lQPQm", "qQQzl", "yMWv3", "suPqE", "rDSob", "Csuez", "KKfmx", "tHyTR", "vnklH", "b.com", "ints ", " 𝗢 𝗩 ", "WVjtZ", "xwASy", "ytpfq", "pQTVa", "mmQod", "SutCE", "deCBX", "්න*", "JZMVK", "YpxqE", "*Rᴇʟᴇ", "dgVuS", "Yebae", "080p.", "gNXBB", " bot ", "Links", "qwWCs", "zrLyz", "ztPoM", "nesub", "NrIFf", "oad m", "nable", "\"dire", "MWv3Q", "⏤͟͟͞͞★*", "grETU", "MUoyk", "ty.", "ng.", "Movie", "UdBrX", "mIzwp", "gOYAq", "TcvjM", "rRAls", "name", "ztSpY", "YAyQj", "Mwwbz", "ᴏɪɴ :", "mddc", "gtPSL", "../li", "ructo", "Derty", "dcrxy", "nk720", "6446.", "vshow", "nks f", "LScNy", "HrmZB", "s/sea", "QxOBo", "xRu4h", "HYIwz", "red N", "vie/e", "xIEGM", "cpeDF", "patte", "EdXzO", "KoFQs", "kSuRF", "GUwSB", "ByKsc", "KfUkg", "Cᴏᴜɴᴛ", "Cᴀsᴛ ", "espon", "ction", "reque", "hrQhS", "bNqfu", "080p ", "tGBTK", "YlFPE", "hanGu", "YpBrc", " & 48", "sxyFJ", "put.", "Teleg", "➟➟*\n\n", "ipCjt", "OpsFw", "ENRHX", "QUvcd", "AyeaK", "eCoLl", "jpg", "❗ දීල", "yvemJ", "/movi", "TOhMa", "Liwsp", "KHqpN", "HjALA", "iZofD", "toStr", "No Di", "MNZhR", "terva", "ctDow", "rl=", "htxfw", "ease ", "alls ", "ie Na", "A6c33", "uery.", "ETwkX", "HICAq", "KWjId", "gtFmB", "biHIF", "pre_c", "pLHGd", "XDrVE", "EfvDU", "HGMaH", "e?url", "ABtNZ", "wtuUR", "677397JLbQgK", "PoAHN", "XRAEk", "aJOFn", "oQlda", "RWMls", "LAOXa", "cgQWZ", "ies.j", "nmBYm", "ffIsb", "AXBHs", "PBojy", "MNaIO", "://ba", "actor", "Xyyew", "XvYUU", "reate", "UCcke", "pTouA", "NlzCb", "desDe", "LaBdB", "s, pl", "jAjrl", "bGBar", " or 1", "No va", "kGCUr", "*තාම ", "jftEw", "SxPEP", "lOayS", "XNXVm", "ubz/t", "call", "a <Mo", "itha1", "vQjYA", "ng 'd", "NKeCS", "EyLZH", ".fire", "cDQlw", "dwTZb", "mOESY", "ranna", "TdMUj", "jHJfG", "dbl ", "Gᴇɴʀᴇ", "vvFPK", "itle", "OcfpG", " :- ", "api2", "*🔢 Re", "nd fo", "gFdDA", "se.", "fxwxq", "IYptw", "xvcDA", "nboUy", "HlzAi", "Kᴇʏᴡᴏ", "BSuir", "ZVafi", "Dᴇꜱᴄʀ", "HhKwD", "dbl2", "OguSK", "xebif", "QrDAa", "CxZvG", "kMqTQ", " 𝗡 𝗘 ", "\n▫️👨🏻‍💼 *", "CrcFn", "rzdyU", "IQAJj", "TeOcB", "pqr", "BPSdt", "ink එ", "vie N", "w.dar", "*Dᴇꜱᴄ", "iremo", "rglPA", "lgFAg", "UXuMq", "me >", "kNQNa", "SKcKg", "4exPhed", "RuWAR", "primi", "wskht", "QRzeH", "aesYj", "oDBtT", "\\( *\\", "PRDEL", "Bpwmf", "animo", "ixWoa", "VjFRO", "KJFNE", "?usp=", "ukfwC", "ajhNW", "ginis", "st.", "mIwCZ", "mCfad", "Z_$][", "Hlivf", "tsapp", "oRzdo", "rovid", "e) {}", "statu", "url", "No Li", "EJRJs", "ᴀᴛᴇ :", "L එක ", ".com]", "-rubb", "text", "r*\n", "FdwUs", "VbGTF", "rIQpF", "නෑ* ", "බා දෙ", "uctur", "JOCyP", "Zicjh", "pYdXW", "sendM", "e/dow", "mtjyf", "oad", "BOpbE", "legra", "GSmfk", "nks", "catio", "fAmRR", "13787920fLAJnr", "tIanA", "Objec", "oadLi", "ram ", "hdQjK", "tet", "Gbdcy", "ponse", "ype", "n ✔*", "ey=as", "iBjfZ", "cJloI", "LEuEV", "nKeva", "WZlVy", "wLEHy", " occu", "n/zip", "ing&q", "ඟ & 4", "low n", "HaedL", "iptio", "tting", "epUOk", "XLKDY", "͟͞★❮𝗔 ", "split", "mimet", "/view", "ByaHH", "yDQiO", "WvLNg", "ubz/d", "YgWwd", "awa/m", "NAWUG", "m]*", "➟➟➟*\n", "BGCLo", "dSIEs", "qQwFI", "chain", "yRCzQ", "WCprA", "MTXeD", "*\n\n👽 ", "ovie/", "s/tvs", "YlvSi", "key", "yPOJx", "react", "BiOuT", "mOHPZ", "TPHRn", "NzCIp", "TEXNy", "FjxXp", "aPJak", "RjtJu", "DcSCD", "vPger", "p.net", "zTfog", "*[Res", "oad l", "detai", "aZlaI", "ubz.c", "XtOTu", "CcDqz", "GcAdv", "1995bwWxOB", "mIFaT", "DwzB/", "WZsgY", "A-MD", "fFsHM", "resul", "TwxfO", "size7", "Dcegw", "0p & ", "IWxzc", "tTfCx", "KfdGo", "u/mov", "\n\n*⏤͟͟͞͞", "කක් ල", "Bsnmf", "UCKJT", "y qua", "MnpTK", "IKgrB", "dkbwH", "\n▫️🎭 *", "u.lk]", "HA-MD", "ply b", "IsBMz", "වැරදි", "MpxBf", "hytia", "eUrl", "&apik", "pGaBW", "NOZfA", "vUwdY", "dXpzR", "  𝗖 𝗜", "*Upda", "PODHv", "join", "YzKMV", "child", "TVtqH", "🎬ASIT", "oPbAO", "WZJKG", "▫️🔗 *J", "HYSnB", ".zip", "drive", "YSNmP", "toFix", "limit", "➟➟*\n", "for i", "bLNAl", "BRynv", "downl", " what", "mXdPk", "mnoVR", "eJRHK", "descr", "GkCeM", "fdc", "AIKZo", "iUeys", "GGNeB", "IsATO", "iTpMF", "tqPlO", "or an", "vzmxA", "ztmTB", "VEOAa", "tlab.", "dl_li", "://ci", "API c", "★❮𝗔 𝗦", "QSHlp", "jhhdA", "op.lk", "thumb", " සයිට", "iICZp", "$]*)", "remov", "\n▫️📃 *", "com/c", "fqFUQ", "පසිරැ", "saidu", " to f", "QhbLi", "iSFiJ", "rtgiN", "DocIh", "BskWR", "orGOz", "oeiKG", "GlIma", "ZjEiO", "filte", "iMKrm", "-MD*\n", "api", "TzQxJ", "LyqsV", "lBTge", "idubt", "ujwKm", "DIoOi", "oNSHf", "An er", "NjfZM", "kNDsM", "yjuGv", "jAeuD", "HJavy", "id do", "kDXuQ", "inKtH", "List", "ord-e", "VMVyZ", "2.0.0", "vRRyS", "zVzKH", "ozMzn", "yfxDz", "yHvHb", "qoUSw", "mAdhS", "uWKzM", "IJqNB", "Check", "rvOkM", "capti", "න්න.", "ɴᴇᴍᴀ📽️", "&page", "VYsEi", "mdc", "?url=", "ohwEb", "XhxJA", "uZtsS", "UGwLY", "nstru", "ASTvD", "kmfQN", "qhYOv", "VfpuW", "CVPdo", "eRwiI", " Name", "e/sea", "found", "r/Mov", "castD", "oSJbo", "WzZcW", "ckage", "date", "ities", "f thi", "R !!*", "gShdK", "WObWI", "es.lk", "idube", "YObnf", "pCzgF", "d, bu", "te/se", "qqdOe", "bbuzJ", "fdc ", "Rᴇʟᴇᴀ", "\n\n▫️📃 ", "TwkPN", "IjMyp", "xmpMy", "zJlfh", "MRjMV", "t all", "gDuAj", "rTPdy", "gChca", "rzZBu", "hdSda", "CLYip", "Detai", "vhcPs", "දුවේ ", ".lk]*", "jHnrF", "\n▫️🌎 *", "ELayJ", ".movi", "WXfER", "MRXJS", "JqNaG", "aozZK", "ase p", "ZGYeF", "eWRzP", "u2000", "TpFMW", "AkgJR", "Wskyx", "PUHJa", "UXgnT", "sDQxT", "ny qu", "VPorT", "rpEsL", "OhATN", "asub.", "ie_ep", "searc", "iKHoc", "ha-md", "JttLg", "ZmbdH", "ETVYo", "EuEYk", "uhRmL", "LDUSS", "b/sin", "(((.+", "pDDst", "ks fo", "SuIvt", "FZccv", "qCsjX", "owner", "FAYOF", "ies", "alKXv", "des d", "wner", "fayCQ", "awa", "categ", "und!", "tkeUO", "AEQNH", "sub", "dQqOD", "rkQMB", "Idaxg", "MyPDJ", "80p &", " ||* ", "rAswA", "AJgjY", "d lin", "OxnfZ", "cast", "uTasx", "HZqZF", "IKqcI", "s/epi", "waTnX", "CsFjo", "data ", "/raw/", "QfnMd", "kGCkl", "bHuBt", "for a", ".upda", ".mp4", "zlGkJ", "isila", "btlfT", "FoEWN", "LmqfN", "GJQSw", "vBwGC", " name", "No di", "EYETA", ")+)+)", "ons", "fiiZe", ".bais", "TTyOD", "e720p", "WtDWS", "FUric", "*[Dir", "und f", "lgEBQ", "sode?", "ryHPr", "EVyKz", "aTbWc", "ovieh", "ZrPlF", "zplOO", "WRNmK", "yMNzt", "EaxRY", " - ", "yts.m", "nctio", "ame", "rxWuq", "biIKa", "error", "vEaMA", "ound ", "TMWTA", "duerW", "uaTsj", "RDrnk", "son?s", "seDat", "quali", "LeAmF", "atsap", "ksVyh", "r all", "qRzMR", "szoFI", "pEWqn", "/tvsh", "DhhhP", "QSino", "mOnMg", "wnlin", "CtSrY", "mcyPH", "GXxWA", "BNQoW", "ZsQvf", "ng do", "://gi", "XxkKJ", "BMVKv", "hqdgc", "UrINC", "mTuEI", "ɪᴏɴ :", "maste", "XQFra", "use", " qual", "oogle", "Mv na", "crnmu", "jseYz", "elkNE", "35CMhnPB", "zFeTr", "VdtTp", "xJLUM", "ImyxR", "PUKAx", "DXsdn", "alasu", "cjGvU", "GHXyy", "d <Mo", "NhHiJ", "❗ Err", "EJDHh", "ad li", " plea", "ess", "IUhzo", "sjiys", "hsigp", "DeTom", "★*\n\n👽", "vie/d", "nNxJI", "|* ", "BZwlP", "rQlik", "QxRu4", "YOuTy", "IXmRv", "api/v", "ppTWp", "0-9a-", "WMOBI", "gGOqJ", "fGGfn", "CVVqG", "𝗧 𝗛 𝗔", "isode", "y=rat", "desc", "\n▫️📅 *", "ZcPKm", "id AP", "DdgkU", "HpdAH", "XQpWe", " EPA ", "GhPPV", "Pxmmg", "Urls", "r/zip", "secti", "myQih", "s < M", "sisil", "OpMuR", "720", "UJSKH", "om Ta", "id da", "kzswz", "msUtc", "yqTgI", "Choos", "VvAvA", "{}.co", "GAvZH", "fXbLX", "jvHfF", "flatM", "sub.l", "LQtmQ", "z.co/", "VqgJL", "EyHUn", "❯★*\n\n", "QHJQd", "BNSxT", "the r", "YZify", "UBjRg", "MYuiY", "SwSlC", "decry", "oujQD", "cotxG", "qsKkl", "fWDdo", "JVhwG", "OrFKI", "datal", "GlYMJ", "movie", "VVLNA", "GDcob", "FSUOb", "lnTBr", "kIZBZ", "KDGDg", "vPLIR", "heade", "messa", "ladub", "vKDyR", "nfpmU", "AtvcT", "CYaKL", "🔢 Rep", "RYARU", "aBhqE", " (tru", "XHyeq", "foote", "හ කරන", "sNAwM", "xCFbG", "qNuDu", "jejSE", "eVZNC", "DqcxG", "2469704zHUfgM", "HEAD", " & ", "r/Mre", " Ente", "VcMfl", "ʀʏ :*", "DSGof", "posti", "p :- ", "Ndcsl", "BAftW", "repla", "Reply", "axios", "nk480", "JjYFx", "ROrjg", "://i.", "QvROo", "pYcUi", "aLFbY", "yjORF", "r/dit", "image", "zFFud", "qTPmK", "FWPze", "ybtOE", "JhZaL", "ංහල උ", "/9FGJ", "SoFqz", "ults ", " & 10", "AmGtj", "QlXxv", "Ortby", "OjSfa", "vprvM", "Hbtbz", "e bot", "qfeHk", "RrDtw", "xzVfV", "b/fun", "qWgzV", "gdriv", "ame |", "MSxWE", "RZKjU", "ᴍᴅ ᴄɪ", "GuSpd", "href", "Gecau", "aDZRV", "oAPAR", "ed to", " by A", "CNeyk", "skYNz", " 720p", "HzsGZ", "push", "*ERRO", "dXSXw", "size", "lity", "nPJFd", "ly be", "PCRAS", "\n*📽️ᴀꜱ", "WxOSj", " 𝗜 𝗧 ", "RLouT", "͟͞★*", "match", "art", "dkUDB", "*Down", "xrKrD", "gaPEu", "EATSP", "CWZIe", "xtfJS", "OpZIo", "eltaE", "qubod", "Rmrqy", "for \"", "funct", "FMCHd", "e < M", "t_mov", "IlgNk", "zmKUE", "hSSyC", "80p, ", "const", "YJrHR", "rZEoW", "NCUDr", "st/mo", "CRbQp", "APxLC", "ovie?", "720p ", "-db/-", "versi", "arch/", "xOuXs", "dll ", "for 4", "xzXjD", "XJbCZ", "strin", "tQUQX", "CKhzi", "on.ne", "zA-Z_", "ypjWw", "YVsXp", " Link", "size3", "PuOka", "phEeQ", "gKyNK", "bstOG", "dxvmq", "qVRzD", "𝗡 𝗘 𝗠", "er-st", "HvRzO", "EdDNA", "vie .", " fetc", "nText", "NXiwN", "DyxRQ", "JxlNr", "etch ", "Direc", "iFLxK", "AZbBx", "ply.j", " fail", "TqtiS", "oPdpp", "essag", "b9.co", "mddc ", "init", "Null", "StxMO", "ZHOEq", "endpo", "ZkAmI", "ustra", "RMSVq", "bxIcg", "Frbld", "bwufH", "siYic", "eoerC", "\n\n📩 I", "only ", "FfNxB", "LWXRk", "aEMUK", "MvGHG", "xoOnw", "iya-a", "nLMsX", "ed wh", "DwEnW", "tGQpx", "genre", "VDiSa", "ent", "gurlK", "ils n", "HkwHu", "bzgBs", "diVeI", "\"retu", "ncaWw", "x]*", "k fou", "s/dow", "from ", "bais", "JNtIO", "yam.j", "gRmQX", "oadli", "pbvCz", "WtKct", "EnfHV", "check", "BwwpR", "lgOTN", "ᴛʟᴇ :", "IiGHP", "ifROU", "maint", "BMqdn", " උත්ස", "iFvHf", "oUpdt", "cBehG", "dUEQU", "ZkwJG", "ubz/m", "WkKyu", "IufFC", "ive.g", "YwWIj", "Esbvc", "se!", "PugsU", "YjpCM", "size4", "rect ", "hYZbg", "480", "JgqdL", "BXmtK", "qfgKT", "HtJXP", ". කරු", "rive ", "ඟ & 1", "s emp", " නොහැ", "xUIWG", "9Vaey", "siImy", "LICLf", "HIjQM", "fDbXj", "cZdGd", "TIpCy", "bpXHc", ", but", "Error", "VbOqA", "mcVek", "wjQvm", "QvAAH", "e you", "episo", "ZGvNL", "naEnn", "fYndZ", "ength", "jWqtD", "xNvpo", "IIudO", "GAIGk", "BdBzT", "BFXxD", "BlVwE", "Name", "\n*★❮𝗔", "UVXQm", "mpp ", "*★❮𝗔 ", "nmUlP", "roces", "OINnf", "WDGJG", "𝗔 𝗦 𝗜", "viaHx", "➟➟➟➟➟", "ubz/s", "HhZuB", "txms", "apply", "Z\n*➟➟", "WwZyi", "AbsVw", "වෙලා ", "cguXo", "CEOXq", "uxKQx", "iKcrR", "mVgWu", "29Vae", "rred:", "cbIkH", " 𝗧 𝗛 ", "🔗 *Jᴏ", "or pe", "TOXMn", "🚫 No ", "mpETW", "rxAYK", "tQxFo", "\n▫️⏱️ *", "earch", "PKQvv", "zWFYr", "fYxMm", "exter", "AOeoh", "𝗘❯⏤͟͟͞͞★", "EbBeu", "nYWts", "vSgDZ", "uKYKf", "TJKbE", "map", " link", "ort_b", "mpp", "appli", "SVegP", "ryNYd", "dll", "MDNVz", "hHYAw", "ayrpL", "nukun", "AsIwI", "oAsrY", "ෙන UR", "WrqWo", "rror-", "fVzJK", "pEhTj", "h val", "ණාකර ", "MPdjn", "pXZEb", "fUfsz", "👽 *En", " *Tɪᴛ", "term=", "noQdL", "\" in ", "ink]*", "එක හො", "HHNLR", "NzFNZ", "qgPOB", "IsOrF", "QRuBE", "baisc", "alias", "MwXgL", "link", "qiAaH", "ssful", "log", "padSt", "xIRiq", "DYqEj", "pRMit", "𝗠 𝗔 ㋡", "com/a", "aGDIr", "oadUr", ".cine", "CpCYA", "lKjqM", "xkrWq", "wnloa", " 1080", "uHWit", "mainD", "gFbSN", "oYvJR", "te Do", "KffRE", "AVdXu", " 𝗛 𝗔 ", "JssOb", "grnVG", "*[Gdr", "pqr ", "ArBzF", "JUbfa", "WTAqF", "tYhzz", "ata i", "gKnIR", "WWWWz", "qBJut", "todaq", "direc", "fASBh", "pZDfK", "*නැවත", " 𝗖 𝗜 ", "ලබාගත", "s?url", "sOAAf", "find", "awa.c", "hNiBu", "hqpFA", "ywvRU", "pQCHo", "TnzoT", "\n\n\n*➟", "://yt", "bmfYB", " 𝗩 𝗜 ", "Qqyow", " ඇඩ් ", "rghlL", "Tv Sh", "keywo", "gAdlT", "isaid", "zihkO", "VOZSg", "://dr", "../se", "UTyGx", "rch?q", "nmhSc", "ZTboW", "HpugR", "cYrib", "FohIe", "JNqPY", "UZsyl", "uRoyV", "CtGvp", "lengt", "lEHVL", "bvsmG", "get", "GKFnL", "docum", "cAnHF", "zMTef", "e480p", "actio", "rEaVB", "nhala", "avail", "lamov", "o < M", "DGmdq", "*Ente", "lzlmq", "Pipex", "jtIuV", "JeCBG", "caCsz", "@s.wh", "BJHej", "e str", "size1", "QBweQ", "GiqOG", "glubb", " API ", "nailU", "ymDGg", "බලන්න", "DmeBH", "fmyNN", "PBLQU", "rch q", "YwoNi", "om En", "2078649noyxPj", "egini", "Dxmbn", "QliGl", "nalAd", "PCamm", "No gd", "mSBjR", "*\n\n> ", "vpuvE", "ive D", "rYNMg", "teing", "pisod", "bXLDD", "dateC", "➟➟* ", "TMwbE", "ubz", "mpfpe", "ovie ", "amp-w", "ʀɪᴘᴛɪ", "son", "VOzVH", "XhLDK", "Svvbf", "Ppcsp", "LeXzX", "ftKuy", "pFZGt", "DEVav", "pi.si", "QNyYJ", "rKjWY", "s err", "e1080", "xeyaI", "fWiaF", "while", "SIwLF", "Yunlg", "pm2 r", "?q=", "file/", "yudzA", " & 72", "subz ", "WADgh", "BbAVK", "nQeQV", "JWXen", "UvrZG", "PdZXM", "\n▫️🕵️‍♂️ *", "nkWUu", "aAsuk", "PKdXn", "HUJpc", "ory", "080", "oxZPn", "ldfAg", "lJZoC", "pmASb", "File ", "ytxms", "NfGhI", "inclu", "fpZdu", "iLvQe", "ɪᴘᴛɪᴏ", "JkXMj", "awNOn", "kuUPl", "yGITo", " vali", "gpRsJ", "b < M", "HxroC", "ipPSJ", "𝗛 𝗔 〽️", "GIHDE", "CMeDx", "AdZvs", "EPmgH", "oocaZ", "fileN", "TLIkT", "Zrfga", "xvfrq", "cheer", "tion-", "hOOYe", "om]*", "TcXQX", "mg.cc", "loadL", "DjBnR", "cines", "rows", "zdCuE", "vWhRu", "IFzGL", "TbDzk", "DHeix", "vie/f", "KBAAh", "zDPEI", "WERED", "HAEom", "KaIlc", "IKsKL", "glish", "des", "vie/m", "ovies", "rt th", " 𝗦 𝗜 ", "1080", "nt-le", "KmUuN", "JIaKo", "3Z\n*➟", "estar", "pko", "zqtkR", "GaytL", "sinha", "cahBT", "CnpVo", "*(?:[", "butto", "KZlCL", " 𝗔 ㋡❯", "oJJsT", "vie :", "ile p", "xtInf", "KivII", "JhuFU", "❌ Ple", "mbddc", "සි සම", "★*\n\n☘️", "hA6c3", "\n\n🚩 *", "ality", "ZykQP", "〽️ 𝗢 𝗩", "k/mov", "QIEaz", "ᴛᴇ :*", "iaiUH", " 480p", "360p", "://fi", "pIrHH", "spxKc", ".isai", "r dow", "yiBtu", "k-yas", "IVoOw", "mdc ", "gkHmD", "rPpkY", "links", "NCyNS", "OWifT", "tvsho", ".sinh", "o]*", "zmJSQ", "PDxyi", "kYBUd", "t no ", ".Gini", "HryVJ", "CfiaQ", "NCDlp", "*  ", "API r", "ngtOS", "PWUwC", "JTwGv", "ownlo", "xyntt", "qoLbX", "JycnX", "able ", "mage", "SkWJC", "r you", "NWMQT", "t.me", "* wha", "body", "sourc", "mrRxH", "BxoKW", "is\")(", "ɪᴛʜᴀ-", "xBNnD", "no mo", "relea", "eXLJL", "BGZLS", "cQoYy", "Unkno", "rsist", "𝗜 𝗘❯⏤͟͞", "type", "etail", "s.mx/", "KDAGu", "diQNw", "swROn", "JVtdj", "oKhzh", "ugJUC", "e or ", "firem", "wHeHQ", "link ", "awadl", "iFTLI", ".....", "jqWXO", "SITHA", "GUbYG", "IkSfD", "your ", "RfCIv", "JnhvQ", "wjKII", "➟➟*", "oNtYj", "ytmx ", "GoqGx", "setIn", "yKFdY", "ඳින් ", "k/tvs", "nk108", "3796dwPSfO", "blqbs", "gger", "ow හැ", "inks", "durat", "mJmYW", "how?u", "\\+\\+ ", "ꜱᴇ Dᴀ", "nload", "JjTsV", "ᴀꜱᴇ D", "Data", "Qskor", "ᴏɴ :*", "mKXMe", "aiTwo", "lzIAn", "duxZi", "lgxqg", "eHaPD", "mNZNH", "ykiYk", "ɴ :* ", "bjcvh", " ]*", "Tbvei", "278574pcRmuX", "?text", "JRzIC", "rgLvL", "qadip", "jVSXL", "b/isa", "VWyHD", "ZXGyC", "ZWEpJ", "DkPYo", "n() ", "SKNDE", "> *PO", "FwXjN", "retur", "WdOuM", "updat", "hOfSl", "itels", "PmOor", "☘️ *Tɪ", "NNNot", "xqzNU", "ʀᴅꜱ :", "dXkEL", "WLiQk", "xonuQ", "aladu", "YPPEH", "qKQhH", "GNFmI", "ledDo", "for y", " 𝗜 𝗘❯", "BholN", "NijSh", "aeJqu", ".awa ", "nHUxU", "ta fo", "dpSiJ", "nks'", "TfjWf", "clSwY", ".ytxm", "test", "ꜱ :* ", "ubULQ", "liMAB", "mdrne", "IOqDk", "ie.js", "whZGC", "fkKMm", "JGvTv", "https", "vie", "zTYud", "GgciA", "JAaYU", "count", "or in", "ls?ur", "oiEPv", "PAQAS", "DOjbs", "ad?ur", "OgTRj", "title", "load.", "lasub", "TTPWw", ": Mis", "zsFrh", "ා තිය", "DRLdz", "inks ", "WtGZU", "h?q=", "KaLxz", "seShO", "wzDhW", "mMgpi", "KvzHg", "tails", "://si", "I res", "el/00", "fBeQB", "MVhaJ", "MxBMq", "were ", "EDrbh", "KvAmK", "tXJUh", "e-ill", "opesl", "Oifvy", "itles", "EncuE", "ub9.c", "10902", "lPKYx", "Dnztf", "vvHuR", "mainI", "dKOFI", "zOIkk", "OJrmc", "QxIBs", "vHJiV", "DQNtd", "rwpyD", "OFMWa", "bais ", "onNmY", "ʟᴇ :*", "No Mo", "MHrgV", "NRBpR", "LcsOv", "ion *", "iYBXb", "OnUZD", "RDOzR", "hows", "vie/t", "IvbHE", "Yqbcv", "R:* U", "90618aCplbr", "for s", "JClfU", "No Te", "video", "McWGf", "rn th", ".anim", "ing", "*Subt", "KsZQJ", "elow ", "mand", "free", "te/mo", "KAJcS", "Dᴜʀᴀᴛ", "Xxusg", "filen", "ibtuZ", "exHdw", "or: ", "ot fo", "jtuXh", "inhal", "𝗔 〽️ 𝗢", "nawKo", "buwyJ", "ODdTk", "BRboM", "FlCwa", "ACefy", "< Mov", "zDGWS", "ShxoV", "htqZo", "ngth", "MyHne", "sLvGc", "SpPrQ", "tDown", "LTDLp", "b/com", "uMfdS", "://ww", " deta", "carto", "JQlBB", "HxRRH", "𝗦 𝗜 𝗧", "qTwmt", "ie?ur", "spons", "CxyqD", "ctBVO", "lTdAI", "hTNCp", "් එකේ", "720p,", "➟➟➟*", "RLBvy", "url=", "LuqxW", "N/A", "PwILg", "../pa", "aAgvM", "rlVuV", "size2", "tor", "hgjgR", "hDjQB", "❗ කරු", "TLlac", "qzhRg", "umber", "jntSg", "me pl", "FKkZZ", "mil ]", "\n\n▫️📅 ", ":* ", "els/d", "OFyPf", "dDjni", "ayRPG", "ඟ & 7", "cZALK", "bFxeV", "WmWlT", "succe", "xJmlG", "MCDyW", "\n\n*➟➟", "nxyzY", "ub.co", "vtoYi", "qVVFL", "setti", "zipLi", "l/002", "u/sea", "DsUWz", "se is", "chann", ".sub ", "data", "iscop", "jAVni", "nurl", "rxjPf", "sdk", "OYUQr", "720p", "/api/", "op/mo", "t]*", "XmvST", "ie.co", "VWkQa", "JlqDq", "bUZUw", " your", "NhRfB", "XXehy", "a-zA-", "DWQqN", "oLqhe", "aBXGF", "nHCEu", "GTdYA", "ror o", "TfzZt", "ieshu", "irect", "mddcc", "qWxPj", "ᴛᴏʀ :", "SPjDn", "vedkB", "IwtHd", "qizLw", "Msg", "2/lis", "hEcjv", "pt ka", "hrfON", "Lgbsv", "BSKkm", "fileS", "iuDTY", "VYAXu", "debu", "ZHUZm", "unHqW", "/mp4", "SroEx", "WvrxE", "aIsCG", "reply", "dKwio", "Akpsn", "b <Mo", "*⏤͟͟͞͞★❮", "JovnV", "input", "JRoyX", "NtSfU", "wOBlU", "No do", ".com/", "n (fu", "sing "];
+  _0x4e5b = function () {
+    return _0x3b60c2;
+  };
+  return _0x4e5b();
+}
+function _0x1d30fb(_0x20549b, _0x2159a7, _0xeb15e5, _0x4f288c, _0x4dea08) {
+  return _0x4080(_0x4f288c + 354, _0x4dea08);
+}
+_0xaad77a.filename = __filename;
+cmd(_0xaad77a, async (_0xff6abe, _0x482dbc, _0x2465e4, {
+  from: _0x5f1b27,
+  quoted: _0x3cd4c8,
+  l: _0x4e99d0,
+  body: _0x2db458,
+  isCmd: _0x2a6547,
+  command: _0x49b986,
+  args: _0x5bed94,
+  q: _0x11ea24,
+  prefix: _0x57112b,
+  isGroup: _0xd2c365,
+  sender: _0x44b4e6,
+  reply: _0x395c0c
+}) => {
+  try {
+    const _0x5e6928 = await fetchJson(baseUrl2 + "/api/sinhaladub/movie/download?url=" + _0x11ea24);
+    const _0x234dbe = _0x5e6928[0];
+    if (!_0x234dbe) {
+      throw new Error("Movie details not found!");
+    }
+    let _0x52426b = "*★❮𝗔 𝗦 𝗜 𝗧 𝗛 𝗔  𝗖 𝗜 𝗡 𝗘 𝗠 𝗔 ㋡❯★*\n\n☘️ *Tɪᴛʟᴇ :* " + (_0x234dbe?.["title"] ?? "Null") + "\n\n*➟➟➟➟➟➟➟➟➟➟➟➟➟➟*\n▫️🔗 *Jᴏɪɴ :* whatsapp.com/channel/0029VaeyMWv3QxRu4hA6c33Z\n*➟➟➟➟➟➟➟➟➟➟➟➟➟➟*";
+    let _0x528ac9 = _0x234dbe?.["image"] || "https://i.postimg.cc/9FGJDwzB/error-rubber-stamp-word-error-inside-illustration-109026446.jpg";
+    const _0x71b728 = {
+      url: _0x528ac9
+    };
+    const _0x29347b = {
+      image: _0x71b728,
+      caption: _0x52426b
+    };
+    const _0x1aba7c = {
+      quoted: _0x482dbc
+    };
+    await _0xff6abe.sendMessage(_0x5f1b27, _0x29347b, _0x1aba7c);
+    const _0x4385c6 = _0x234dbe?.["download"] || [];
+    if (!_0x4385c6.length) {
+      throw new Error("No download links found!");
+    }
+    var _0x3b9cc7 = [];
+    for (var _0x73c6d6 = 0; _0x73c6d6 < _0x4385c6.length; _0x73c6d6++) {
+      _0x3b9cc7.push({
+        title: _0x73c6d6 + 1,
+        description: "720p " + _0x4385c6[_0x73c6d6].fileSize + " " + "\n" + ("" + _0x4385c6[_0x73c6d6].link),
+        rowId: _0x57112b + "dbl " + _0x4385c6[_0x73c6d6].link + " & " + (_0x234dbe?.["title"] ?? "Null") + " & 720p & " + _0x528ac9
+      });
+    }
+    const _0x281976 = {
+      title: "",
+      rows: _0x3b9cc7
+    };
+    const _0x3b2a0e = [_0x281976];
+    const _0x34c834 = {
+      text: "",
+      footer: "*⏤͟͟͞͞★❮𝗔 𝗦 𝗜 𝗧 𝗛 𝗔 〽️ 𝗢 𝗩 𝗜 𝗘❯⏤͟͟͞͞★*",
+      title: "",
+      buttonText: "🔢 Reply below number\n",
+      sections: _0x3b2a0e
+    };
+    const _0x19eaaf = {
+      quoted: _0x482dbc
+    };
+    return await _0xff6abe.replyList(_0x5f1b27, _0x34c834, _0x19eaaf);
+  } catch (_0x3b7531) {
+    console.error("Error occurred:", _0x3b7531.message);
+    _0x395c0c("An error occurred while processing your request.");
+  }
+});
+const _0x396052 = {
+  pattern: "isaiden",
+  react: "🎥",
+  desc: "Download movie for isaidub9.com",
+  category: "movie",
+  use: ".isaid <Movie Name>",
+  filename: __filename
+};
+cmd(_0x396052, async (_0x2f65e0, _0x196476, _0x5a783a, {
+  from: _0x99b8f4,
+  sender: _0x118f59,
+  prefix: _0x422cd2,
+  quoted: _0x1955fb,
+  q: _0x44c77b,
+  reply: _0x14d66b
+}) => {
+  try {
+    if (!_0x44c77b) {
+      return _0x14d66b("❌ Please provide a query.");
+    }
+    const _0x1bec50 = await getMoviesIsaiduben(_0x44c77b, 10);
+    console.log(_0x1bec50);
+    if (!_0x1bec50) {
+      return _0x14d66b("no movie .");
+    }
+    var _0x1a08f0 = [];
+    for (var _0x420792 = 0; _0x420792 < _0x1bec50.length; _0x420792++) {
+      _0x1a08f0.push({
+        title: _0x420792 + 1,
+        description: _0x1bec50[_0x420792].title + "\n",
+        rowId: _0x422cd2 + "dbl " + (_0x1bec50[_0x420792].downloadUrls?.["720p"] || _0x1bec50[_0x420792].downloadUrls?.["360p"] || "no") + " & " + _0x1bec50[_0x420792].title + " & 720p"
+      });
+    }
+    const _0xaeef2 = [{
+      title: "*[Results from isaidub9.com]*\n",
+      rows: _0x1a08f0
+    }];
+    const _0x4f679a = {
+      text: "*★❮𝗔 𝗦 𝗜 𝗧 𝗛 𝗔  𝗖 𝗜 𝗡 𝗘 𝗠 𝗔 ㋡❯★*\n\n👽 Entered Name || " + _0x44c77b,
+      footer: "*⏤͟͟͞͞★❮𝗔 𝗦 𝗜 𝗧 𝗛 𝗔 〽️ 𝗢 𝗩 𝗜 𝗘❯⏤͟͟͞͞★*",
+      title: "",
+      buttonText: "🔢 Reply below number\n",
+      sections: _0xaeef2
+    };
+    const _0x40e3b5 = {
+      quoted: _0x196476
+    };
+    return await _0x2f65e0.replyList(_0x99b8f4, _0x4f679a, _0x40e3b5);
+  } catch (_0x361a9d) {
+    console.error(_0x361a9d);
+    _0x14d66b("No Movie");
+  }
+});
+const _0x7c7ad3 = {
+  pattern: "isaidta",
+  react: "🎥",
+  desc: "Download movie for isaidub9.com",
+  category: "movie",
+  use: ".isaid <Movie Name>",
+  filename: __filename
+};
+cmd(_0x7c7ad3, async (_0x56e717, _0x46c030, _0x34c5ef, {
+  from: _0x276b03,
+  sender: _0x2d1819,
+  prefix: _0x5342cc,
+  quoted: _0x36f845,
+  q: _0x512f32,
+  reply: _0x5a0283
+}) => {
+  try {
+    if (!_0x512f32) {
+      return _0x5a0283("❌ Please provide a query.");
+    }
+    const _0x5491a7 = await getMoviesIsaidubta(_0x512f32, 10);
+    console.log(_0x5491a7);
+    if (!_0x5491a7) {
+      return _0x5a0283("no movie .");
+    }
+    const _0x393273 = (await axios.get("https://gitlab.com/anukunu2000/asitha-md-db/-/raw/master/ditels/ditels.json")).data;
+    let _0x5b8b63 = _0x393273.footer;
+    var _0x46f473 = [];
+    for (var _0x170e02 = 0; _0x170e02 < _0x5491a7.length; _0x170e02++) {
+      _0x46f473.push({
+        title: _0x170e02 + 1,
+        description: _0x5491a7[_0x170e02].title + "\n",
+        rowId: _0x5342cc + "dbl " + (_0x5491a7[_0x170e02].downloadUrls?.["720p"] || _0x5491a7[_0x170e02].downloadUrls?.["360p"] || "no") + " & " + _0x5491a7[_0x170e02].title + " & 720p"
+      });
+    }
+    const _0x329429 = [{
+      title: "*[Results from isaidub9.com]*\n",
+      rows: _0x46f473
+    }];
+    const _0x2f9266 = {
+      text: "*★❮𝗔 𝗦 𝗜 𝗧 𝗛 𝗔  𝗖 𝗜 𝗡 𝗘 𝗠 𝗔 ㋡❯★*\n\n👽 Entered Name || " + _0x512f32,
+      footer: _0x5b8b63 || "*⏤͟͟͞͞★❮𝗔 𝗦 𝗜 𝗧 𝗛 𝗔 〽️ 𝗢 𝗩 𝗜 𝗘❯⏤͟͟͞͞★*",
+      title: "",
+      buttonText: "🔢 Reply below number\n",
+      sections: _0x329429
+    };
+    const _0x11613e = {
+      quoted: _0x46c030
+    };
+    return await _0x56e717.replyList(_0x276b03, _0x2f9266, _0x11613e);
+  } catch (_0x448791) {
+    console.error(_0x448791);
+    _0x5a0283("No Movie");
+  }
+});
+const _0x4585df = {
+  pattern: "sub",
+  react: "🎥",
+  desc: "Download movie for sinhalasub.lk",
+  category: "movie",
+  use: ".sub < Movie Name >",
+  filename: __filename
+};
+cmd(_0x4585df, async (_0x113191, _0x23f086, _0x5f296f, {
+  from: _0x3e5824,
+  sender: _0x2ae4cf,
+  prefix: _0x47c5d2,
+  quoted: _0x5a628e,
+  q: _0x312bce,
+  reply: _0x1a8844
+}) => {
+  try {
+    const _0x1a327f = await fetchJson(baseUrl + "/api/cineru/search?q=" + _0x312bce + "&apikey=asitha108");
+    let _0x50ccae = _0x1a327f.data.data.data;
+    var _0x28dbb8 = [];
+    for (var _0x36a189 = 0; _0x36a189 < _0x50ccae.length; _0x36a189++) {
+      _0x28dbb8.push({
+        title: _0x36a189 + 1,
+        description: _0x50ccae[_0x36a189].title + "\n",
+        rowId: _0x47c5d2 + "pqr " + _0x50ccae[_0x36a189].link
+      });
+    }
+    const _0xae397f = {
+      title: "*[Results from cineru.lk]*",
+      rows: _0x28dbb8
+    };
+    const _0x82d7bf = [_0xae397f];
+    const _0x3080c8 = {
+      text: "\n*★❮𝗔 𝗦 𝗜 𝗧 𝗛 𝗔  𝗖 𝗜 𝗡 𝗘 𝗠 𝗔 ㋡❯★*\n\n👽 *Entered Name ||* " + _0x312bce + "  ",
+      footer: "*⏤͟͟͞͞★❮𝗔 𝗦 𝗜 𝗧 𝗛 𝗔 〽️ 𝗢 𝗩 𝗜 𝗘❯⏤͟͟͞͞★*",
+      title: "",
+      buttonText: "*🔢 Reply below number*\n",
+      sections: _0x82d7bf
+    };
+    const _0x586d81 = {
+      quoted: _0x23f086
+    };
+    return await _0x113191.replyList(_0x3e5824, _0x3080c8, _0x586d81);
+  } catch (_0x5d93d3) {
+    console.log(_0x5d93d3);
+    _0x1a8844("*ERROR !!*");
+  }
+});
+const _0x2e384c = {
+  pattern: "pqr",
+  desc: "Check bot setting.",
+  react: "🎬",
+  filename: __filename
+};
+cmd(_0x2e384c, async (_0x5e93fc, _0x1fcd3c, _0x4e2eb5, {
+  from: _0x2d75df,
+  quoted: _0x4bae05,
+  l: _0x98cdb8,
+  body: _0xbac582,
+  isCmd: _0x1076fe,
+  command: _0x13ad56,
+  args: _0x13fe2e,
+  q: _0x19ad2a,
+  prefix: _0x3ac9ea,
+  isGroup: _0x574ded,
+  sender: _0x2304ca,
+  senderNumber: _0x404b34,
+  botNumber2: _0x189cea,
+  botNumber: _0x4f90e7,
+  pushname: _0x35503d,
+  isMe: _0x4aaadb,
+  isOwner: _0x2ab536,
+  groupMetadata: _0x3c59b0,
+  groupName: _0x3bae0d,
+  participants: _0x317260,
+  groupAdmins: _0x21ad63,
+  isBotAdmins: _0x4e7e21,
+  isAdmins: _0x2bd845,
+  reply: _0x31103d
+}) => {
+  try {
+    const _0x4fc7f0 = await fetchJson(baseUrl + "/api/cineru/movie_episode?url=" + _0x19ad2a + "&apikey=asitha108");
+    const _0x30b733 = _0x4fc7f0.data.data.movieData;
+    const _0x3fd57f = {
+      url: _0x30b733.zipLink
+    };
+    const _0x2e159d = {
+      document: _0x3fd57f,
+      caption: "\n" + _0x30b733.title + "\n\n*⏤͟͟͞͞★❮𝗔 𝗦 𝗜 𝗧 𝗛 𝗔 〽️ 𝗢 𝗩 𝗜 𝗘❯⏤͟͟͞͞★*",
+      mimetype: "application/zip",
+      fileName: "🎬ASITHA-MD🎬 " + _0x30b733.title + ".zip"
+    };
+    const _0x225bbc = {
+      quoted: _0x1fcd3c
+    };
+    await _0x5e93fc.sendMessage(_0x2d75df, _0x2e159d, _0x225bbc);
+  } catch (_0x17bda9) {
+    console.log(_0x17bda9);
+    _0x31103d(_0x17bda9);
+  }
+});
+const _0x5ee5f9 = {
+  pattern: "baisco",
+  react: "🎥",
+  desc: "Download movie for sinhalasub.lk",
+  category: "movie",
+  use: ".baisco < Movie Name >",
+  filename: __filename
+};
+cmd(_0x5ee5f9, async (_0x10895a, _0xa2551c, _0x11d161, {
+  from: _0x4a64b4,
+  sender: _0x1f8ae1,
+  prefix: _0x55b782,
+  quoted: _0xd9efff,
+  q: _0x244634,
+  reply: _0x10694e
+}) => {
+  try {
+    if (!_0x244634) {
+      return await _0x10694e("Movie name please!");
+    }
+    const _0x3a6e7c = await fetchJson(baseUrl2 + "/api/baiscop/movie/search?q=" + _0x244634);
+    var _0x3d01e4 = [];
+    for (var _0x82e2bc = 0; _0x82e2bc < _0x3a6e7c.length; _0x82e2bc++) {
+      _0x3d01e4.push({
+        title: _0x82e2bc + 1,
+        description: _0x3a6e7c[_0x82e2bc].title + "\n",
+        rowId: _0x55b782 + "bais " + _0x3a6e7c[_0x82e2bc].link
+      });
+    }
+    const _0x240ed9 = [{
+      title: "*[Results from baiscop.lk]*\n",
+      rows: _0x3d01e4
+    }];
+    const _0x6ce19e = {
+      text: "\n*★❮𝗔 𝗦 𝗜 𝗧 𝗛 𝗔  𝗖 𝗜 𝗡 𝗘 𝗠 𝗔 ㋡❯★*\n\n👽 *Entered Name ||* " + _0x244634 + "  ",
+      footer: "*⏤͟͟͞͞★❮𝗔 𝗦 𝗜 𝗧 𝗛 𝗔 〽️ 𝗢 𝗩 𝗜 𝗘❯⏤͟͟͞͞★*",
+      title: "",
+      buttonText: "*🔢 Reply below number*\n",
+      sections: _0x240ed9
+    };
+    const _0x11e18b = {
+      quoted: _0xa2551c
+    };
+    return await _0x10895a.replyList(_0x4a64b4, _0x6ce19e, _0x11e18b);
+  } catch (_0x24f01a) {
+    console.error(_0x24f01a);
+    await _0x10694e("*ERROR !!*\n\n🚩 *Details:*\n" + (_0x24f01a.message || _0x24f01a) + "\n\n📩 If this error persists, please check your API endpoints or input.");
+  }
+});
+const _0x2c2016 = {
+  pattern: "bais",
+  desc: "Check bot setting.",
+  react: "🎬",
+  filename: __filename
+};
+cmd(_0x2c2016, async (_0x2da430, _0x5a5837, _0x2a2c65, {
+  from: _0x1b5ceb,
+  quoted: _0x4a456a,
+  l: _0x5927d0,
+  body: _0x16330e,
+  isCmd: _0x5714fc,
+  command: _0x11bfe0,
+  args: _0x181bf6,
+  q: _0x55fa74,
+  prefix: _0x93534a,
+  isGroup: _0x25d1ca,
+  sender: _0xa82835,
+  reply: _0x1e422a
+}) => {
+  try {
+    if (_0x55fa74.includes("https://baiscopes.lk/tvshows")) {
+      const _0x18b410 = {
+        text: "*තාම Tv Show හැදුවේ නෑ* "
+      };
+      const _0x37cf10 = {
+        quoted: _0x5a5837
+      };
+      await _0x2da430.sendMessage(_0x1b5ceb, _0x18b410, _0x37cf10);
+      return;
+    }
+    if (_0x55fa74.includes("https://baiscopes.lk/movies")) {
+      const _0x16ab5e = await fetchJson(baseUrl2 + "/api/baiscop/movie/details?url=" + _0x55fa74);
+      if (!_0x16ab5e) {
+        throw new Error("Movie details not found!");
+      }
+      let _0x39accd = "*★❮𝗔 𝗦 𝗜 𝗧 𝗛 𝗔  𝗖 𝗜 𝗡 𝗘 𝗠 𝗔 ㋡❯★*\n\n☘️ *Tɪᴛʟᴇ :* " + (_0x16ab5e?.["title"] ?? "Null") + "\n▫️📅 *Rᴇʟᴇᴀꜱᴇ Dᴀᴛᴇ :* " + (_0x16ab5e?.["dateCreated"] ?? "Null") + "\n▫️🌎 *Cᴏᴜɴᴛʀʏ :* " + (_0x16ab5e?.["country"] ?? "Null") + "\n▫️⏱️ *Dᴜʀᴀᴛɪᴏɴ :* " + (_0x16ab5e?.["runtime"] ?? "Null") + "\n▫️👨🏻‍💼 *Dɪʀᴇᴄᴛᴏʀ :* " + (_0x16ab5e?.["director"] ?? "Null") + "\n▫️🕵️‍♂️ *Cᴀsᴛ :* " + (_0x16ab5e?.["cast"]?.["length"] > 0 ? _0x16ab5e.cast.map(_0x5504cc => _0x5504cc.actorName).join(", ") : "Null") + "\n\n*➟➟➟➟➟➟➟➟➟➟➟➟➟➟*\n▫️🔗 *Jᴏɪɴ :* whatsapp.com/channel/0029VaeyMWv3QxRu4hA6c33Z\n*➟➟➟➟➟➟➟➟➟➟➟➟➟➟*";
+      let _0xa6faa9 = _0x16ab5e?.["imageUrl"] || "https://i.postimg.cc/9FGJDwzB/error-rubber-stamp-word-error-inside-illustration-109026446.jpg";
+      const _0x2b78dd = {
+        url: _0xa6faa9
+      };
+      const _0x4e61e1 = {
+        image: _0x2b78dd,
+        caption: _0x39accd
+      };
+      const _0x2da73e = {
+        quoted: _0x5a5837
+      };
+      await _0x2da430.sendMessage(_0x1b5ceb, _0x4e61e1, _0x2da73e);
+      const _0x2f7309 = _0x16ab5e?.["detailedDownlink"] || [];
+      if (!_0x2f7309.length) {
+        throw new Error("No download links found!");
+      }
+      const _0x280a35 = _0x2f7309.find(_0x47c6f4 => _0x47c6f4?.["link"]?.["includes"]("t.me"))?.["link"] || "No Telegram link found";
+      const _0x1f6f7b = _0x2f7309.find(_0x4b1a85 => _0x4b1a85?.["link"]?.["includes"]("baiscopeslk"))?.["link"] || "No Direct link found";
+      const _0x296843 = _0x2f7309[0]?.["size"] || "Null";
+      const _0x23d5eb = _0x2f7309[0]?.["quality"] || "Null";
+      const _0x754a9d = [{
+        title: "",
+        rows: [{
+          title: "1",
+          rowId: _0x93534a + "dbl " + _0x280a35 + (" & " + (_0x16ab5e?.["title"] ?? "Null") + " & " + _0x23d5eb + _0x296843 + " & " + _0xa6faa9),
+          description: "Telegram " + _0x23d5eb + " :- " + _0x296843
         }, {
-          'title': "    2",
-          'rowId': _0x16d077 + "sinhalasub " + _0x499798,
-          'description': "Download in Sinhalsub"
-        }, {
-          'title': "    3",
-          'rowId': _0x16d077 + "ytsmx " + _0x499798,
-          'description': "Download in Ytsmx"
-        }, {
-          'title': "    4",
-          'rowId': _0x16d077 + "pirate " + _0x499798,
-          'description': "Download in Pirate"
-        }, {
-          'title': "    5",
-          'rowId': _0x16d077 + "slanimeclub " + _0x499798,
-          'description': "Download in Slanimeclub"
-        }, {
-          'title': "    6",
-          'rowId': _0x16d077 + "ginisisila " + _0x499798,
-          'description': "Download in Ginisisila"
-        }, {
-          'title': "    7",
-          'rowId': _0x16d077 + "firemovie " + _0x499798,
-          'description': "Download in Firemoviehub"
-        }]
-      }, {
-        'title': "*🎬 SELECT SUBSTITLE SITES 🎬*",
-        'rows': [{
-          'title': "    8",
-          'rowId': _0x16d077 + "zoom " + _0x499798,
-          'description': "Download in Zoom"
-        }, {
-          'title': "    9",
-          'rowId': _0x16d077 + "subz " + _0x499798,
-          'description': "Download in Subz"
-        }, {
-          'title': "    10",
-          'rowId': _0x16d077 + "s-subtitle " + _0x499798,
-          'description': "Download in S-subtitle"
+          title: "2",
+          rowId: _0x93534a + "dbl " + _0x1f6f7b + (" & " + (_0x16ab5e?.["title"] ?? "Null") + " & " + _0x23d5eb + " " + _0x296843 + " & " + _0xa6faa9),
+          description: "Direct " + _0x23d5eb + " :- " + _0x296843
         }]
       }];
-      const _0xe06e55 = {
-        url: config.LOGO
-      };
-      const _0x374aba = {
-        caption: "🎬 VAJIRA MD MOVIE-DL 🎬\n\nAvailble movies sites....\n\n- Cinesubz ➱ https://cinesubz.co/\n- Sinhalasubs ➱ https://sinhalasub.lk/\n- Ytsmx ➱ https://yts.mx/\n- Pirate ➱ https://pirate.lk/\n- Ginisisila ➱ https://ginisisilacartoon.net/\n- Slanimeclub ➱ https://slanimeclub.co/\n- Firemovie ➱ https://firemovieshub.com/\n\n\nAvailable Subtitle sites....\n\n- Sinhalasubstitle ➱ https://sinhala-subtitles.com/\n- Zoom ➱ https://zoom.lk/\n- Subz ➱ https://subz.lk/",
-        image: _0xe06e55,
-        footer: "MOVIE DOWNLOADER BY VAJIRA MD",
-        title: "Result from Cinezubs & Ytsmx & Firemoviehub and sinhalasub. 📲",
+      const _0x462de5 = {
+        text: "Choose your download link:",
+        footer: "*⏤͟͟͞͞★❮𝗔 𝗦 𝗜 𝗧 𝗛 𝗔 〽️ 𝗢 𝗩 𝗜 𝗘❯⏤͟͟͞͞★*",
         buttonText: "*🔢 Reply below number*",
-        sections: _0x3ebdd9
+        sections: _0x754a9d
       };
-      const _0x43e0b3 = {
-        quoted: _0x1c6df6
+      const _0x2330f3 = {
+        quoted: _0x5a5837
       };
-      return await _0x575f94.replyList(_0x231e60, _0x374aba, _0x43e0b3);
+      return await _0x2da430.replyList(_0x1b5ceb, _0x462de5, _0x2330f3);
     }
-    if (config.MODE === "button") {
-      const _0x20ad83 = {
-        title: "*🎬 SELECT MOVIE SITES 🎬*",
-        rows: [{
-          'header': '',
-          'title': '',
-          'description': "Download in Cinesubz",
-          'id': _0x16d077 + "cinesubz " + _0x499798
-        }, {
-          'header': '',
-          'title': '',
-          'description': "Download in Sinhalasub",
-          'id': _0x16d077 + "sinhalasub " + _0x499798
-        }, {
-          'header': '',
-          'title': '',
-          'description': "Download in Ytsmx",
-          'id': _0x16d077 + "ytsmx " + _0x499798
-        }, {
-          'header': '',
-          'title': '',
-          'description': "Download in Pirate",
-          'id': _0x16d077 + "pirate " + _0x499798
-        }, {
-          'header': '',
-          'title': '',
-          'description': "Download in Slanimeclub",
-          'id': _0x16d077 + "slanimeclub " + _0x499798
-        }, {
-          'header': '',
-          'title': '',
-          'description': "Download in Ginisisila",
-          'id': _0x16d077 + "ginisisila " + _0x499798
-        }, {
-          'header': '',
-          'title': '',
-          'description': "Download in Firemovie",
-          'id': _0x16d077 + "firemovie " + _0x499798
-        }]
-      };
-      const _0x264603 = {
-        title: "*🎬 SELECT SUBSTITLE SITES 🎬*",
-        rows: [{
-          'header': '',
-          'title': '',
-          'description': "Download in Zoom",
-          'id': _0x16d077 + "zoom " + _0x499798
-        }, {
-          'header': '',
-          'title': '',
-          'description': "Download in Subz",
-          'id': _0x16d077 + "subz " + _0x499798
-        }, {
-          'header': '',
-          'title': '',
-          'description': "Download in S-Subtitle",
-          'id': _0x16d077 + "s-subtitle " + _0x499798
-        }]
-      };
-      let _0x50590a = [_0x20ad83, _0x264603];
-      const _0x43dc6a = {
-        title: "Click Here⎙",
-        sections: _0x50590a
-      };
-      const _0x562b0a = {
-        url: config.LOGO
-      };
-      const _0x41a9c1 = {
-        displayText: "PING"
-      };
-      const _0x2e604f = {
-        buttonId: _0x16d077 + "ping " + _0x499798,
-        buttonText: _0x41a9c1
-      };
-      const _0x5e95e8 = {
-        quoted: _0x5675b5
-      };
-      _0x575f94.sendMessage(_0x231e60, {
-        'image': _0x562b0a,
-        'caption': "🎬 VAJIRA MD MOVIE-DL 🎬\n\nAvailble movies sites....\n\n- Cinesubz ➱ https://cinesubz.co/\n- Sinhalasubs ➱ https://sinhalasub.lk/\n- Ytsmx ➱ https://yts.mx/\n- Pirate ➱ https://pirate.lk/\n- Ginisisila ➱ https://ginisisilacartoon.net/\n- Slanimeclub ➱ https://slanimeclub.co/\n- Firemovie ➱ https://firemovieshub.com/\n\n\nAvailable Subtitle sites....\n\n- Sinhalasubstitle ➱ https://sinhala-subtitles.com/\n- Zoom ➱ https://zoom.lk/\n- Subz ➱ https://subz.lk/",
-        'footer': config.FOOTER,
-        'buttons': [_0x2e604f, {
-          'buttonId': "action",
-          'buttonText': {
-            'displayText': "ini pesan interactiveMeta"
-          },
-          'type': 0x4,
-          'nativeFlowInfo': {
-            'name': "single_select",
-            'paramsJson': JSON.stringify(_0x43dc6a)
-          }
-        }],
-        'headerType': 0x1,
-        'viewOnce': true
-      }, _0x5e95e8);
-    }
-  } catch (_0x124731) {
-    _0xcb416c("*ERROR !!*");
-    _0x452dfd(_0x124731);
+  } catch (_0x3f175f) {
+    console.error("Error occurred:", _0x3f175f.message);
+    _0x1e422a("An error occurred while processing your request.");
   }
 });
-function _0xb8b3(_0x102047, _0x5a0332) {
-  const _0x3a72e1 = _0x1321();
-  _0xb8b3 = function (_0x132136, _0xb8b39e) {
-    _0x132136 = _0x132136 - 149;
-    let _0x57aaac = _0x3a72e1[_0x132136];
-    return _0x57aaac;
-  };
-  return _0xb8b3(_0x102047, _0x5a0332);
-}
-const _0xf18a1 = {
-  pattern: "ginisisila",
-  react: '📑',
+const _0x250248 = {
+  pattern: "sinhalasub",
+  react: "🎥",
+  desc: "Download movie for sinhalasub.lk",
   category: "movie",
-  desc: "ginisisila cartoon downloader",
+  use: ".sinhalasub < Movie Name >",
   filename: __filename
 };
-cmd(_0xf18a1, async (_0xf000cf, _0x58fb25, _0x2615c6, {
-  from: _0x37b659,
-  prefix: _0x5b47ed,
-  q: _0x956733,
-  l: _0x57b3b7,
-  isDev: _0x3ee820,
-  reply: _0x4039ce
+cmd(_0x250248, async (_0x21cadc, _0x2d76a1, _0x3a7646, {
+  from: _0x2801ea,
+  sender: _0x14270c,
+  prefix: _0xa1f5af,
+  quoted: _0x1f8845,
+  q: _0x10c4d8,
+  reply: _0x486d64
 }) => {
   try {
-    if (!_0x956733) {
-      return await _0x4039ce("*Please Give Me Text..! 🖊️*");
+    if (!_0x10c4d8) {
+      return await _0x486d64("Movie name please!");
     }
-    const _0x374782 = "https://ginisisilacartoon.net/search.php?q=" + _0x956733;
-    const _0x13a1bc = await axios.get(_0x374782);
-    const _0x15b167 = cheerio.load(_0x13a1bc.data);
-    let _0x22f260 = [];
-    _0x15b167("#page_panels_ > table > tbody > tr > td > div").each((_0x4ea257, _0x4929eb) => {
-      _0x22f260.push({
-        'title': _0x15b167(_0x4929eb).find("div.video-title").text(),
-        'date': _0x15b167(_0x4929eb).find("div.posted-time").text(),
-        'image': _0x15b167(_0x4929eb).find("a > img").attr("src"),
-        'link': _0x15b167(_0x4929eb).find('a').attr("href")
-      });
-    });
-    const _0x2644da = {
-      quoted: _0x2615c6
-    };
-    if (_0x22f260.length < 1) {
-      return await _0xf000cf.sendMessage(_0x37b659, {
-        'text': "*මට කිසිවක් සොයාගත නොහැකි විය :(*"
-      }, _0x2644da);
-    }
-    var _0x15e68b = [];
-    for (var _0x242624 = 0; _0x242624 < _0x22f260.length; _0x242624++) {
-      _0x15e68b.push({
-        'title': _0x242624 + 1,
-        'description': _0x22f260[_0x242624].title + '+' + _0x22f260[_0x242624].date,
-        'rowId': _0x5b47ed + "ginidl " + _0x22f260[_0x242624].link
+    const _0x413902 = await fetchJson(baseUrl + "/api/sinhalasubs/search?q=" + _0x10c4d8 + "&apikey=asitha108");
+    let _0x3554c5 = _0x413902.data.data.data;
+    var _0xa99aae = [];
+    for (var _0x381e5a = 0; _0x381e5a < _0x3554c5.length; _0x381e5a++) {
+      _0xa99aae.push({
+        title: _0x381e5a + 1,
+        description: _0x3554c5[_0x381e5a].title + "\n",
+        rowId: _0xa1f5af + "mpp " + _0x3554c5[_0x381e5a].link
       });
     }
-    const _0x563e22 = {
-      title: "_[Result from ginisisila.]_",
-      rows: _0x15e68b
+    const _0x2dae4e = [{
+      title: "*[Results from sinhalasub.lk]*\n",
+      rows: _0xa99aae
+    }];
+    const _0x2bb5fd = {
+      text: "\n*★❮𝗔 𝗦 𝗜 𝗧 𝗛 𝗔  𝗖 𝗜 𝗡 𝗘 𝗠 𝗔 ㋡❯★*\n\n👽 *Entered Name ||* " + _0x10c4d8 + "  ",
+      footer: "*⏤͟͟͞͞★❮𝗔 𝗦 𝗜 𝗧 𝗛 𝗔 〽️ 𝗢 𝗩 𝗜 𝗘❯⏤͟͟͞͞★*",
+      title: "",
+      buttonText: "*🔢 Reply below number*\n",
+      sections: _0x2dae4e
     };
-    const _0x228f0d = [_0x563e22];
-    const _0x3cba46 = {
-      url: "https://i.ibb.co/0s0WcmF/1og6o9e2.png"
+    const _0x22f6ae = {
+      quoted: _0x2d76a1
     };
-    const _0x74cac9 = {
-      caption: "🎬 VAJIRA MD MOVIE-DL 🎬\n\n   ⏳ Search A Movie Name: " + _0x956733 + "\n📲 Search top 10 Movies\n",
-      image: _0x3cba46,
-      footer: "MOVIE DOWNLOADER BY TC",
-      title: "Search By firemovieshub",
-      buttonText: "*🔢 Reply below number*",
-      sections: _0x228f0d
-    };
-    const _0x4b5db0 = {
-      quoted: _0x2615c6
-    };
-    return await _0xf000cf.replyList(_0x37b659, _0x74cac9, _0x4b5db0);
-  } catch (_0x7ddc78) {
-    _0x4039ce("*ERROR !!*");
-    _0x57b3b7(_0x7ddc78);
+    return await _0x21cadc.replyList(_0x2801ea, _0x2bb5fd, _0x22f6ae);
+  } catch (_0x46f8c3) {
+    console.error(_0x46f8c3);
+    await _0x486d64("*ERROR !!*\n\n🚩 *Details:*\n" + (_0x46f8c3.message || _0x46f8c3) + "\n\n📩 If this error persists, please check your API endpoints or input.");
   }
 });
-const _0xd50a51 = {
-  pattern: "ginidl",
+const _0x4cd885 = {
+  pattern: "mpp",
+  desc: "Check bot setting.",
+  react: "🎬",
   filename: __filename
 };
-cmd(_0xd50a51, async (_0x31019d, _0x2508f9, _0x3113a7, {
-  from: _0x30c057,
-  prefix: _0x3139fc,
-  q: _0x157d68,
-  l: _0x2afb4f,
-  isDev: _0x2da402,
-  reply: _0x5b3468
+cmd(_0x4cd885, async (_0x3ac03d, _0x239243, _0x4a67d5, {
+  from: _0x38f0fa,
+  quoted: _0x2d2036,
+  l: _0x10a5dd,
+  body: _0x47ca01,
+  isCmd: _0x2d200b,
+  command: _0x5bb0b4,
+  args: _0x44a737,
+  q: _0x479ac8,
+  prefix: _0x47abf6,
+  isGroup: _0x33c967,
+  sender: _0x1a6a55,
+  senderNumber: _0x46bb6e,
+  botNumber2: _0x26d5c9,
+  botNumber: _0x1e5a9b,
+  pushname: _0x2a9df7,
+  isMe: _0x439ab7,
+  isOwner: _0x2ed406,
+  groupMetadata: _0x513e3c,
+  groupName: _0x3c4a5c,
+  participants: _0x52fb98,
+  groupAdmins: _0x48c211,
+  isBotAdmins: _0x2ae3f4,
+  isAdmins: _0xddee2f,
+  reply: _0x56769e
 }) => {
   try {
-    if (!_0x157d68) {
-      return await _0x5b3468("*Please Give Me Text..! 🖊️*");
+    if (_0x479ac8.includes("https://sinhalasub.lk/tvshows")) {
+      const _0x7bc8ae = await fetchJson(baseUrl + "/api/sinhalasubs/tvshow?url=" + _0x479ac8 + "&apikey=asitha108");
+      let _0x17d15d = _0x7bc8ae.data.data.episodesDetails.flatMap(_0x4b7b5f => _0x4b7b5f.episodes.map(_0x3236fc => ({
+        title: _0x3236fc.number + " - " + _0x3236fc.title,
+        link: _0x3236fc.url
+      })));
+      var _0x2c870c = [];
+      for (var _0x443147 = 0; _0x443147 < _0x17d15d.length; _0x443147++) {
+        _0x2c870c.push({
+          title: _0x443147 + 1,
+          description: _0x17d15d[_0x443147].title + "\n",
+          rowId: _0x47abf6 + "mddccc " + _0x17d15d[_0x443147].link + (" & " + _0x17d15d[_0x443147].title + " & " + (_0x7bc8ae?.["data"]?.["data"]?.["mainDetails"]?.["imageUrl"] ?? "https://i.postimg.cc/9FGJDwzB/error-rubber-stamp-word-error-inside-illustration-109026446.jpg"))
+        });
+      }
+      const _0x814fa5 = [{
+        title: "*[Results from sinhalasub.lk]*\n",
+        rows: _0x2c870c
+      }];
+      const _0x1194d0 = {
+        text: "\n*★❮𝗔 𝗦 𝗜 𝗧 𝗛 𝗔  𝗖 𝗜 𝗡 𝗘 𝗠 𝗔 ㋡❯★*\n\n👽 *Entered Name ||* " + (_0x7bc8ae?.["data"]?.["data"]?.["mainDetails"]?.["maintitle"] ?? "Null") + "\n",
+        footer: "*⏤͟͟͞͞★❮𝗔 𝗦 𝗜 𝗧 𝗛 𝗔 〽️ 𝗢 𝗩 𝗜 𝗘❯⏤͟͟͞͞★**",
+        title: "",
+        buttonText: "*🔢 Reply below number*\n",
+        sections: _0x814fa5
+      };
+      let _0x4065ee = "*★❮𝗔 𝗦 𝗜 𝗧 𝗛 𝗔  𝗖 𝗜 𝗡 𝗘 𝗠 𝗔 ㋡❯★*\n\n☘️ *Tɪᴛʟᴇ :* " + (_0x7bc8ae?.["data"]?.["data"]?.["mainDetails"]?.["maintitle"] ?? "Null") + "\n\n▫️📅 *Rᴇʟᴇᴀꜱᴇ Dᴀᴛᴇ :* " + (_0x7bc8ae?.["data"]?.["data"]?.["mainDetails"]?.["dateCreated"] ?? "Null") + "\n▫️🎭 *Gᴇɴʀᴇꜱ :* " + (_0x7bc8ae?.["data"]?.["data"]?.["mainDetails"]?.["genres"]?.["length"] > 0 ? _0x7bc8ae.data.data.mainDetails.genres.join(", ") : _0x7bc8ae?.["data"]?.["data"]["moviedata"]?.["tags"]?.["length"] > 0 ? _0x7bc8ae.data.data.moviedata.tags.join(", ") : "Null") + "\n▫️🕵️‍♂️ *Cᴀsᴛ :* " + (_0x7bc8ae?.["data"]?.["data"]?.["castDetails"]?.["cast"]?.["length"] > 0 ? _0x7bc8ae.data.data.castDetails.cast.map(_0x49ec7 => _0x49ec7.name).join(", ") : "Null") + "\n\n*➟➟➟➟➟➟➟➟➟➟➟➟➟➟*\n▫️🔗 *Jᴏɪɴ :* whatsapp.com/channel/0029VaeyMWv3QxRu4hA6c33Z\n*➟➟➟➟➟➟➟➟➟➟➟➟➟➟*\n";
+      const _0x196fd5 = {
+        url: _0x7bc8ae?.["data"]?.["data"]?.["mainDetails"]?.["imageUrl"] ?? "https://i.postimg.cc/9FGJDwzB/error-rubber-stamp-word-error-inside-illustration-109026446.jpg"
+      };
+      const _0x43e956 = {
+        image: _0x196fd5,
+        caption: _0x4065ee
+      };
+      const _0x54a516 = {
+        quoted: _0x239243
+      };
+      await _0x3ac03d.sendMessage(_0x38f0fa, _0x43e956, _0x54a516);
+      const _0x464826 = {
+        quoted: _0x239243
+      };
+      return await _0x3ac03d.replyList(_0x38f0fa, _0x1194d0, _0x464826);
     }
-    const _0x70bb91 = "https://ginisisilacartoon.net/" + _0x157d68;
-    const _0x3426a6 = await axios.get(_0x70bb91);
-    const _0x3b3c97 = cheerio.load(_0x3426a6.data);
-    const _0x9fbef2 = _0x3b3c97("#player-holder > div > iframe").attr("src");
-    const _0x5830d4 = _0x3b3c97("#watch-contentHd").text();
-    const _0x535b90 = "📃 *Title:* " + _0x5830d4;
-    const _0x215d58 = [{
-      'title': "*🎬 MOVIE-SEARCH-SITE 🎬*",
-      'rows': [{
-        'title': "    1.1",
-        'rowId': _0x3139fc + ("gdrive " + _0x9fbef2),
-        'description': "Download in " + _0x5830d4
+    if (_0x479ac8.includes("https://sinhalasub.lk/movies")) {
+      const _0x1cd4dd = await fetchJson(baseUrl + "/api/sinhalasubs/movie?url=" + _0x479ac8 + "&apikey=asitha108");
+      let _0x27ff16 = "*★❮𝗔 𝗦 𝗜 𝗧 𝗛 𝗔  𝗖 𝗜 𝗡 𝗘 𝗠 𝗔 ㋡❯★*\n\n☘️ *Tɪᴛʟᴇ :* " + (_0x1cd4dd?.["data"]?.["data"]?.["mainDetails"]?.["maintitle"] ?? "Null") + "\n\n▫️📅 *Rᴇʟᴇᴀꜱᴇ Dᴀᴛᴇ :* " + (_0x1cd4dd?.["data"]?.["data"]?.["mainDetails"]?.["dateCreated"] ?? "Null") + "\n▫️🌎 *Cᴏᴜɴᴛʀʏ :* " + (_0x1cd4dd?.["data"]?.["data"]?.["mainDetails"]?.["country"] ?? "Null") + "\n▫️⏱️ *Dᴜʀᴀᴛɪᴏɴ :* " + (_0x1cd4dd?.["data"]?.["data"]?.["mainDetails"]?.["runtime"] ?? "Null") + "\n▫️🎭 *Gᴇɴʀᴇꜱ :* " + (_0x1cd4dd?.["data"]?.["data"]?.["moviedata"]?.["genres"]?.["length"] > 0 ? _0x1cd4dd.data.data.moviedata.genres.join(", ") : _0x1cd4dd?.["data"]?.["data"]["moviedata"]?.["tags"]?.["length"] > 0 ? _0x1cd4dd.data.data.moviedata.tags.join(", ") : "Null") + "\n▫️👨🏻‍💼 *Dɪʀᴇᴄᴛᴏʀ :* " + (_0x1cd4dd?.["data"]?.["data"]?.["moviedata"]?.["director"] ?? "Null") + "\n▫️🕵️‍♂️ *Cᴀsᴛ :* " + (_0x1cd4dd?.["data"]?.["data"]?.["moviedata"]?.["cast"]?.["length"] > 0 ? _0x1cd4dd.data.data.moviedata.cast.map(_0x828a84 => _0x828a84.name).join(", ") : "Null") + "\n\n*➟➟➟➟➟➟➟➟➟➟➟➟➟➟*\n▫️🔗 *Jᴏɪɴ :* whatsapp.com/channel/0029VaeyMWv3QxRu4hA6c33Z\n*➟➟➟➟➟➟➟➟➟➟➟➟➟➟* ";
+      let _0x137494 = _0x1cd4dd?.["data"]?.["data"]["moviedata"]?.["imageUrls"][0];
+      let _0x4cedb7 = _0x137494.replace(/\n/g, "");
+      const _0x1adbb0 = {
+        quoted: _0x239243
+      };
+      await _0x3ac03d.sendMessage(_0x38f0fa, {
+        image: {
+          url: _0x4cedb7 ?? "https://i.postimg.cc/9FGJDwzB/error-rubber-stamp-word-error-inside-illustration-109026446.jpg"
+        },
+        caption: _0x27ff16
+      }, _0x1adbb0);
+      if (!_0x1cd4dd?.["data"]?.["data"]?.["dllinks"]?.["directDownloadLinks"]) {
+        throw new Error("Invalid response structure or missing 'directDownloadLinks'");
+      }
+      const _0x3b16eb = _0x1cd4dd.data.data.dllinks.directDownloadLinks.filter(_0x52d41a => _0x52d41a.id === "download" && _0x52d41a.quality.includes("480")).map(_0x50bb9b => _0x50bb9b.link) || [];
+      const _0x5f19c8 = _0x1cd4dd.data.data.dllinks.directDownloadLinks.filter(_0x35f8fc => _0x35f8fc.id === "download" && _0x35f8fc.quality.includes("720")).map(_0x210835 => _0x210835.link) || [];
+      const _0x250327 = _0x1cd4dd.data.data.dllinks.directDownloadLinks.filter(_0x14d174 => _0x14d174.id === "download" && _0x14d174.quality.includes("1080")).map(_0x85908f => _0x85908f.link) || [];
+      if (!_0x3b16eb[0] && !_0x5f19c8[0] && !_0x250327[0]) {
+        throw new Error("No valid download links found for any quality");
+      }
+      const _0x492417 = _0x3b16eb[0] ? await fetchJson(baseUrl + "/api/sinhalasubs/download?url=" + _0x3b16eb[0] + "&apikey=asitha108") : null;
+      const _0x269e1a = _0x5f19c8[0] ? await fetchJson(baseUrl + "/api/sinhalasubs/download?url=" + _0x5f19c8[0] + "&apikey=asitha108") : null;
+      const _0x242c89 = _0x250327[0] ? await fetchJson(baseUrl + "/api/sinhalasubs/download?url=" + _0x250327[0] + "&apikey=asitha108") : null;
+      const _0x17e984 = _0x1cd4dd?.["data"]?.["data"]?.["dllinks"]?.["directDownloadLinks"]?.["find"](_0x4da72f => _0x4da72f.quality.includes("480"))?.["size"] || "Null";
+      const _0x4f635b = _0x1cd4dd?.["data"]?.["data"]?.["dllinks"]?.["directDownloadLinks"]?.["find"](_0x56d8ac => _0x56d8ac.quality.includes("720"))?.["size"] || "Null";
+      const _0x15b942 = _0x1cd4dd?.["data"]?.["data"]?.["dllinks"]?.["directDownloadLinks"]?.["find"](_0x485e15 => _0x485e15.quality.includes("1080"))?.["size"] || "Null";
+      const _0x5b5d48 = _0x492417?.["data"]?.["data"]?.["link"] || "Null";
+      const _0x14a761 = _0x269e1a?.["data"]?.["data"]?.["link"] || "Null";
+      const _0x179296 = _0x242c89?.["data"]?.["data"]?.["link"] || "Null";
+      const _0xe3378a = {
+        links480: _0x5b5d48,
+        size480: _0x17e984,
+        links720: _0x14a761,
+        size720: _0x4f635b,
+        links1080: _0x179296,
+        size1080: _0x15b942
+      };
+      console.log(_0xe3378a);
+      const _0x5be21a = [{
+        title: "",
+        rows: [{
+          title: "1",
+          rowId: _0x47abf6 + "dbl " + _0x5b5d48 + (" & " + (_0x1cd4dd?.["data"]?.["data"]?.["mainDetails"]?.["maintitle"] ?? "Null") + " & 480p & " + _0x4cedb7),
+          description: " 480p :- " + _0x17e984
+        }, {
+          title: "2",
+          rowId: _0x47abf6 + "dbl " + _0x14a761 + (" & " + (_0x1cd4dd?.["data"]?.["data"]?.["mainDetails"]?.["maintitle"] ?? "Null") + " & 720p & " + _0x4cedb7),
+          description: " 720p :- " + _0x4f635b
+        }, {
+          title: "3",
+          rowId: _0x47abf6 + "dbl " + _0x179296 + (" & " + (_0x1cd4dd?.["data"]?.["data"]?.["mainDetails"]?.["maintitle"] ?? "Null") + " & 1080p & " + _0x4cedb7),
+          description: " 1080p :- " + _0x15b942
+        }]
+      }];
+      const _0x4674b1 = {
+        text: ".",
+        footer: "*⏤͟͟͞͞★❮𝗔 𝗦 𝗜 𝗧 𝗛 𝗔 〽️ 𝗢 𝗩 𝗜 𝗘❯⏤͟͟͞͞★*",
+        buttonText: "*🔢 Reply below number*",
+        sections: _0x5be21a
+      };
+      const _0x17c68c = {
+        quoted: _0x239243
+      };
+      return await _0x3ac03d.replyList(_0x38f0fa, _0x4674b1, _0x17c68c);
+    }
+  } catch (_0x203480) {
+    _0x56769e("No Link");
+    _0x10a5dd(_0x203480);
+  }
+});
+const _0x2497c8 = {
+  pattern: "mddccc",
+  desc: "Check bot setting.",
+  react: "🎬",
+  filename: __filename
+};
+cmd(_0x2497c8, async (_0xb5f39c, _0x3f0dc0, _0x17bf33, {
+  from: _0x27754b,
+  prefix: _0x2f078e,
+  l: _0xdba8b5,
+  quoted: _0x4d662d,
+  body: _0x11c3fb,
+  isCmd: _0x1684b2,
+  command: _0x300303,
+  args: _0x1de6d0,
+  q: _0x12d447,
+  isGroup: _0x5b4b07,
+  sender: _0x4835a4,
+  senderNumber: _0x42e182,
+  botNumber2: _0x382f52,
+  botNumber: _0x1ba560,
+  pushname: _0x7d504b,
+  isMe: _0x26b58e,
+  isOwner: _0x54b4e4,
+  groupMetadata: _0x415157,
+  groupName: _0x40f4a1,
+  participants: _0x30db02,
+  groupAdmins: _0x3bb3dc,
+  isBotAdmins: _0x548776,
+  isAdmins: _0x1967c8,
+  reply: _0x445cc5
+}) => {
+  try {
+    const _0x57107e = _0x12d447.split(" & ")[0];
+    const _0x1a77ab = _0x12d447.split(" & ")[1];
+    const _0x47e566 = _0x12d447.split(" & ")[2];
+    const _0x300408 = await fetchJson(baseUrl + "/api/sinhalasubs/episode?url=" + _0x57107e + "&apikey=asitha108");
+    if (!_0x300408?.["data"]?.["data"]?.["dllinks"]?.["directDownloadLinks"]) {
+      throw new Error("Invalid response structure or missing 'directDownloadLinks'");
+    }
+    const _0x3e97c6 = _0x300408.data.data.dllinks.directDownloadLinks.filter(_0x43a864 => _0x43a864.id === "download" && _0x43a864.quality.includes("480")).map(_0x31d166 => _0x31d166.link) || [];
+    const _0x3eee59 = _0x300408.data.data.dllinks.directDownloadLinks.filter(_0x3f6b1e => _0x3f6b1e.id === "download" && _0x3f6b1e.quality.includes("720")).map(_0x4ce361 => _0x4ce361.link) || [];
+    const _0x2b66f9 = _0x300408.data.data.dllinks.directDownloadLinks.filter(_0x23c526 => _0x23c526.id === "download" && _0x23c526.quality.includes("1080")).map(_0x5125ce => _0x5125ce.link) || [];
+    if (!_0x3e97c6[0] && !_0x3eee59[0] && !_0x2b66f9[0]) {
+      throw new Error("No download links found for any quality");
+    }
+    const _0x308642 = _0x3e97c6[0] ? await fetchJson(baseUrl + "/api/sinhalasubs/download?url=" + _0x3e97c6[0] + "&apikey=asitha108") : null;
+    const _0x58b637 = _0x3eee59[0] ? await fetchJson(baseUrl + "/api/sinhalasubs/download?url=" + _0x3eee59[0] + "&apikey=asitha108") : null;
+    const _0x24ad91 = _0x2b66f9[0] ? await fetchJson(baseUrl + "/api/sinhalasubs/download?url=" + _0x2b66f9[0] + "&apikey=asitha108") : null;
+    const _0x2f1b7c = _0x300408?.["data"]?.["data"]?.["dllinks"]?.["directDownloadLinks"]?.["find"](_0x87d9e0 => _0x87d9e0.quality.includes("480"))?.["size"] || "Null";
+    const _0x56884f = _0x300408?.["data"]?.["data"]?.["dllinks"]?.["directDownloadLinks"]?.["find"](_0x4717be => _0x4717be.quality.includes("720"))?.["size"] || "Null";
+    const _0x19df0d = _0x300408?.["data"]?.["data"]?.["dllinks"]?.["directDownloadLinks"]?.["find"](_0x227060 => _0x227060.quality.includes("1080"))?.["size"] || "Null";
+    const _0x23ae79 = _0x308642?.["data"]?.["data"]?.["link"] || "Null";
+    const _0x441f2f = _0x58b637?.["data"]?.["data"]?.["link"] || "Null";
+    const _0x1eddc7 = _0x24ad91?.["data"]?.["data"]?.["link"] || "Null";
+    const _0x129e12 = {
+      links480: _0x23ae79,
+      size480: _0x2f1b7c,
+      links720: _0x441f2f,
+      size720: _0x56884f,
+      links1080: _0x1eddc7,
+      size1080: _0x19df0d
+    };
+    console.log(_0x129e12);
+    const _0x58d1ba = [{
+      title: "",
+      rows: [{
+        title: "1",
+        rowId: _0x2f078e + "dbl " + _0x23ae79 + (" & " + _0x1a77ab + " & 480p & " + _0x47e566),
+        description: " 480p :- " + _0x2f1b7c
+      }, {
+        title: "2",
+        rowId: _0x2f078e + "dbl " + _0x441f2f + (" & " + _0x1a77ab + " & 720p & " + _0x47e566),
+        description: " 720p :- " + _0x56884f
+      }, {
+        title: "3",
+        rowId: _0x2f078e + "dbl " + _0x1eddc7 + (" & " + _0x1a77ab + " & 1080p & " + _0x47e566),
+        description: " 1080p :- " + _0x19df0d
       }]
     }];
-    const _0x1cc6cc = {
-      text: _0x535b90,
-      footer: "MOVIE DOWNLOADER BY VAJIRA MD",
-      title: "Search By ginisisila",
+    const _0x5e6c79 = {
+      text: ".",
+      footer: "*⏤͟͟͞͞★❮𝗔 𝗦 𝗜 𝗧 𝗛 𝗔 〽️ 𝗢 𝗩 𝗜 𝗘❯⏤͟͟͞͞★*",
       buttonText: "*🔢 Reply below number*",
-      sections: _0x215d58
+      sections: _0x58d1ba
     };
-    const _0x47c9d2 = {
-      quoted: _0x3113a7
+    const _0x3eb613 = {
+      quoted: _0x3f0dc0
     };
-    return await _0x31019d.replyList(_0x30c057, _0x1cc6cc, _0x47c9d2);
-  } catch (_0xbfb898) {
-    _0x5b3468("*ERROR !!*");
-    _0x2afb4f(_0xbfb898);
+    return await _0xb5f39c.replyList(_0x27754b, _0x5e6c79, _0x3eb613);
+  } catch (_0x367563) {
+    _0x445cc5(_0x367563);
+    _0xdba8b5(_0x367563);
   }
 });
-async function GDriveDl(_0x23f8fb) {
-  const _0x1b3e8c = {
-    error: true
-  };
-  let _0x38736d;
-  let _0x556bb1 = _0x1b3e8c;
-  if (!(_0x23f8fb && _0x23f8fb.match(/drive\.google/i))) {
-    return _0x556bb1;
-  }
-  const _0x64aa10 = sizeFormatter({
-    'std': "JEDEC",
-    'decimalPlaces': 0x2,
-    'keepTrailingZeroes': false,
-    'render': (_0x4058cc, _0x1a927d) => _0x4058cc + " " + _0x1a927d + 'B'
-  });
-  try {
-    _0x38736d = (_0x23f8fb.match(/\/?id=(.+)/i) || _0x23f8fb.match(/\/d\/(.*?)\//))[1];
-    if (!_0x38736d) {
-      throw "ID Not Found";
-    }
-    _0x556bb1 = await fetch("https://drive.google.com/uc?id=" + _0x38736d + "&authuser=0&export=download", {
-      'method': "post",
-      'headers': {
-        'accept-encoding': "gzip, deflate, br",
-        'content-length': 0x0,
-        'Content-Type': "application/x-www-form-urlencoded;charset=UTF-8",
-        'origin': "https://drive.google.com",
-        'user-agent': "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36",
-        'x-client-data': "CKG1yQEIkbbJAQiitskBCMS2yQEIqZ3KAQioo8oBGLeYygE=",
-        'x-drive-first-party': "DriveWebUi",
-        'x-json-requested': "true"
-      }
-    });
-    let {
-      fileName: _0xa35509,
-      sizeBytes: _0x566c88,
-      downloadUrl: _0x180c67
-    } = JSON.parse((await _0x556bb1.text()).slice(4));
-    if (!_0x180c67) {
-      throw "Link Download Limit!";
-    }
-    let _0x414dcf = await fetch(_0x180c67);
-    if (_0x414dcf.status !== 200) {
-      return _0x414dcf.statusText;
-    }
-    return {
-      'downloadUrl': _0x180c67,
-      'fileName': _0xa35509,
-      'fileSize': _0x64aa10(_0x566c88),
-      'mimetype': _0x414dcf.headers.get("content-type")
-    };
-  } catch (_0x4fe9af) {
-    console.log(_0x4fe9af);
-    return _0x556bb1;
-  }
-}
-const _0x8539f5 = {
-  pattern: "pirate",
-  react: '📑',
-  category: "movie"
-};
-function _0x36377a(_0x32b734, _0x331780, _0x3a66f2, _0x34dc43, _0x1f52b5) {
-  return _0xb8b3(_0x34dc43 - 0x2f3, _0x32b734);
-}
-_0x8539f5.desc = "pirate moive downloader";
-_0x8539f5.filename = __filename;
-cmd(_0x8539f5, async (_0x205ecc, _0x1af1e2, _0x125e28, {
-  from: _0x1d6f23,
-  prefix: _0x562f2d,
-  q: _0x13c116,
-  l: _0x8ce60d,
-  isDev: _0x5c8d73,
-  reply: _0x5aa3b4
-}) => {
-  try {
-    if (!_0x13c116) {
-      return await _0x5aa3b4("*Please Give Me Text..! 🖊️*");
-    }
-    const _0x597bc8 = await fetchJson(config.API + "/api/pirate/search?q=" + _0x13c116 + "&apikey=" + config.APIKEY);
-    const _0x3af59a = {
-      quoted: _0x125e28
-    };
-    if (_0x597bc8.data.data.data.length < 1) {
-      return await _0x205ecc.sendMessage(_0x1d6f23, {
-        'text': "*මට කිසිවක් සොයාගත නොහැකි විය :(*"
-      }, _0x3af59a);
-    }
-    var _0x4a5425 = [];
-    for (var _0x138764 = 0; _0x138764 < _0x597bc8.data.data.data.length; _0x138764++) {
-      _0x4a5425.push({
-        'title': _0x138764 + 1,
-        'description': _0x597bc8.data.data.data[_0x138764].title + " | " + _0x597bc8.data.data.data[_0x138764].rating,
-        'rowId': _0x562f2d + "piratein " + _0x597bc8.data.data.data[_0x138764].link
-      });
-    }
-    const _0x370192 = {
-      title: "_[Result from pirate.]_",
-      rows: _0x4a5425
-    };
-    const _0x4a95d3 = [_0x370192];
-    const _0x19bea4 = {
-      text: '',
-      footer: config.FOOTER,
-      title: "Result from pirate. 📲",
-      buttonText: "*🔢 Reply below number*",
-      sections: _0x4a95d3
-    };
-    const _0x50f067 = {
-      quoted: _0x125e28
-    };
-    return await _0x205ecc.replyList(_0x1d6f23, _0x19bea4, _0x50f067);
-  } catch (_0x1e59aa) {
-    _0x5aa3b4("*ERROR !!*");
-    _0x8ce60d(_0x1e59aa);
-  }
-});
-const _0x687723 = {
-  pattern: "piratein",
-  react: '📑',
+const _0x22f787 = {
+  pattern: "cinesubz",
+  react: "🎥",
+  alias: ["cz"],
+  desc: "Download movie for sinhalasub.lk",
+  category: "movie",
+  use: ".cinesubz < Movie Name >",
   filename: __filename
 };
-cmd(_0x687723, async (_0x2ce44e, _0x37c13c, _0x3b8c28, {
-  from: _0xe545ff,
-  prefix: _0x3adbb3,
-  q: _0x5f1992,
-  l: _0x1ee337,
-  isDev: _0x460dd5,
-  reply: _0x4b3120
+cmd(_0x22f787, async (_0x15180e, _0x160f62, _0x1b7add, {
+  from: _0x9d662c,
+  sender: _0x5e7cb7,
+  prefix: _0x2ce0c2,
+  quoted: _0x530b29,
+  q: _0x12d95f,
+  reply: _0x1f3aa6
 }) => {
   try {
-    if (!_0x5f1992) {
-      return await _0x4b3120("*Please Give Me Text..! 🖊️*");
+    const _0x820424 = (await fetchJson("https://gitlab.com/anukunu2000/asitha-md-db/-/raw/master/Mreply.json")).replyMsg;
+    const _0x4a01ab = await getPremiumUsers();
+    const _0x1dcaf9 = _0x4a01ab.includes(_0x5e7cb7);
+    let _0x56c618 = await free();
+    if (!_0x1dcaf9 && !_0x56c618) {
+      return _0x1f3aa6(_0x820424.pre_cmd);
     }
-    const _0x5b81b5 = await fetchJson(config.API + "/api/pirate/movie?url=" + _0x5f1992 + "&apikey=" + config.APIKEY);
-    const _0x5278d5 = {
-      quoted: _0x3b8c28
-    };
-    if (_0x5b81b5.data.data.dllinks.directDownloadLinks.length < 1) {
-      return await _0x2ce44e.sendMessage(_0xe545ff, {
-        'text': "*මට කිසිවක් සොයාගත නොහැකි විය :(*"
-      }, _0x5278d5);
+    if (!_0x12d95f) {
+      return await _0x1f3aa6("Mv name plz");
     }
-    var _0x40e6e2 = [];
-    for (var _0x46454d = 0; _0x46454d < _0x5b81b5.data.data.dllinks.directDownloadLinks.length; _0x46454d++) {
-      _0x40e6e2.push({
-        'title': _0x46454d + 1,
-        'description': _0x5b81b5.data.data.dllinks.directDownloadLinks[_0x46454d].quality + " | " + _0x5b81b5.data.data.dllinks.directDownloadLinks[_0x46454d].size + " | " + _0x5b81b5.data.data.dllinks.directDownloadLinks[_0x46454d].platform,
-        'rowId': _0x3adbb3 + ("piratedl " + _0x5b81b5.data.data.dllinks.directDownloadLinks[_0x46454d].link + '|' + _0x5b81b5.data.data.mainDetails.maintitle + '|' + _0x5b81b5.data.data.moviedata.imageUrls[0])
+    const _0x188e90 = await fetchJson(baseUrl + "/api/cinesubz/search?q=" + _0x12d95f + "&apikey=asitha108");
+    if (_0x188e90.data.data.datalength === 0) {
+      return _0x1f3aa6("🚫 No movies found for your search query.");
+    }
+    let _0x58ec9c = _0x188e90.data.data.data;
+    var _0x29d6a1 = [];
+    for (var _0x304b38 = 0; _0x304b38 < _0x58ec9c.length; _0x304b38++) {
+      _0x29d6a1.push({
+        title: _0x304b38 + 1,
+        description: _0x58ec9c[_0x304b38].title + "\n",
+        rowId: _0x2ce0c2 + "mdc " + _0x58ec9c[_0x304b38].link
       });
     }
-    const _0x58302c = {
-      title: "_Select Movie_",
-      rows: _0x40e6e2
+    const _0xd07f2f = [{
+      title: "*[Results from cinesubz.co]*\n",
+      rows: _0x29d6a1
+    }];
+    const _0x3bf7e3 = {
+      text: "\n*★❮𝗔 𝗦 𝗜 𝗧 𝗛 𝗔  𝗖 𝗜 𝗡 𝗘 𝗠 𝗔 ㋡❯★*\n\n👽 *Entered Name ||* " + _0x12d95f + "  ",
+      footer: "*⏤͟͟͞͞★❮𝗔 𝗦 𝗜 𝗧 𝗛 𝗔 〽️ 𝗢 𝗩 𝗜 𝗘❯⏤͟͟͞͞★*",
+      title: "",
+      buttonText: "*🔢 Reply below number*\n",
+      sections: _0xd07f2f
     };
-    const _0xd81082 = [_0x58302c, {
-      'title': "*🎬 MOVIE INFO 🎬*",
-      'rows': [{
-        'title': "    1.1",
-        'rowId': _0x3adbb3 + ("pirates " + _0x5f1992),
-        'description': "Send Movie Details 📄"
+    const _0x1e7453 = {
+      quoted: _0x160f62
+    };
+    return await _0x15180e.replyList(_0x9d662c, _0x3bf7e3, _0x1e7453);
+  } catch (_0x54bf57) {
+    console.log(_0x54bf57);
+    _0x1f3aa6("*ERROR !!*");
+  }
+});
+const _0x556e94 = {
+  pattern: "mdc",
+  desc: "Check bot setting."
+};
+function _0x45bf39(_0xc11939, _0x1e7226, _0x7d41ce, _0x1c286a, _0xd4b961) {
+  return _0x4080(_0x1e7226 - 0xd9, _0xd4b961);
+}
+_0x556e94.react = "🎬";
+_0x556e94.filename = __filename;
+cmd(_0x556e94, async (_0x5ca077, _0x4e73f, _0x5ee1ab, {
+  from: _0x1cf833,
+  l: _0x371cdb,
+  quoted: _0x2e7c9c,
+  body: _0x230a3f,
+  isCmd: _0x238204,
+  command: _0x15663b,
+  args: _0x2f6076,
+  q: _0xb967d,
+  prefix: _0x454bbb,
+  isGroup: _0x288413,
+  sender: _0x5afdee,
+  senderNumber: _0x6f744b,
+  botNumber2: _0x5362b4,
+  botNumber: _0x43f326,
+  pushname: _0x3d7e8a,
+  isMe: _0x4e2097,
+  isOwner: _0x5ba513,
+  groupMetadata: _0x2a1e85,
+  groupName: _0x2fb2b2,
+  participants: _0x522409,
+  groupAdmins: _0x2f04e3,
+  isBotAdmins: _0x3e5893,
+  isAdmins: _0x1d9628,
+  reply: _0x32a39e
+}) => {
+  try {
+    const _0x206283 = (await fetchJson("https://gitlab.com/anukunu2000/asitha-md-db/-/raw/master/Mreply.json")).replyMsg;
+    const _0x154a5d = await getPremiumUsers();
+    const _0x2cb7d1 = _0x154a5d.includes(_0x5afdee);
+    let _0x552b95 = await free();
+    if (!_0x2cb7d1 && !_0x552b95) {
+      return _0x32a39e(_0x206283.pre_cmd);
+    }
+    if (_0xb967d.includes("https://cinesubz.co/tvshows")) {
+      const _0x38b2d0 = await fetchJson(baseUrl + "/api/cinesubz/tvshow?url=" + _0xb967d + "&apikey=asitha108");
+      let _0xe4f766 = _0x38b2d0.data.data.episodesDetails.flatMap(_0x28364c => _0x28364c.episodes.map(_0x2593c9 => ({
+        title: _0x2593c9.number + " - " + _0x2593c9.title,
+        link: _0x2593c9.url
+      })));
+      var _0x30a167 = [];
+      for (var _0x38e335 = 0; _0x38e335 < _0xe4f766.length; _0x38e335++) {
+        _0x30a167.push({
+          title: _0x38e335 + 1,
+          description: _0xe4f766[_0x38e335].title + "\n",
+          rowId: _0x454bbb + "mddc " + _0xe4f766[_0x38e335].link + (" & " + _0xe4f766[_0x38e335].title + " & " + (_0x38b2d0?.["data"]?.["data"]["mainDetails"]?.["imageUrl"] ?? "https://i.postimg.cc/9FGJDwzB/error-rubber-stamp-word-error-inside-illustration-109026446.jpg"))
+        });
+      }
+      const _0x558840 = [{
+        title: "*[Results from cinesubz.co]*\n",
+        rows: _0x30a167
+      }];
+      const _0x3f8318 = {
+        text: "\n*📽️ᴀꜱɪᴛʜᴀ-ᴍᴅ ᴄɪɴᴇᴍᴀ📽️*\n\n👽 *Entered Name ||* " + (_0x38b2d0?.["data"]?.["data"]?.["mainDetails"]?.["maintitle"] ?? "Null") + "\n",
+        footer: "*⏤͟͟͞͞★❮𝗔 𝗦 𝗜 𝗧 𝗛 𝗔 〽️ 𝗢 𝗩 𝗜 𝗘❯⏤͟͟͞͞★*",
+        title: "",
+        buttonText: "*🔢 Reply below number*\n",
+        sections: _0x558840
+      };
+      let _0x5168a2 = "*★❮𝗔 𝗦 𝗜 𝗧 𝗛 𝗔  𝗖 𝗜 𝗡 𝗘 𝗠 𝗔 ㋡❯★*\n\n☘️ *Tɪᴛʟᴇ :* " + (_0x38b2d0?.["data"]?.["data"]?.["mainDetails"]?.["maintitle"] ?? "Null") + "\n\n▫️📅 *Rᴇʟᴇᴀꜱᴇ Dᴀᴛᴇ :* " + (_0x38b2d0?.["data"]?.["data"]?.["mainDetails"]?.["dateCreated"] ?? "Null") + "\n▫️🎭 *Gᴇɴʀᴇꜱ :* " + (_0x38b2d0?.["data"]?.["data"]?.["mainDetails"]?.["genres"]?.["length"] > 0 ? _0x38b2d0.data.data.mainDetails.genres.join(", ") : _0x38b2d0?.["data"]?.["data"]["moviedata"]?.["tags"]?.["length"] > 0 ? _0x38b2d0.data.data.moviedata.tags.join(", ") : "Null") + "\n▫️🕵️‍♂️ *Cᴀsᴛ :* " + (_0x38b2d0?.["data"]?.["data"]?.["castDetails"]?.["cast"]?.["length"] > 0 ? _0x38b2d0.data.data.castDetails.cast.map(_0x215fe5 => _0x215fe5.name).join(", ") : "Null") + "\n\n*➟➟➟➟➟➟➟➟➟➟➟➟➟➟*\n▫️🔗 *Jᴏɪɴ :* whatsapp.com/channel/0029VaeyMWv3QxRu4hA6c33Z\n*➟➟➟➟➟➟➟➟➟➟➟➟➟➟*\n\n> *POWERED by ASITHA-MD*\n";
+      const _0x3b2cf1 = {
+        url: _0x38b2d0?.["data"]?.["data"]["mainDetails"]?.["imageUrl"] ?? "https://i.postimg.cc/9FGJDwzB/error-rubber-stamp-word-error-inside-illustration-109026446.jpg"
+      };
+      const _0x2e97dc = {
+        image: _0x3b2cf1,
+        caption: _0x5168a2
+      };
+      const _0x74a61d = {
+        quoted: _0x4e73f
+      };
+      await _0x5ca077.sendMessage(_0x1cf833, _0x2e97dc, _0x74a61d);
+      const _0x4eb110 = {
+        quoted: _0x4e73f
+      };
+      return await _0x5ca077.replyList(_0x1cf833, _0x3f8318, _0x4eb110);
+    }
+    if (_0xb967d.includes("https://cinesubz.co/movies")) {
+      const _0x583b40 = await fetchJson(baseUrl + "/api/cinesubz/movie?url=" + _0xb967d + "&apikey=asitha108");
+      let _0x5bc92d = "*★❮𝗔 𝗦 𝗜 𝗧 𝗛 𝗔  𝗖 𝗜 𝗡 𝗘 𝗠 𝗔 ㋡❯★*\n\n☘️ *Tɪᴛʟᴇ :* " + (_0x583b40?.["data"]?.["data"]?.["mainDetails"]?.["maintitle"] ?? "Null") + "\n\n▫️📅 *Rᴇʟᴇᴀꜱᴇ Dᴀᴛᴇ :* " + (_0x583b40?.["data"]?.["data"]?.["mainDetails"]?.["dateCreated"] || "Null") + "\n▫️🌎 *Cᴏᴜɴᴛʀʏ :* " + (_0x583b40?.["data"]?.["data"]?.["mainDetails"]?.["country"] || "Null") + "\n▫️⏱️ *Dᴜʀᴀᴛɪᴏɴ :* " + (_0x583b40?.["data"]?.["data"]?.["mainDetails"]?.["runtime"] || "Null") + "\n▫️🎭 *Gᴇɴʀᴇꜱ :* " + (_0x583b40?.["data"]?.["data"]?.["moviedata"]?.["genres"]?.["length"] > 0 ? _0x583b40.data.data.moviedata.genres.join(", ") : _0x583b40?.["data"]?.["data"]["moviedata"]?.["tags"]?.["length"] > 0 ? _0x583b40.data.data.moviedata.tags.join(", ") : "Null") + "\n▫️👨🏻‍💼 *Dɪʀᴇᴄᴛᴏʀ :* " + (_0x583b40?.["data"]?.["data"]?.["moviedata"]?.["director"] || "Null") + "\n▫️🕵️‍♂️ *Cᴀsᴛ :* " + (_0x583b40?.["data"]?.["data"]?.["moviedata"]?.["cast"]?.["length"] > 0 ? _0x583b40.data.data.moviedata.cast.map(_0xd7be94 => _0xd7be94.name).join(", ") : "Null") + "\n▫️📃 *Dᴇꜱᴄʀɪᴘᴛɪᴏɴ :* " + (_0x583b40?.["data"]?.["data"]?.["moviedata"]?.["description"] || "Null") + "\n\n*➟➟➟➟➟➟➟➟➟➟➟➟➟➟*\n▫️🔗 *Jᴏɪɴ :* whatsapp.com/channel/0029VaeyMWv3QxRu4hA6c33Z\n*➟➟➟➟➟➟➟➟➟➟➟➟➟➟*\n";
+      const _0x418b1c = {
+        url: _0x583b40?.["data"]?.["data"]["mainDetails"]?.["imageUrl"] ?? "https://i.postimg.cc/9FGJDwzB/error-rubber-stamp-word-error-inside-illustration-109026446.jpg"
+      };
+      const _0x2ca614 = {
+        image: _0x418b1c,
+        caption: _0x5bc92d
+      };
+      const _0x5bf3dd = {
+        quoted: _0x4e73f
+      };
+      await _0x5ca077.sendMessage(_0x1cf833, _0x2ca614, _0x5bf3dd);
+      if (!_0x583b40?.["data"]?.["data"]?.["dllinks"]?.["directDownloadLinks"]) {
+        throw new Error("Invalid API response: Missing \"directDownloadLinks\" in the response.");
+      }
+      const _0x4891df = _0x583b40.data.data.dllinks.directDownloadLinks?.["filter"](_0x20b037 => _0x20b037?.["quality"]?.["includes"]("480"))?.["map"](_0x567012 => _0x567012?.["link"]) || [];
+      const _0x462b21 = _0x583b40.data.data.dllinks.directDownloadLinks?.["filter"](_0xee1ccc => _0xee1ccc?.["quality"]?.["includes"]("720"))?.["map"](_0x5ada0e => _0x5ada0e?.["link"]) || [];
+      const _0x2c0719 = _0x583b40.data.data.dllinks.directDownloadLinks?.["filter"](_0x2f7978 => _0x2f7978?.["quality"]?.["includes"]("1080"))?.["map"](_0x1e4e5a => _0x1e4e5a?.["link"]) || [];
+      if (_0x2c0719.length === 0 && _0x462b21.length === 0 && _0x4891df.length === 0) {
+        throw new Error("API response is valid, but no download links available for 480p, 720p, or 1080p.");
+      }
+      const _0x216621 = _0x2c0719.length > 0 ? await fetchJson(baseUrl + "/api/cinesubz/download?url=" + _0x2c0719[0] + "&apikey=asitha108") : null;
+      const _0x150947 = _0x462b21.length > 0 ? await fetchJson(baseUrl + "/api/cinesubz/download?url=" + _0x462b21[0] + "&apikey=asitha108") : null;
+      const _0x19481b = _0x4891df.length > 0 ? await fetchJson(baseUrl + "/api/cinesubz/download?url=" + _0x4891df[0] + "&apikey=asitha108") : null;
+      if (!_0x216621 && !_0x150947 && !_0x19481b) {
+        throw new Error("API calls were successful, but failed to fetch valid data for all qualities.");
+      }
+      let _0x3ac27a = [];
+      let _0x326745 = [];
+      let _0x291095 = [];
+      let _0x13872c = [];
+      let _0x598217 = [];
+      let _0x4e7b0b = [];
+      if (_0x19481b?.["data"]?.["data"] !== "error") {
+        _0x3ac27a = _0x19481b?.["data"]?.["data"]?.["filter"](_0x3ae119 => _0x3ae119?.["type"] === "direct")?.["map"](_0x4a619e => _0x4a619e?.["href"]) || [];
+      }
+      if (_0x150947?.["data"]?.["data"] !== "error") {
+        _0x326745 = _0x150947?.["data"]?.["data"]?.["filter"](_0x4548b1 => _0x4548b1?.["type"] === "direct")?.["map"](_0x4b08ed => _0x4b08ed?.["href"]) || [];
+      }
+      if (_0x216621?.["data"]?.["data"] !== "error") {
+        _0x291095 = _0x216621?.["data"]?.["data"]?.["filter"](_0xb6076 => _0xb6076?.["type"] === "direct")?.["map"](_0x5a966b => _0x5a966b?.["href"]) || [];
+      }
+      if (_0x19481b?.["data"]?.["data"] !== "error") {
+        _0x13872c = _0x19481b?.["data"]?.["data"]?.["filter"](_0x73756b => _0x73756b?.["type"] === "gdrive")?.["map"](_0x1f803d => _0x1f803d?.["href"]) || [];
+      }
+      if (_0x150947?.["data"]?.["data"] !== "error") {
+        _0x598217 = _0x150947?.["data"]?.["data"]?.["filter"](_0x197680 => _0x197680?.["type"] === "gdrive")?.["map"](_0x10e142 => _0x10e142?.["href"]) || [];
+      }
+      if (_0x216621?.["data"]?.["data"] !== "error") {
+        _0x4e7b0b = _0x216621?.["data"]?.["data"]?.["filter"](_0x4a4dd4 => _0x4a4dd4?.["type"] === "gdrive")?.["map"](_0x1b53a4 => _0x1b53a4?.["href"]) || [];
+      }
+      const _0x1bc5f9 = _0x3ac27a[0] || "No direct link";
+      const _0x1e54c1 = _0x326745[0] || "No direct link";
+      const _0x493f69 = _0x291095[0] || "No direct link";
+      const _0x4f7c99 = _0x13872c[0] ? await convertDownloadToViewLink(_0x13872c[0]) : "No gdrive link";
+      const _0x4e5561 = _0x598217[0] ? await convertDownloadToViewLink(_0x598217[0]) : "No gdrive link";
+      const _0x2f8be0 = _0x4e7b0b[0] ? await convertDownloadToViewLink(_0x4e7b0b[0]) : "No gdrive link";
+      const _0x189a63 = _0x19481b?.["data"]?.["data"]?.[0]?.["fileSize"] || "Unknown";
+      const _0x3df744 = _0x150947?.["data"]?.["data"]?.[0]?.["fileSize"] || "Unknown";
+      const _0x4d51f7 = _0x216621?.["data"]?.["data"]?.[0]?.["fileSize"] || "Unknown";
+      const _0x41f87e = {
+        downloadlink480: _0x1bc5f9,
+        downloadlink720: _0x1e54c1,
+        downloadlink1080: _0x493f69,
+        gdrive480p: _0x4f7c99,
+        gdrive720p: _0x4e5561,
+        gdrive1080p: _0x2f8be0,
+        size: _0x189a63,
+        size2: _0x3df744,
+        size3: _0x4d51f7
+      };
+      console.log(_0x41f87e);
+      const _0xfa29d0 = [{
+        title: "*[Direct Link]*\n",
+        rows: [{
+          title: "1",
+          rowId: _0x454bbb + "dbl " + _0x1bc5f9 + (" & " + (_0x583b40?.["data"]?.["data"]?.["mainDetails"]?.["maintitle"] ?? "Null") + " | සිංහල උපසිරැසි සමඟ & 480p & " + (_0x583b40?.["data"]?.["data"]["mainDetails"]?.["imageUrl"] ?? "https://i.postimg.cc/9FGJDwzB/error-rubber-stamp-word-error-inside-illustration-109026446.jpg")),
+          description: " 480p :- " + _0x189a63
+        }, {
+          title: "2",
+          rowId: _0x454bbb + "dbl " + _0x1e54c1 + (" & " + (_0x583b40?.["data"]?.["data"]?.["mainDetails"]?.["maintitle"] ?? "Null") + " | සිංහල උපසිරැසි සමඟ & 720p & " + (_0x583b40?.["data"]?.["data"]["mainDetails"]?.["imageUrl"] ?? "https://i.postimg.cc/9FGJDwzB/error-rubber-stamp-word-error-inside-illustration-109026446.jpg")),
+          description: " 720p :- " + _0x3df744
+        }, {
+          title: "3",
+          rowId: _0x454bbb + "dbl " + _0x493f69 + (" & " + (_0x583b40?.["data"]?.["data"]?.["mainDetails"]?.["maintitle"] ?? "Null") + " | සිංහල උපසිරැසි සමඟ & 1080p & " + (_0x583b40?.["data"]?.["data"]["mainDetails"]?.["imageUrl"] ?? "https://i.postimg.cc/9FGJDwzB/error-rubber-stamp-word-error-inside-illustration-109026446.jpg")),
+          description: " 1080p :- " + _0x4d51f7
+        }]
+      }, {
+        title: "*[Gdrive Direct Link]*\n",
+        rows: [{
+          title: "4",
+          rowId: _0x454bbb + "dbl " + _0x4f7c99 + (" & " + (_0x583b40?.["data"]?.["data"]?.["mainDetails"]?.["maintitle"] ?? "Null") + " | සිංහල උපසිරැසි සමඟ & 480p & " + (_0x583b40?.["data"]?.["data"]["mainDetails"]?.["imageUrl"] ?? "https://i.postimg.cc/9FGJDwzB/error-rubber-stamp-word-error-inside-illustration-109026446.jpg")),
+          description: " 480p :- " + _0x189a63
+        }, {
+          title: "5",
+          rowId: _0x454bbb + "dbl " + _0x4e5561 + (" & " + (_0x583b40?.["data"]?.["data"]?.["mainDetails"]?.["maintitle"] ?? "Null") + " | සිංහල උපසිරැසි සමඟ & 720p & " + (_0x583b40?.["data"]?.["data"]["mainDetails"]?.["imageUrl"] ?? "https://i.postimg.cc/9FGJDwzB/error-rubber-stamp-word-error-inside-illustration-109026446.jpg")),
+          description: " 720p :- " + _0x3df744
+        }, {
+          title: "6",
+          rowId: _0x454bbb + "dbl " + _0x2f8be0 + (" & " + (_0x583b40?.["data"]?.["data"]?.["mainDetails"]?.["maintitle"] ?? "Null") + " | සිංහල උපසිරැසි සමඟ & 1080p & " + (_0x583b40?.["data"]?.["data"]["mainDetails"]?.["imageUrl"] ?? "https://i.postimg.cc/9FGJDwzB/error-rubber-stamp-word-error-inside-illustration-109026446.jpg")),
+          description: " 1080p :- " + _0x4d51f7
+        }]
+      }];
+      const _0x5a07bf = {
+        text: "*Download..*",
+        footer: "*⏤͟͟͞͞★❮𝗔 𝗦 𝗜 𝗧 𝗛 𝗔 〽️ 𝗢 𝗩 𝗜 𝗘❯⏤͟͟͞͞★*",
+        buttonText: "*🔢 Reply below number*",
+        sections: _0xfa29d0
+      };
+      const _0x34727b = {
+        quoted: _0x4e73f
+      };
+      return await _0x5ca077.replyList(_0x1cf833, _0x5a07bf, _0x34727b);
+    }
+  } catch (_0x2cfbde) {
+    _0x32a39e("No Link");
+    _0x371cdb(_0x2cfbde);
+  }
+});
+const _0x4701d0 = {
+  pattern: "mddc",
+  desc: "Check bot setting.",
+  react: "🎬",
+  filename: __filename
+};
+cmd(_0x4701d0, async (_0x3649ce, _0x49be4e, _0x4c6bb3, {
+  from: _0x57efee,
+  prefix: _0x16c67d,
+  l: _0x1c2920,
+  quoted: _0x5e4947,
+  body: _0xa634bb,
+  isCmd: _0x13fc7e,
+  command: _0x1c8568,
+  args: _0x30f97c,
+  q: _0x4801ac,
+  isGroup: _0x92bca1,
+  sender: _0x3ecc02,
+  senderNumber: _0x2721c0,
+  botNumber2: _0x211f4c,
+  botNumber: _0x19f0ce,
+  pushname: _0x29fda5,
+  isMe: _0x15c029,
+  isOwner: _0x47e407,
+  groupMetadata: _0x3cae72,
+  groupName: _0x1b9df3,
+  participants: _0x3c9ae2,
+  groupAdmins: _0x4eede6,
+  isBotAdmins: _0xbc1f98,
+  isAdmins: _0x5b8632,
+  reply: _0x599172
+}) => {
+  try {
+    const _0x2f339b = (await fetchJson("https://gitlab.com/anukunu2000/asitha-md-db/-/raw/master/Mreply.json")).replyMsg;
+    const _0x979030 = await getPremiumUsers();
+    const _0xadaf8d = _0x979030.includes(_0x3ecc02);
+    let _0x4f3642 = await free();
+    if (!_0xadaf8d && !_0x4f3642) {
+      return _0x599172(_0x2f339b.pre_cmd);
+    }
+    const _0x24a5a8 = _0x4801ac.split(" & ")[0];
+    const _0x445657 = _0x4801ac.split(" & ")[1];
+    const _0x5c57b6 = _0x4801ac.split(" & ")[2];
+    const _0x387414 = await fetchJson(baseUrl + "/api/cinesubz/episode?url=" + _0x24a5a8 + "&apikey=asitha108");
+    if (!_0x387414?.["data"]?.["data"]?.["dllinks"]?.["directDownloadLinks"]) {
+      throw new Error("Invalid response structure or missing download links");
+    }
+    const _0x1c7158 = _0x387414.data.data.dllinks.directDownloadLinks.filter(_0x46cdfb => _0x46cdfb.quality.includes("480")).map(_0x265a57 => _0x265a57.link) || [];
+    const _0x151232 = _0x387414.data.data.dllinks.directDownloadLinks.filter(_0x27d158 => _0x27d158.quality.includes("720")).map(_0x64c91e => _0x64c91e.link) || [];
+    const _0x234b79 = _0x387414.data.data.dllinks.directDownloadLinks.filter(_0x417cde => _0x417cde.quality.includes("1080")).map(_0x5e089d => _0x5e089d.link) || [];
+    if (_0x1c7158.length === 0 && _0x151232.length === 0 && _0x234b79.length === 0) {
+      throw new Error("No download links found for any quality");
+    }
+    const _0x307ae4 = _0x1c7158.length > 0 ? await fetchJson(baseUrl + "/api/cinesubz/download?url=" + _0x1c7158[0] + "&apikey=asitha108") : null;
+    const _0x4b793a = _0x151232.length > 0 ? await fetchJson(baseUrl + "/api/cinesubz/download?url=" + _0x151232[0] + "&apikey=asitha108") : null;
+    const _0x2e8fe3 = _0x234b79.length > 0 ? await fetchJson(baseUrl + "/api/cinesubz/download?url=" + _0x234b79[0] + "&apikey=asitha108") : null;
+    const _0x2cd873 = _0x307ae4?.["data"]?.["data"]?.["filter"](_0x4f64d8 => _0x4f64d8.type === "direct")["map"](_0x30decc => _0x30decc.href) || [];
+    const _0x35f4b9 = _0x2cd873[0] || "No direct link";
+    const _0x2193f2 = _0x307ae4?.["data"]?.["data"]?.[0]?.["fileSize"] ?? "Unknown";
+    const _0x4b9aa7 = _0x4b793a?.["data"]?.["data"]?.["filter"](_0x4ab67f => _0x4ab67f.type === "direct")["map"](_0x1f8921 => _0x1f8921.href) || [];
+    const _0x3c1567 = _0x4b9aa7[0] || "No direct link";
+    const _0x233662 = _0x4b793a?.["data"]?.["data"]?.[0]?.["fileSize"] ?? "Unknown";
+    const _0x2b5bb2 = _0x2e8fe3?.["data"]?.["data"]?.["filter"](_0x1d1fdb => _0x1d1fdb.type === "direct")["map"](_0x5d739c => _0x5d739c.href) || [];
+    const _0x38f303 = _0x2b5bb2[0] || "No direct link";
+    const _0x3e98c1 = _0x2e8fe3?.["data"]?.["data"]?.[0]?.["fileSize"] ?? "Unknown";
+    const _0x2c555f = _0x307ae4?.["data"]?.["data"]?.["filter"](_0x390e9b => _0x390e9b.type === "gdrive")["map"](_0x300feb => _0x300feb.href) || [];
+    const _0x351056 = await convertDownloadToViewLink(_0x2c555f[0] || "No direct link");
+    const _0x1b61c6 = _0x4b793a?.["data"]?.["data"]?.["filter"](_0x3ef73f => _0x3ef73f.type === "gdrive")["map"](_0x4c8065 => _0x4c8065.href) || [];
+    const _0x255e0e = await convertDownloadToViewLink(_0x1b61c6[0] || "No direct link");
+    const _0x1225ba = _0x2e8fe3?.["data"]?.["data"]?.["filter"](_0x2e238c => _0x2e238c.type === "gdrive")["map"](_0x3a190e => _0x3a190e.href) || [];
+    const _0x16c121 = await convertDownloadToViewLink(_0x1225ba[0] || "No direct link");
+    const _0x16b9ba = {
+      downloadlink480: _0x35f4b9,
+      size: _0x2193f2,
+      downloadlink720: _0x3c1567,
+      size2: _0x233662,
+      downloadlink1080: _0x38f303,
+      size3: _0x3e98c1
+    };
+    console.log(_0x16b9ba);
+    const _0x1cd419 = [{
+      title: "*[Direct Link]*\n",
+      rows: [{
+        title: "1",
+        rowId: _0x16c67d + "dbl " + _0x35f4b9 + (" & " + _0x445657 + " | සිංහල උපසිරැසි සමඟ & 480p & " + _0x5c57b6),
+        description: " 480p :- " + _0x2193f2
+      }, {
+        title: "2",
+        rowId: _0x16c67d + "dbl " + _0x3c1567 + (" & " + _0x445657 + " | සිංහල උපසිරැසි සමඟ & 720p & " + _0x5c57b6),
+        description: " 720p :- " + _0x233662
+      }, {
+        title: "3",
+        rowId: _0x16c67d + "dbl " + _0x38f303 + (" & " + _0x445657 + " | සිංහල උපසිරැසි සමඟ & 1080p & " + _0x5c57b6),
+        description: " 1080p :- " + _0x3e98c1
       }]
     }, {
-      'title': "*🎬 MOVIE IMAGES 🎬*",
-      'rows': [{
-        'title': "    1.2",
-        'rowId': _0x3adbb3 + ("piratei " + _0x5f1992),
-        'description': "Send Movie IMAGES 🏞️"
+      title: "*[Gdrive Direct Link]*\n",
+      rows: [{
+        title: "4",
+        rowId: _0x16c67d + "dbl " + _0x351056 + (" & " + _0x445657 + " | සිංහල උපසිරැසි සමඟ & 480p & " + _0x5c57b6),
+        description: " 480p :- " + _0x2193f2
+      }, {
+        title: "5",
+        rowId: _0x16c67d + "dbl " + _0x255e0e + (" & " + _0x445657 + " | සිංහල උපසිරැසි සමඟ & 720p & " + _0x5c57b6),
+        description: " 720p :- " + _0x233662
+      }, {
+        title: "6",
+        rowId: _0x16c67d + "dbl " + _0x16c121 + (" & " + _0x445657 + " | සිංහල උපසිරැසි සමඟ & 1080p & " + _0x5c57b6),
+        description: " 1080p :- " + _0x3e98c1
       }]
     }];
-    const _0x33cba0 = {
-      caption: "*_☘ Title: " + _0x5b81b5.data.data.mainDetails.maintitle + "_*\n\n- *Year:* " + _0x5b81b5.data.data.mainDetails.dateCreated + "\n- *Rating:* " + _0x5b81b5.data.data.mainDetails.runtime + "\n- *ImdbRating* " + _0x5b81b5.data.data.moviedata.imdbRating + "\n- *ImdbvotesCount* " + _0x5b81b5.data.data.moviedata.imdbvotesCount + "\n\n*⛏️ Link:* " + _0x5f1992,
-      image: {},
-      footer: "MOVIE DOWNLOADER BY TDD",
-      title: '',
+    const _0x8a6e4e = {
+      text: "*Download..*",
+      footer: "*⏤͟͟͞͞★❮𝗔 𝗦 𝗜 𝗧 𝗛 𝗔 〽️ 𝗢 𝗩 𝗜 𝗘❯⏤͟͟͞͞★*",
       buttonText: "*🔢 Reply below number*",
-      sections: _0xd81082
+      sections: _0x1cd419
     };
-    _0x33cba0.image.url = _0x5b81b5.data.data.mainDetails.imageUrl;
-    const _0x3e3bd0 = {
-      quoted: _0x3b8c28
+    const _0x2b466a = {
+      quoted: _0x49be4e
     };
-    return await _0x2ce44e.replyList(_0xe545ff, _0x33cba0, _0x3e3bd0);
-  } catch (_0x17e9b4) {
-    _0x4b3120("*ERROR !!*");
-    _0x1ee337(_0x17e9b4);
+    return await _0x3649ce.replyList(_0x57efee, _0x8a6e4e, _0x2b466a);
+  } catch (_0x2e1d47) {
+    _0x599172(_0x2e1d47);
+    _0x1c2920(_0x2e1d47);
   }
 });
-const _0x49955f = {
-  pattern: "pirates",
-  react: '⬆',
-  dontAddCommandList: true,
-  filename: __filename
-};
-cmd(_0x49955f, async (_0x48b8ca, _0x90f82e, _0x3c59ef, {
-  reply: _0x24366b,
-  isDev: _0x487dcc,
-  from: _0x5f1b59,
-  q: _0x3d5aad,
-  prefix: _0x24715b
-}) => {
-  try {
-    if (!_0x3d5aad) {
-      return await _0x24366b("*Please Give Me Link..! 🖊️*");
-    }
-    const _0x3b9cdb = await fetchJson(config.API + "/api/pirate/movie?url=" + _0x3d5aad + "&apikey=" + config.APIKEY);
-    const _0x41982b = "*_☘ Title: " + _0x3b9cdb.data.data.mainDetails.maintitle + "_*\n\n- *Year:* " + _0x3b9cdb.data.data.mainDetails.dateCreated + "\n- *Rating:* " + _0x3b9cdb.data.data.mainDetails.runtime + "\n- *ImdbRating* " + _0x3b9cdb.data.data.moviedata.imdbRating + "\n- *ImdbvotesCount* " + _0x3b9cdb.data.data.moviedata.imdbvotesCount + "\n\n*⛏️ Link:* " + _0x3d5aad + "\n\n" + config.FOOTER;
-    const _0x113c57 = {
-      url: _0x3b9cdb.data.data.moviedata.imageUrls[0]
-    };
-    const _0x494707 = {
-      image: _0x113c57,
-      caption: _0x41982b
-    };
-    const _0x51e115 = {
-      quoted: _0x90f82e
-    };
-    return await _0x48b8ca.sendMessage(_0x5f1b59, _0x494707, _0x51e115);
-  } catch (_0x443c1c) {
-    _0x24366b("*_First activate location sender_*\n\n- Eg:- .activate\n- Then reply 1.1");
-    console.log(_0x443c1c);
-  }
-});
-const _0x354545 = {
-  pattern: "piratei",
-  react: '⬆',
-  dontAddCommandList: true,
-  filename: __filename
-};
-cmd(_0x354545, async (_0x21b175, _0x3c535f, _0x6b28dd, {
-  reply: _0x279901,
-  isDev: _0x122e8e,
-  from: _0x45210e,
-  q: _0x5416d7,
-  prefix: _0x4f8d52
-}) => {
-  try {
-    if (!_0x5416d7) {
-      return await _0x279901("*Please Give Me Link..! 🖊️*");
-    }
-    const _0x333c04 = await fetchJson(config.API + "/api/pirate/movie?url=" + _0x5416d7 + "&apikey=" + config.APIKEY);
-    const _0x28646e = config.FOOTER;
-    _0x279901("UPLOADING MOVIE IMAGES 🔄");
-    const _0x1c0282 = {
-      url: _0x333c04.data.data.moviedata.imageUrls[0]
-    };
-    const _0x453f33 = {
-      image: _0x1c0282,
-      caption: _0x28646e
-    };
-    const _0x11bc72 = {
-      quoted: _0x3c535f
-    };
-    await _0x21b175.sendMessage(_0x45210e, _0x453f33, _0x11bc72);
-    const _0x1120e0 = {
-      url: _0x333c04.data.data.moviedata.imageUrls[1]
-    };
-    const _0x50bbdb = {
-      image: _0x1120e0,
-      caption: _0x28646e
-    };
-    const _0xed40c0 = {
-      quoted: _0x3c535f
-    };
-    await _0x21b175.sendMessage(_0x45210e, _0x50bbdb, _0xed40c0);
-    const _0x19ea7e = {
-      url: _0x333c04.data.data.moviedata.imageUrls[2]
-    };
-    const _0x7524d5 = {
-      image: _0x19ea7e,
-      caption: _0x28646e
-    };
-    const _0x454a44 = {
-      quoted: _0x3c535f
-    };
-    await _0x21b175.sendMessage(_0x45210e, _0x7524d5, _0x454a44);
-    const _0x51cf7d = {
-      url: _0x333c04.data.data.moviedata.imageUrls[4]
-    };
-    const _0x1029bf = {
-      image: _0x51cf7d,
-      caption: _0x28646e
-    };
-    const _0x967812 = {
-      quoted: _0x3c535f
-    };
-    await _0x21b175.sendMessage(_0x45210e, _0x1029bf, _0x967812);
-    const _0x161a39 = {
-      url: _0x333c04.data.data.moviedata.imageUrls[5]
-    };
-    const _0x382622 = {
-      image: _0x161a39,
-      caption: _0x28646e
-    };
-    const _0x40805f = {
-      quoted: _0x3c535f
-    };
-    await _0x21b175.sendMessage(_0x45210e, _0x382622, _0x40805f);
-    const _0x56ced9 = {
-      text: '✅',
-      key: _0x3c535f.key
-    };
-    const _0x308c9e = {
-      react: _0x56ced9
-    };
-    await _0x21b175.sendMessage(_0x45210e, _0x308c9e);
-  } catch (_0x5e65e2) {
-    _0x279901("*_First activate location sender_*\n\n- Eg:- .activate\n- Then reply 1.1");
-    console.log(_0x5e65e2);
-  }
-});
-const _0x45cf7b = {
-  pattern: "piratedl",
-  react: '📥',
-  dontAddCommandList: true,
-  filename: __filename
-};
-cmd(_0x45cf7b, async (_0x4a8ac4, _0x163072, _0x49ace3, {
-  from: _0x2d3033,
-  q: _0x478760,
-  isDev: _0x55653f,
-  reply: _0x325043
-}) => {
-  if (!_0x478760) {
-    return await _0x325043("*Please provide a direct URL!*");
-  }
-  try {
-    const _0x45d8e8 = _0x478760.split('|')[0];
-    const _0x447bce = _0x478760.split('|')[1] || "tdd_movie_dl_system";
-    const _0x4d0801 = await fetchJson(config.API + "/api/pirate/download?url=" + _0x45d8e8 + "&apikey=" + config.APIKEY);
-    const _0x1f7c2a = '' + _0x4d0801.data.data.link;
-    const _0x716408 = _0x1f7c2a.replace('u', "api/file");
-    console.log(_0x1f7c2a);
-    console.log(_0x716408);
-    _0x325043("╭═════════════════❀\n│  UPLOADING YOUR MOVIE 📥\n│ ❀ Target : WAIT FEW MINUTES...\n│ ❀ Use commands after come the movie\n│ ❀ Device : 1/3\n╰═════════════════❀");
-    if (_0x1f7c2a.includes("https://pixeldrain.com")) {
-      const _0x941874 = {
-        'document': await getBuffer(_0x716408),
-        'caption': _0x447bce + "\n" + config.FOOTER,
-        'mimetype': "video/mp4",
-        'fileName': _0x447bce + ".mp4"
-      };
-      await _0x4a8ac4.sendMessage(_0x2d3033, _0x941874);
-    }
-    if (_0x1f7c2a.includes("https://www.amdahost.com")) {
-      const _0x90580c = {
-        'document': await getBuffer(_0x1f7c2a),
-        'caption': _0x447bce + "\n" + config.FOOTER,
-        'mimetype': "video/mp4",
-        'fileName': _0x447bce + ".mp4"
-      };
-      await _0x4a8ac4.sendMessage(_0x2d3033, _0x90580c);
-    }
-    const _0x15352e = {
-      text: '✅',
-      key: _0x163072.key
-    };
-    const _0x458982 = {
-      react: _0x15352e
-    };
-    await _0x4a8ac4.sendMessage(_0x2d3033, _0x458982);
-  } catch (_0x29a531) {
-    console.error("Error fetching or sending", _0x29a531);
-    const _0x583dab = {
-      quoted: _0x163072
-    };
-    await _0x4a8ac4.sendMessage(_0x2d3033, "*Error fetching or sending *", _0x583dab);
-  }
-});
-const _0x8faacc = {
-  pattern: "slanimeclub",
-  react: '📑',
+const _0x386e39 = {
+  pattern: "ytxms",
+  react: "🎥",
+  alias: ["ys"],
+  desc: "Download movie for ytxms",
   category: "movie",
-  desc: "slanimeclub movie downloader"
+  use: ".ytxms < Movie Name >",
+  filename: __filename
 };
-function _0x401b13(_0xf32d96, _0x19e2c1, _0x35ef39, _0x3fc63d, _0xb4c2a8) {
-  return _0xb8b3(_0x19e2c1 - 0x3bd, _0xf32d96);
+cmd(_0x386e39, async (_0x2c9f8a, _0x6b4f90, _0x417c76, {
+  from: _0x2fd980,
+  sender: _0x4b084e,
+  prefix: _0x36fe59,
+  quoted: _0x291a46,
+  q: _0x568bab,
+  reply: _0x16934c
+}) => {
+  try {
+    const _0x25d7b1 = (await fetchJson("https://gitlab.com/anukunu2000/asitha-md-db/-/raw/master/Mreply.json")).replyMsg;
+    const _0x531b02 = await getPremiumUsers();
+    const _0x47ff4a = _0x531b02.includes(_0x4b084e);
+    let _0x50807a = await free();
+    if (!_0x47ff4a && !_0x50807a) {
+      return _0x16934c(_0x25d7b1.pre_cmd);
+    }
+    if (!_0x568bab) {
+      return await _0x16934c("Mv name plz");
+    }
+    const _0x3d0495 = await fetchJson("https://yts.mx/api/v2/list_movies.json?sort_by=rating&query_term=" + _0x568bab);
+    if (_0x3d0495.data.limit === 0) {
+      return _0x16934c("🚫 No movies found for your search query.");
+    }
+    let _0xce448 = _0x3d0495.data.movies;
+    var _0x442aea = [];
+    for (var _0x2df171 = 0; _0x2df171 < _0xce448.length; _0x2df171++) {
+      _0x442aea.push({
+        title: _0x2df171 + 1,
+        description: _0xce448[_0x2df171].title_long + "\n",
+        rowId: _0x36fe59 + "ytmx " + _0xce448[_0x2df171].url
+      });
+    }
+    const _0x32cf0e = [{
+      title: "*[Results from yts.mx]*\n",
+      rows: _0x442aea
+    }];
+    const _0x33b1ce = {
+      text: "\n*★❮𝗔 𝗦 𝗜 𝗧 𝗛 𝗔  𝗖 𝗜 𝗡 𝗘 𝗠 𝗔 ㋡❯★*\n\n👽 *Entered Name ||* " + _0x568bab + "  ",
+      footer: "*⏤͟͟͞͞★❮𝗔 𝗦 𝗜 𝗧 𝗛 𝗔 〽️ 𝗢 𝗩 𝗜 𝗘❯⏤͟͟͞͞★*",
+      title: "",
+      buttonText: "*🔢 Reply below number*\n",
+      sections: _0x32cf0e
+    };
+    const _0x5c6ae0 = {
+      quoted: _0x6b4f90
+    };
+    return await _0x2c9f8a.replyList(_0x2fd980, _0x33b1ce, _0x5c6ae0);
+  } catch (_0x3ff9fa) {
+    console.log(_0x3ff9fa);
+    _0x16934c("*ERROR !!*");
+  }
+});
+const _0x2c7359 = {
+  pattern: "firemovies",
+  alias: ["fh"],
+  desc: "Check bot setting.",
+  react: "🎬",
+  category: "movie",
+  use: ".firemovies < Movie Name >",
+  filename: __filename
+};
+cmd(_0x2c7359, async (_0x499d3, _0x39bb30, _0x380104, {
+  from: _0x46913e,
+  prefix: _0x1f289e,
+  quoted: _0xb4ae2b,
+  body: _0x5d274e,
+  isCmd: _0x533073,
+  command: _0x5ef969,
+  args: _0x1178e1,
+  q: _0xb9aa36,
+  isGroup: _0x5f17b2,
+  sender: _0x3e97b5,
+  senderNumber: _0x405026,
+  botNumber2: _0x43678d,
+  botNumber: _0x3b3881,
+  pushname: _0x24d06c,
+  isMe: _0xf15ec2,
+  isOwner: _0x31cbbf,
+  groupMetadata: _0x3b3d53,
+  groupName: _0x2e5399,
+  participants: _0x5d402c,
+  groupAdmins: _0x562e7f,
+  isBotAdmins: _0x33f3b6,
+  isAdmins: _0x2f97b5,
+  reply: _0x52acad
+}) => {
+  try {
+    const _0x443d9a = await fetchJson("https://www.dark-yasiya-api.site/movie/firemovie/search?text=" + _0xb9aa36);
+    if (_0x443d9a.result && _0x443d9a.result.length > 0) {
+      return _0x52acad("🚫 No movies found for your search query.");
+    }
+    var _0x2e90eb = [];
+    for (var _0x1bf45c = 0; _0x1bf45c < _0x443d9a.result.data.length; _0x1bf45c++) {
+      _0x2e90eb.push({
+        title: _0x1bf45c + 1,
+        description: _0x443d9a.result.data[_0x1bf45c].title + "\n",
+        rowId: _0x1f289e + "fdc " + _0x443d9a.result.data[_0x1bf45c].link
+      });
+    }
+    const _0x43306b = [{
+      title: "*[Results from firemoviehub.com]*\n",
+      rows: _0x2e90eb
+    }];
+    const _0x487777 = {
+      text: "\n*★❮𝗔 𝗦 𝗜 𝗧 𝗛 𝗔  𝗖 𝗜 𝗡 𝗘 𝗠 𝗔 ㋡❯★*\n\n👽 *Entered Name ||* " + _0xb9aa36 + "  ",
+      footer: "*⏤͟͟͞͞★❮𝗔 𝗦 𝗜 𝗧 𝗛 𝗔 〽️ 𝗢 𝗩 𝗜 𝗘❯⏤͟͟͞͞★*",
+      title: "",
+      buttonText: "*🔢 Reply below number*\n",
+      sections: _0x43306b
+    };
+    const _0x34faae = {
+      quoted: _0x39bb30
+    };
+    return await _0x499d3.replyList(_0x46913e, _0x487777, _0x34faae);
+  } catch (_0x443a61) {
+    console.log(_0x443a61);
+    _0x52acad("*ERROR !!*");
+  }
+});
+const _0x2278e8 = {
+  pattern: "fdc",
+  desc: "Check bot setting.",
+  react: "🎬",
+  filename: __filename
+};
+cmd(_0x2278e8, async (_0x43175b, _0x171e80, _0x4d483f, {
+  from: _0x5193a0,
+  prefix: _0x5a04eb,
+  quoted: _0x567069,
+  body: _0x5cc86e,
+  isCmd: _0x4ca100,
+  command: _0x3a025d,
+  args: _0x5e356f,
+  q: _0x185d0b,
+  isGroup: _0x3dce12,
+  sender: _0x55dd1d,
+  senderNumber: _0x13babb,
+  botNumber2: _0x227e7a,
+  botNumber: _0x3dea28,
+  pushname: _0x142588,
+  isMe: _0x5ac319,
+  isOwner: _0x2f338c,
+  groupMetadata: _0x2be427,
+  groupName: _0x243f04,
+  participants: _0x1de86d,
+  groupAdmins: _0x14d992,
+  isBotAdmins: _0x3b01b1,
+  isAdmins: _0x5bae05,
+  reply: _0x2ccda3
+}) => {
+  try {
+    if (_0x185d0b.includes("https://firemovieshub.com/tvshows")) {
+      const _0x432cb5 = await fetchJson("https://www.dark-yasiya-api.site/movie/firemovie/tvshow?url=" + _0x185d0b);
+      const _0x9378f3 = _0x432cb5?.["result"]?.["data"]?.["episodes"] ?? [];
+      if (!_0x9378f3 || _0x9378f3.length === 0) {
+        return _0x2ccda3("Episodes data is empty.");
+      }
+      var _0x3c273f = [];
+      for (var _0x58aafb = 0; _0x58aafb < _0x9378f3.length; _0x58aafb++) {
+        _0x3c273f.push({
+          title: _0x58aafb + 1,
+          description: _0x9378f3[_0x58aafb].number + (" " + _0x9378f3[_0x58aafb].name),
+          rowId: _0x5a04eb + "mbddc " + _0x9378f3[_0x58aafb].link + " & " + _0x9378f3[_0x58aafb].image
+        });
+      }
+      const _0x310264 = {
+        title: "",
+        rows: _0x3c273f
+      };
+      const _0x4e3820 = [_0x310264];
+      const _0x2ff0ad = {
+        text: "",
+        footer: "*⏤͟͟͞͞★❮𝗔 𝗦 𝗜 𝗧 𝗛 𝗔 〽️ 𝗢 𝗩 𝗜 𝗘❯⏤͟͟͞͞★*",
+        title: "",
+        buttonText: "🔢 Reply below number\n",
+        sections: _0x4e3820
+      };
+      let _0x2e506f = "\n*★❮𝗔 𝗦 𝗜 𝗧 𝗛 𝗔  𝗖 𝗜 𝗡 𝗘 𝗠 𝗔 ㋡❯★*\n\n☘️ *Tɪᴛʟᴇ :* " + (_0x432cb5?.["result"]?.["data"]?.["title"] ?? "Null") + "\n\n▫️📅 *Rᴇʟᴇᴀꜱᴇ Dᴀᴛᴇ :* " + (_0x432cb5?.["result"]?.["data"]?.["date"] ?? "Null") + "\n▫️⏱️ *Dᴜʀᴀᴛɪᴏɴ :* " + (_0x432cb5?.["result"]?.["data"]?.["duration"] ?? "Null") + "\n▫️🎭 *Gᴇɴʀᴇꜱ :* " + (_0x432cb5?.["result"]?.["data"]?.["category"]?.["length"] > 0 ? _0x432cb5.result.data.category.join(", ") : "Null") + "\n▫️👨🏻‍💼 *Dɪʀᴇᴄᴛᴏʀ :* " + (_0x432cb5?.["result"]?.["data"]?.["director"] ?? "Null") + "\n▫️🕵️‍♂️ *Cᴀsᴛ :* " + (_0x432cb5?.["result"]?.["data"]?.["cast"]?.["length"] > 0 ? _0x432cb5.result.data.cast.map(_0x57338c => _0x57338c.name).join(", ") : "Null") + "\n\n*➟➟➟➟➟➟➟➟➟➟➟➟➟➟*\n▫️🔗 *Jᴏɪɴ :* whatsapp.com/channel/0029VaeyMWv3QxRu4hA6c33Z\n*➟➟➟➟➟➟➟➟➟➟➟➟➟➟*\n";
+      const _0x53bea9 = {
+        url: _0x432cb5?.["result"]?.["data"]?.["mainImage"] ?? "https://i.postimg.cc/9FGJDwzB/error-rubber-stamp-word-error-inside-illustration-109026446.jpg"
+      };
+      const _0x444e30 = {
+        image: _0x53bea9,
+        caption: _0x2e506f
+      };
+      const _0x47bd96 = {
+        quoted: _0x171e80
+      };
+      await _0x43175b.sendMessage(_0x5193a0, _0x444e30, _0x47bd96);
+      const _0x2d0d52 = {
+        quoted: _0x171e80
+      };
+      return await _0x43175b.replyList(_0x5193a0, _0x2ff0ad, _0x2d0d52);
+    }
+    if (_0x185d0b.includes("https://firemovieshub.com/movies")) {
+      const _0x4d2c0a = await fetchJson("https://www.dark-yasiya-api.site/movie/firemovie/movie?url=" + _0x185d0b);
+      if (!_0x4d2c0a) {
+        return _0x2ccda3("*නැවත උත්සහ කරන්න*");
+      }
+      const _0x51d62c = _0x4d2c0a.result.data.dl_links;
+      var _0x3c273f = [];
+      for (var _0x58aafb = 0; _0x58aafb < _0x51d62c.length; _0x58aafb++) {
+        _0x3c273f.push({
+          title: _0x58aafb + 1,
+          description: _0x51d62c[_0x58aafb].quality + (" " + _0x51d62c[_0x58aafb].size),
+          rowId: _0x5a04eb + "dbl " + _0x51d62c[_0x58aafb].link + " & " + (_0x4d2c0a?.["result"]?.["data"]?.["title"] ?? "Null") + " & " + _0x51d62c[_0x58aafb].quality + " & " + _0x4d2c0a.result.data.mainImage
+        });
+      }
+      const _0x43ad8f = {
+        title: "",
+        rows: _0x3c273f
+      };
+      const _0x302f3a = [_0x43ad8f];
+      const _0xed6351 = {
+        text: "",
+        footer: "*⏤͟͟͞͞★❮𝗔 𝗦 𝗜 𝗧 𝗛 𝗔 〽️ 𝗢 𝗩 𝗜 𝗘❯⏤͟͟͞͞★*",
+        title: "",
+        buttonText: "🔢 Reply below number\n",
+        sections: _0x302f3a
+      };
+      const _0x525e1d = {
+        quoted: _0x171e80
+      };
+      return await _0x43175b.replyList(_0x5193a0, _0xed6351, _0x525e1d);
+    }
+  } catch (_0x4ced4f) {
+    console.log(_0x4ced4f);
+    await _0x2ccda3("" + _0x4ced4f);
+  }
+});
+const _0x141779 = {
+  pattern: "mbddc",
+  desc: "Check bot setting.",
+  react: "🎬",
+  filename: __filename
+};
+cmd(_0x141779, async (_0x39a84b, _0x48597f, _0x518ce9, {
+  from: _0x4b4f37,
+  prefix: _0xf2810a,
+  quoted: _0x19ec3e,
+  body: _0x51ca21,
+  isCmd: _0x1992d3,
+  command: _0x361add,
+  args: _0x2dd0b8,
+  q: _0x3a2794,
+  isGroup: _0x488b0c,
+  sender: _0x38e6d3,
+  senderNumber: _0x501563,
+  botNumber2: _0x561fdd,
+  botNumber: _0x3e7313,
+  pushname: _0x59f0b4,
+  isMe: _0x296f5d,
+  isOwner: _0x4ab773,
+  groupMetadata: _0x570020,
+  groupName: _0x4da1b1,
+  participants: _0x5a9712,
+  groupAdmins: _0x53a04f,
+  isBotAdmins: _0x3562d1,
+  isAdmins: _0x4146d8,
+  reply: _0x1c3470
+}) => {
+  try {
+    const _0x359fd4 = _0x3a2794.split(" & ")[0];
+    const _0x1d57a3 = _0x3a2794.split(" & ")[1];
+    const _0x4df0d6 = await fetchJson("https://www.dark-yasiya-api.site/movie/firemovie/episode?url=" + _0x359fd4);
+    const _0x27e97c = _0x4df0d6.result.data.dl_links;
+    var _0x28e6b1 = [];
+    for (var _0x34243c = 0; _0x34243c < _0x27e97c.length; _0x34243c++) {
+      _0x28e6b1.push({
+        title: _0x34243c + 1,
+        description: _0x27e97c[_0x34243c].quality + (" " + _0x27e97c[_0x34243c].size),
+        rowId: _0xf2810a + "dbl " + _0x27e97c[_0x34243c].link + " & " + (_0x4df0d6.result.data.title || "Null") + " & " + _0x27e97c[_0x34243c].quality + " & " + _0x1d57a3
+      });
+    }
+    const _0xb4845b = {
+      title: "",
+      rows: _0x28e6b1
+    };
+    const _0x591df7 = [_0xb4845b];
+    const _0x59ed02 = {
+      text: "",
+      footer: "*⏤͟͟͞͞★❮𝗔 𝗦 𝗜 𝗧 𝗛 𝗔 〽️ 𝗢 𝗩 𝗜 𝗘❯⏤͟͟͞͞★*",
+      title: "",
+      buttonText: "🔢 Reply below number\n",
+      sections: _0x591df7
+    };
+    const _0x169e01 = {
+      quoted: _0x48597f
+    };
+    return await _0x39a84b.replyList(_0x4b4f37, _0x59ed02, _0x169e01);
+  } catch (_0x23fb44) {
+    console.log(_0x23fb44);
+    await _0x1c3470("" + _0x23fb44);
+  }
+});
+const _0x3343c2 = {
+  pattern: "awa",
+  react: "🎥",
+  desc: "Download movie for sinhalasub.lk",
+  category: "movie",
+  use: ".awa < Movie Name >",
+  filename: __filename
+};
+cmd(_0x3343c2, async (_0x17a1f7, _0x1504a1, _0x4126c1, {
+  from: _0xb18c3a,
+  sender: _0x6de553,
+  prefix: _0xb8119c,
+  quoted: _0x2cd00c,
+  q: _0x2d956d,
+  reply: _0x484f74
+}) => {
+  try {
+    if (!_0x2d956d) {
+      return await _0x484f74("Movie name please!");
+    }
+    const _0x4858ba = await fetchJson(baseUrl2 + "/api/awa/movie/search?q=" + _0x2d956d);
+    var _0x1f2e03 = [];
+    for (var _0x1f23f5 = 0; _0x1f23f5 < _0x4858ba.length; _0x1f23f5++) {
+      _0x1f2e03.push({
+        title: _0x1f23f5 + 1,
+        description: _0x4858ba[_0x1f23f5].title + "\n",
+        rowId: _0xb8119c + "awadll " + _0x4858ba[_0x1f23f5].link
+      });
+    }
+    const _0x443037 = [{
+      title: "*[Results from awa.com]*\n",
+      rows: _0x1f2e03
+    }];
+    const _0x121cb3 = {
+      text: "\n*★❮𝗔 𝗦 𝗜 𝗧 𝗛 𝗔  𝗖 𝗜 𝗡 𝗘 𝗠 𝗔 ㋡❯★*\n\n👽 *Entered Name ||* " + _0x2d956d + "  ",
+      footer: "*⏤͟͟͞͞★❮𝗔 𝗦 𝗜 𝗧 𝗛 𝗔 〽️ 𝗢 𝗩 𝗜 𝗘❯⏤͟͟͞͞★*",
+      title: "",
+      buttonText: "*🔢 Reply below number*\n",
+      sections: _0x443037
+    };
+    const _0x35fe1f = {
+      quoted: _0x1504a1
+    };
+    return await _0x17a1f7.replyList(_0xb18c3a, _0x121cb3, _0x35fe1f);
+  } catch (_0x5f0a13) {
+    console.error(_0x5f0a13);
+    await _0x484f74("*ERROR !!*\n\n🚩 *Details:*\n" + (_0x5f0a13.message || _0x5f0a13) + "\n\n📩 If this error persists, please check your API endpoints or input.");
+  }
+});
+function _0xaf9ad5(_0x5d6574, _0x35410d, _0x925e7f, _0x31873e, _0x2e854f) {
+  return _0x4080(_0x2e854f - "0x296", _0x31873e);
 }
-_0x8faacc.filename = __filename;
-cmd(_0x8faacc, async (_0x581127, _0x479b87, _0x2712ba, {
-  from: _0x3e423a,
-  prefix: _0x14d1c1,
-  q: _0x25acd1,
-  l: _0x4dc506,
-  isDev: _0x3aec5c,
-  reply: _0x18e675
-}) => {
-  try {
-    if (!_0x25acd1) {
-      return await _0x18e675("*Please Give Me Text..! 🖊️*");
-    }
-    const _0x51d69e = await fetchJson(config.API + "/api/slanimeclub/search?q=" + _0x25acd1 + "&apikey=" + config.APIKEY);
-    const _0x28113b = {
-      quoted: _0x2712ba
-    };
-    if (_0x51d69e.data.data.data.length < 1) {
-      return await _0x581127.sendMessage(_0x3e423a, {
-        'text': "*මට කිසිවක් සොයාගත නොහැකි විය :(*"
-      }, _0x28113b);
-    }
-    var _0x7aea21 = [];
-    for (var _0x28b3d7 = 0; _0x28b3d7 < _0x51d69e.data.data.data.length; _0x28b3d7++) {
-      _0x7aea21.push({
-        'title': _0x28b3d7 + 1,
-        'description': _0x51d69e.data.data.data[_0x28b3d7].title,
-        'rowId': _0x14d1c1 + "slanime " + _0x51d69e.data.data.data[_0x28b3d7].link
-      });
-    }
-    const _0x26869c = {
-      title: "_[Result from slanimeclub.]_",
-      rows: _0x7aea21
-    };
-    const _0x10cb1e = [_0x26869c];
-    const _0x3738c6 = {
-      text: '',
-      footer: config.FOOTER,
-      title: "Result from slanimeclub. 📲",
-      buttonText: "*🔢 Reply below number*",
-      sections: _0x10cb1e
-    };
-    const _0x336b37 = {
-      quoted: _0x2712ba
-    };
-    return await _0x581127.replyList(_0x3e423a, _0x3738c6, _0x336b37);
-  } catch (_0x33a71e) {
-    _0x18e675("*ERROR !!*");
-    _0x4dc506(_0x33a71e);
-  }
-});
-const _0x3fa51d = {
-  pattern: "slanime",
-  react: '📑',
-  category: "movie",
-  desc: "slanimeclub moive downloader",
+const _0x4b0f6e = {
+  pattern: "awadll",
+  desc: "Check bot setting.",
+  react: "🎬",
   filename: __filename
 };
-cmd(_0x3fa51d, async (_0x1116ab, _0x4ed752, _0x3422b8, {
-  from: _0x39fa6a,
-  prefix: _0x3b2d3c,
-  q: _0xc4f954,
-  l: _0x2f2a39,
-  isDev: _0xf1a527,
-  reply: _0x8d144
+cmd(_0x4b0f6e, async (_0x55fff6, _0x118951, _0x15579b, {
+  from: _0x718218,
+  quoted: _0x5877ad,
+  l: _0x572d4a,
+  body: _0x2daeea,
+  isCmd: _0x5b5c59,
+  command: _0x17b6cd,
+  args: _0x572e4f,
+  q: _0x39fe58,
+  prefix: _0x1b421e,
+  isGroup: _0x4ac5ea,
+  sender: _0x34a3e3,
+  reply: _0x1066a8
 }) => {
   try {
-    if (!_0xc4f954) {
-      return await _0x8d144("*Please Give Me Text..! 🖊️*");
+    const _0x1c8c66 = await fetchJson(baseUrl2 + "/api/awa/movie/details?url=" + _0x39fe58);
+    if (!_0x1c8c66) {
+      throw new Error("Movie details not found!");
     }
-    const _0x485063 = await fetchJson(config.API + "/api/slanimeclub/movie?url=" + _0xc4f954 + "&apikey=" + config.APIKEY);
-    const _0x435195 = "*_☘ Title: " + _0x485063.data.data.moviedata.title + "_*\n\n- *Date:* " + _0x485063.data.data.moviedata.date + "\n- *Generous* " + _0x485063.data.data.moviedata.generous + "\n\n*⛏️ Link:* " + _0xc4f954;
-    const _0x2251ad = {
-      quoted: _0x3422b8
+    let _0x409b82 = _0x1c8c66[0];
+    let _0x505cdc = "*★❮𝗔 𝗦 𝗜 𝗧 𝗛 𝗔  𝗖 𝗜 𝗡 𝗘 𝗠 𝗔 ㋡❯★*\n\n☘️ *Tɪᴛʟᴇ :* " + (_0x409b82?.["title"] ?? "Null") + "\n▫️📅 *Rᴇʟᴇᴀꜱᴇ Dᴀᴛᴇ :* " + (_0x409b82?.["releaseDate"] ?? "Null") + "\n▫️🌎 *Cᴏᴜɴᴛʀʏ :* " + (_0x409b82?.["country"] ?? "Null") + "\n▫️⏱️ *Dᴜʀᴀᴛɪᴏɴ :* " + (_0x409b82?.["duration"] ?? "Null") + "\n▫️🕵️‍♂️ *Cᴀsᴛ :* " + (_0x409b82?.["cast"] ?? "Null") + "\n▫️📃 *Dᴇꜱᴄʀɪᴘᴛɪᴏɴ :* " + (_0x409b82?.["description"] || "Null") + "\n\n\n*➟➟➟➟➟➟➟➟➟➟➟➟➟➟*\n▫️🔗 *Jᴏɪɴ :* whatsapp.com/channel/0029VaeyMWv3QxRu4hA6c33Z\n*➟➟➟➟➟➟➟➟➟➟➟➟➟➟*";
+    let _0x2fac84 = _0x409b82?.["image"] || "https://i.postimg.cc/9FGJDwzB/error-rubber-stamp-word-error-inside-illustration-109026446.jpg";
+    const _0xf11400 = {
+      url: _0x2fac84
     };
-    if (_0x485063.data.data.moviedata.seasons.length < 1) {
-      return await _0x1116ab.sendMessage(_0x39fa6a, {
-        'text': "*මට කිසිවක් සොයාගත නොහැකි විය :(*"
-      }, _0x2251ad);
+    const _0x3ec659 = {
+      image: _0xf11400,
+      caption: _0x505cdc
+    };
+    const _0x43a537 = {
+      quoted: _0x118951
+    };
+    await _0x55fff6.sendMessage(_0x718218, _0x3ec659, _0x43a537);
+    const _0x5bff9a = _0x409b82?.["movieDownloadLink"] || "";
+    if (!_0x5bff9a) {
+      throw new Error("No download links found!");
     }
-    var _0x34eb73 = [];
-    for (var _0x2a5457 = 0; _0x2a5457 < _0x485063.data.data.moviedata.seasons.length; _0x2a5457++) {
-      _0x34eb73.push({
-        'title': _0x2a5457 + 1,
-        'description': _0x485063.data.data.moviedata.seasons[_0x2a5457].title + " | " + _0x485063.data.data.moviedata.seasons[_0x2a5457].number + " | " + _0x485063.data.data.moviedata.seasons[_0x2a5457].date,
-        'rowId': _0x3b2d3c + ("slanimedl " + _0x485063.data.data.moviedata.seasons[_0x2a5457].link + '|' + _0x485063.data.data.moviedata.seasons[_0x2a5457].title)
-      });
-    }
-    const _0x53dc9b = {
-      title: "_[Result from slanimeclub.]_",
-      rows: _0x34eb73
-    };
-    const _0x2f8be9 = [_0x53dc9b];
-    const _0x1a2896 = {
-      url: _0x485063.data.data.moviedata.image
-    };
-    const _0x146fa8 = {
-      caption: _0x435195,
-      image: _0x1a2896,
-      footer: config.FOOTER,
-      title: "Result from slanimeclub. 📲",
-      buttonText: "*🔢 Reply below number*",
-      sections: _0x2f8be9
-    };
-    const _0x5c301f = {
-      quoted: _0x3422b8
-    };
-    return await _0x1116ab.replyList(_0x39fa6a, _0x146fa8, _0x5c301f);
-  } catch (_0x18ad86) {
-    _0x8d144("*ERROR !!*");
-    _0x2f2a39(_0x18ad86);
-  }
-});
-const _0x1d056a = {
-  pattern: "slanimedl",
-  react: '📥',
-  dontAddCommandList: true,
-  filename: __filename
-};
-cmd(_0x1d056a, async (_0x4d952d, _0x35bd88, _0x8dffea, {
-  from: _0x15efa1,
-  q: _0x758df7,
-  isDev: _0x31fce0,
-  reply: _0x1efe8a
-}) => {
-  if (!_0x758df7) {
-    return await _0x1efe8a("*Please provide a direct URL!*");
-  }
-  try {
-    const _0x40b0fc = _0x758df7.split('|')[0];
-    const _0xbee6f0 = _0x758df7.split('|')[1] || "tdd_movie_dl_system";
-    const _0x3b3c8c = await fetchJson(config.API + "/api/slanimeclub/download?url=" + _0x40b0fc + "&apikey=" + config.APIKEY);
-    const _0x3b4a5d = '' + _0x3b3c8c.data.data.link;
-    _0x1efe8a("╭═════════════════❀\n│  UPLOADING YOUR MOVIE 📥\n│ ❀ Target : WAIT FEW MINUTES...\n│ ❀ Use commands after come the movie\n│ ❀ Device : 1/3\n╰═════════════════❀");
-    if (_0x3b4a5d.includes("https://slanimeclub.co")) {
-      const _0x271896 = {
-        'document': await getBuffer(_0x3b4a5d),
-        'caption': _0xbee6f0 + "\n\n" + config.FOOTER,
-        'mimetype': "video/mp4",
-        'fileName': _0xbee6f0 + ".mp4"
-      };
-      await _0x4d952d.sendMessage(_0x15efa1, _0x271896);
-    }
-    if (_0x3b4a5d.includes("https://drive.google.com")) {
-      let _0x344c69 = await GDriveDl(_0x3b4a5d);
-      let _0x424e68 = "*[ Downloading file ]*\n\n";
-      _0x424e68 += "*Name :* " + _0x344c69.fileName + "\n";
-      _0x424e68 += "*Size :* " + _0x344c69.fileSize + "\n";
-      _0x424e68 += "*Type :* " + _0x344c69.mimetype;
-      await _0x1efe8a(_0x424e68);
-      const _0x2acb98 = {
-        url: _0x344c69.downloadUrl
-      };
-      const _0x142ce7 = {
-        document: _0x2acb98,
-        caption: _0x344c69.fileName + "\n\n" + config.FOOTER,
-        fileName: _0x344c69.fileName,
-        mimetype: _0x344c69.mimetype
-      };
-      const _0x569212 = {
-        quoted: _0x35bd88
-      };
-      _0x4d952d.sendMessage(_0x15efa1, _0x142ce7, _0x569212);
-    }
-    const _0x29b00a = {
-      text: '✅',
-      key: _0x35bd88.key
-    };
-    const _0x3d72b6 = {
-      react: _0x29b00a
-    };
-    await _0x4d952d.sendMessage(_0x15efa1, _0x3d72b6);
-  } catch (_0x21eaeb) {
-    console.error("Error fetching or sending", _0x21eaeb);
-    const _0x12fc75 = {
-      quoted: _0x35bd88
-    };
-    await _0x4d952d.sendMessage(_0x15efa1, "*Error fetching or sending *", _0x12fc75);
-  }
-});
-const _0xd23d20 = {
-  pattern: "cinesubz",
-  react: '📑',
-  category: "movie",
-  desc: "cinesubz moive downloader",
-  filename: __filename
-};
-cmd(_0xd23d20, async (_0x2f1c6a, _0x382a51, _0x188c15, {
-  from: _0x546c4a,
-  prefix: _0x477d18,
-  q: _0x1d7825,
-  l: _0x39ffdd,
-  isDev: _0x4bc854,
-  reply: _0x561ac6
-}) => {
-  try {
-    if (!_0x1d7825) {
-      return await _0x561ac6("*Please Give Me Text..! 🖊️*");
-    }
-    const _0x2e3aa = await fetchJson(config.API + "/api/cinesubz/search?q=" + _0x1d7825 + "&apikey=" + config.APIKEY);
-    const _0x32b42a = {
-      quoted: _0x188c15
-    };
-    if (_0x2e3aa.data.data.data.length < 1) {
-      return await _0x2f1c6a.sendMessage(_0x546c4a, {
-        'text': "*මට කිසිවක් සොයාගත නොහැකි විය :(*"
-      }, _0x32b42a);
-    }
-    var _0x2e91f5 = [];
-    for (var _0xa1d8d5 = 0; _0xa1d8d5 < _0x2e3aa.data.data.data.length; _0xa1d8d5++) {
-      _0x2e91f5.push({
-        'title': _0xa1d8d5 + 1,
-        'description': _0x2e3aa.data.data.data[_0xa1d8d5].title,
-        'rowId': _0x477d18 + "cine " + _0x2e3aa.data.data.data[_0xa1d8d5].link
-      });
-    }
-    const _0x118b01 = {
-      title: "_[Result from cinesubz.]_",
-      rows: _0x2e91f5
-    };
-    const _0x52fad8 = [_0x118b01];
-    const _0x301605 = {
-      text: '',
-      footer: config.FOOTER,
-      title: "Result from cinesubz. 📲",
-      buttonText: "*🔢 Reply below number*",
-      sections: _0x52fad8
-    };
-    const _0x466ce7 = {
-      quoted: _0x188c15
-    };
-    return await _0x2f1c6a.replyList(_0x546c4a, _0x301605, _0x466ce7);
-  } catch (_0x493114) {
-    _0x561ac6("*ERROR !!*");
-    _0x39ffdd(_0x493114);
-  }
-});
-const _0x5a4fd1 = {
-  pattern: "cine",
-  react: '📑',
-  filename: __filename
-};
-cmd(_0x5a4fd1, async (_0x377633, _0x470df0, _0x17f0c2, {
-  from: _0x25ec03,
-  prefix: _0x3f1289,
-  q: _0x4b2c36,
-  l: _0x1bab78,
-  isDev: _0x5b5ee0,
-  reply: _0x51caff
-}) => {
-  try {
-    if (!_0x4b2c36) {
-      return await _0x51caff("*Please Give Me Text..! 🖊️*");
-    }
-    const _0x1b79fc = await fetchJson(config.API + "/api/cinesubz/movie?url=" + _0x4b2c36 + "&apikey=" + config.APIKEY);
-    const _0x24e9e3 = "*_☘ Title: " + _0x1b79fc.data.data.moviedata.title + "_*\n\n- *Year:* " + _0x1b79fc.data.data.mainDetails.dateCreated + "\n- *Rating:* " + _0x1b79fc.data.data.mainDetails.runtime + "\n- *Count* " + _0x1b79fc.data.data.mainDetails.rating.count + "\n- *Value* " + _0x1b79fc.data.data.mainDetails.rating.value + "\n\n*⛏️ Link:* " + _0x4b2c36;
-    const _0xc428c3 = await axios.get(_0x4b2c36);
-    const _0x577b53 = cheerio.load(_0xc428c3.data);
-    const _0x680879 = _0x577b53("div.poster > img").attr("src");
-    const _0x4dd42c = _0x577b53("div.data > h1").text();
-    const _0x557305 = _0x577b53("span > a").text();
-    const _0xfc89a3 = _0x577b53("div.data > div.sgeneros > a").text();
-    const _0x4a9c12 = _0x577b53("div.extra > span.date").text();
-    const _0x459c77 = _0x577b53("#repimdb > strong").text();
-    const _0x5a25aa = [];
-    _0x577b53("div.se-a > ul.episodios > li").each((_0xd1320d, _0x598db5) => {
-      _0x5a25aa.push({
-        'link': _0x577b53(_0x598db5).find('a').attr("href"),
-        'id': _0x577b53(_0x598db5).find("div.numerando").text(),
-        'title': _0x577b53(_0x598db5).find("div.episodiotitle > a").text()
-      });
-    });
-    const _0x2167f8 = "*_☘ Title: " + _0x4dd42c + "*\n\n- *Year:* " + _0x4a9c12 + "\n- *Rating:* " + _0x459c77 + "\n- *Type:* " + _0x557305 + "\n- *Generos:* " + _0xfc89a3 + "\n\n⛏️ *Link:* " + _0x4b2c36;
-    if (_0x4b2c36.includes("https://cinesubz.co/movies")) {
-      const _0x4a796e = {
-        quoted: _0x17f0c2
-      };
-      if (_0x1b79fc.data.data.dllinks.directDownloadLinks.length < 1) {
-        return await _0x377633.sendMessage(_0x25ec03, {
-          'text': "*මට කිසිවක් සොයාගත නොහැකි විය :(*"
-        }, _0x4a796e);
-      }
-      var _0x576314 = [];
-      for (var _0x9cfae9 = 0; _0x9cfae9 < _0x1b79fc.data.data.dllinks.directDownloadLinks.length; _0x9cfae9++) {
-        _0x576314.push({
-          'title': _0x9cfae9 + 1,
-          'description': _0x1b79fc.data.data.dllinks.directDownloadLinks[_0x9cfae9].quality + " | " + _0x1b79fc.data.data.dllinks.directDownloadLinks[_0x9cfae9].size,
-          'rowId': _0x3f1289 + ("cinedls " + _0x1b79fc.data.data.dllinks.directDownloadLinks[_0x9cfae9].link)
+    const _0xcfd857 = require("https");
+    function _0x3973c7(_0x527386) {
+      return new Promise((_0x2b31f2, _0x2f01e1) => {
+        const _0x5eae15 = {
+          method: "HEAD"
+        };
+        _0xcfd857.get(_0x527386, _0x5eae15, _0x1c7054 => {
+          const _0xac9749 = _0x1c7054.headers["content-length"];
+          if (_0xac9749) {
+            const _0x43e08f = (_0xac9749 / 1048576).toFixed(2);
+            _0x2b31f2(_0x43e08f);
+          } else {
+            _0x2f01e1("File size ලබාගත නොහැක.");
+          }
+        }).on("error", _0x5ec923 => {
+          _0x2f01e1(_0x5ec923.message);
         });
-      }
-      const _0xf6a247 = {
-        title: "_Select Movie_",
-        rows: _0x576314
-      };
-      const _0x4ed143 = [_0xf6a247, {
-        'title': "*🎬 MOVIE INFO 🎬*",
-        'rows': [{
-          'title': "    1.1",
-          'rowId': _0x3f1289 + ("cines " + _0x4b2c36),
-          'description': "Send Movie Details 📄"
-        }]
-      }, {
-        'title': "*🎬 MOVIE IMAGES 🎬*",
-        'rows': [{
-          'title': "    1.2",
-          'rowId': _0x3f1289 + ("cinei " + _0x4b2c36),
-          'description': "Send Movie IMAGES 🏞️"
-        }]
-      }];
-      const _0x372ed0 = {
-        url: _0x1b79fc.data.data.mainDetails.imageUrl
-      };
-      const _0x5b56e0 = {
-        caption: _0x24e9e3,
-        image: _0x372ed0,
-        footer: config.FOOTER,
-        title: '',
-        buttonText: "*🔢 Reply below number*",
-        sections: _0x4ed143
-      };
-      const _0x48f180 = {
-        quoted: _0x17f0c2
-      };
-      return await _0x377633.replyList(_0x25ec03, _0x5b56e0, _0x48f180);
-    }
-    if (_0x4b2c36.includes("https://cinesubz.co/tvshows")) {
-      const _0x4967b9 = {
-        quoted: _0x17f0c2
-      };
-      if (_0x5a25aa.length < 1) {
-        return await _0x377633.sendMessage(_0x25ec03, {
-          'text': "*මට කිසිවක් සොයාගත නොහැකි විය :(*"
-        }, _0x4967b9);
-      }
-      var _0x576314 = [];
-      for (var _0x9cfae9 = 0; _0x9cfae9 < _0x5a25aa.length; _0x9cfae9++) {
-        _0x576314.push({
-          'title': _0x9cfae9 + 1,
-          'description': _0x5a25aa[_0x9cfae9].title + " | " + _0x5a25aa[_0x9cfae9].id,
-          'rowId': _0x3f1289 + ("cinetv " + _0x5a25aa[_0x9cfae9].link)
-        });
-      }
-      const _0x4eca55 = {
-        title: "_Select Episode_",
-        rows: _0x576314
-      };
-      const _0x4004e1 = [_0x4eca55, {
-        'title': "*🎬 MOVIE INFO 🎬*",
-        'rows': [{
-          'title': "    1.1",
-          'rowId': _0x3f1289 + ("cines " + _0x4b2c36),
-          'description': "Send Movie Details 📄"
-        }]
-      }, {
-        'title': "*🎬 MOVIE IMAGES 🎬*",
-        'rows': [{
-          'title': "    1.2",
-          'rowId': _0x3f1289 + ("cinei " + _0x4b2c36),
-          'description': "Send Movie IMAGES 🏞️"
-        }]
-      }];
-      const _0x51469a = {
-        url: _0x680879
-      };
-      const _0x183748 = {
-        caption: _0x2167f8,
-        image: _0x51469a,
-        footer: config.FOOTER,
-        title: '',
-        buttonText: "*🔢 Reply below number*",
-        sections: _0x4004e1
-      };
-      const _0x56556c = {
-        quoted: _0x17f0c2
-      };
-      return await _0x377633.replyList(_0x25ec03, _0x183748, _0x56556c);
-    }
-  } catch (_0x2d9394) {
-    _0x51caff("*ERROR !!*");
-    _0x1bab78(_0x2d9394);
-  }
-});
-const _0x1951e6 = {
-  pattern: "cinetv",
-  react: '📑',
-  filename: __filename
-};
-cmd(_0x1951e6, async (_0x274b50, _0x45e3ed, _0x1ee160, {
-  from: _0x3b10d9,
-  prefix: _0x4c86de,
-  q: _0x310b70,
-  l: _0x1da58e,
-  isDev: _0x544196,
-  reply: _0x109901
-}) => {
-  try {
-    if (!_0x310b70) {
-      return await _0x109901("*Please Give Me Text..! 🖊️*");
-    }
-    const _0x190e3c = await fetchJson(config.API + "/api/cinesubz/episode?url=" + _0x310b70 + "&apikey=" + config.APIKEY);
-    const _0x16d937 = {
-      quoted: _0x1ee160
-    };
-    if (_0x190e3c.data.data.dllinks.directDownloadLinks.length < 1) {
-      return await _0x274b50.sendMessage(_0x3b10d9, {
-        'text': "*මට කිසිවක් සොයාගත නොහැකි විය :(*"
-      }, _0x16d937);
-    }
-    var _0xf0e823 = [];
-    for (var _0x55a272 = 0; _0x55a272 < _0x190e3c.data.data.dllinks.directDownloadLinks.length; _0x55a272++) {
-      _0xf0e823.push({
-        'title': _0x55a272 + 1,
-        'description': _0x190e3c.data.data.dllinks.directDownloadLinks[_0x55a272].quality + " | " + _0x190e3c.data.data.dllinks.directDownloadLinks[_0x55a272].size,
-        'rowId': _0x4c86de + ("cinedls " + _0x190e3c.data.data.dllinks.directDownloadLinks[_0x55a272].link)
       });
     }
-    const _0x31e653 = {
-      title: "_Select Movie_",
-      rows: _0xf0e823
-    };
-    const _0x259dad = [_0x31e653];
-    const _0x4805a5 = {
-      caption: "*_☘ Title: " + _0x190e3c.data.data.mainDetails.title + "_*\n\n- *EpisodeTitle:* " + _0x190e3c.data.data.mainDetails.episodeTitle + "\n- *Year:* " + _0x190e3c.data.data.mainDetails.date + "\n- *Completeness* " + _0x190e3c.data.data.mainDetails.completeness + "\n\n*⛏️ Link:* " + _0x310b70,
-      image: {},
-      footer: config.FOOTER,
-      title: '',
-      buttonText: "*🔢 Reply below number*",
-      sections: _0x259dad
-    };
-    _0x4805a5.image.url = _0x190e3c.data.data.imageUrls[0];
-    const _0x8da086 = {
-      quoted: _0x1ee160
-    };
-    return await _0x274b50.replyList(_0x3b10d9, _0x4805a5, _0x8da086);
-  } catch (_0x51ab4e) {
-    _0x109901("*ERROR !!*");
-    _0x1da58e(_0x51ab4e);
-  }
-});
-const _0x2324e5 = {
-  pattern: "cinedls",
-  react: '📑',
-  filename: __filename
-};
-cmd(_0x2324e5, async (_0x43e173, _0x298e19, _0x4c3b53, {
-  from: _0x198b05,
-  prefix: _0x59c3f6,
-  q: _0x5de478,
-  l: _0x26fce8,
-  isDev: _0x38dc87,
-  reply: _0xeecb1f
-}) => {
-  try {
-    if (!_0x5de478) {
-      return await _0xeecb1f("*Please Give Me Text..! 🖊️*");
-    }
-    const _0x45cde8 = await fetchJson(config.API + "/api/cinesubz/download?url=" + _0x5de478 + "&apikey=" + config.APIKEY);
-    const _0x44f0dc = _0x45cde8.data.data;
-    if (!_0x44f0dc || _0x44f0dc.length === 0) {
-      return _0xeecb1f("No download links found.");
-    }
-    let _0x1b4a39 = "*🎥 Cinesubz Download Links 🎥*\n\n";
-    _0x44f0dc.forEach((_0x3c3a3b, _0x37d40) => {
-      _0x1b4a39 += '*' + (_0x37d40 + 1) + ". " + _0x3c3a3b.fileName + "*\n";
-      _0x1b4a39 += "📦 Size: " + _0x3c3a3b.fileSize + "\n";
-      _0x1b4a39 += "🔗 Type: " + _0x3c3a3b.type + "\n===============================\n";
-    });
-    const _0x28659d = {
-      quoted: _0x4c3b53
-    };
-    if (_0x44f0dc < 1) {
-      return await _0x43e173.sendMessage(_0x198b05, {
-        'text': "*මට කිසිවක් සොයාගත නොහැකි විය :(*"
-      }, _0x28659d);
-    }
-    var _0x29e14f = [];
-    for (var _0x42048f = 0; _0x42048f < _0x44f0dc.length; _0x42048f++) {
-      _0x29e14f.push({
-        'title': _0x42048f + 1,
-        'description': _0x44f0dc[_0x42048f].type + " | " + _0x44f0dc[_0x42048f].fileSize,
-        'rowId': _0x59c3f6 + ("cinedl " + _0x44f0dc[_0x42048f].href + '|' + _0x44f0dc[_0x42048f].fileName)
-      });
-    }
-    const _0x917617 = {
-      title: "_[Result from cinesubz.]_",
-      rows: _0x29e14f
-    };
-    const _0x3b4043 = [_0x917617];
-    const _0x46f523 = {
-      text: _0x1b4a39,
-      footer: config.FOOTER,
-      title: "Result from cinesubz. 📲",
-      buttonText: "*🔢 Reply below number*",
-      sections: _0x3b4043
-    };
-    const _0x291dbe = {
-      quoted: _0x4c3b53
-    };
-    return await _0x43e173.replyList(_0x198b05, _0x46f523, _0x291dbe);
-  } catch (_0x5f484f) {
-    _0xeecb1f("*ERROR !!*");
-    _0x26fce8(_0x5f484f);
-  }
-});
-const _0x14e422 = {
-  pattern: "cines",
-  react: '⬆',
-  dontAddCommandList: true,
-  filename: __filename
-};
-cmd(_0x14e422, async (_0x2330e9, _0x4b6a15, _0x3becfa, {
-  reply: _0x23f2fd,
-  isDev: _0x453b12,
-  from: _0x516b46,
-  q: _0x3a7b48,
-  prefix: _0x1e706b
-}) => {
-  try {
-    if (!_0x3a7b48) {
-      return await _0x23f2fd("*Please Give Me Link..! 🖊️*");
-    }
-    if (_0x3a7b48.includes("https://cinesubz.co/movies")) {
-      const _0xccd430 = await fetchJson(config.API + "/api/cinesubz/movie?url=" + _0x3a7b48 + "&apikey=" + config.APIKEY);
-      const _0x1a334c = "*_☘ Title: " + _0xccd430.data.data.moviedata.title + "_*\n\n- *Year:* " + _0xccd430.data.data.mainDetails.dateCreated + "\n- *Rating:* " + _0xccd430.data.data.mainDetails.runtime + "\n- *Count* " + _0xccd430.data.data.mainDetails.rating.count + "\n- *Value* " + _0xccd430.data.data.mainDetails.rating.value + "\n\n*⛏️ Link:* " + _0x3a7b48 + "\n\n" + config.FOOTER;
-      const _0x2827a9 = {
-        url: _0xccd430.data.data.mainDetails.imageUrl
-      };
-      const _0x5a596e = {
-        image: _0x2827a9,
-        caption: _0x1a334c
-      };
-      const _0x5c0ade = {
-        quoted: _0x4b6a15
-      };
-      return await _0x2330e9.sendMessage(_0x516b46, _0x5a596e, _0x5c0ade);
-      const _0x374fc7 = {
-        text: '✅',
-        key: _0x4b6a15.key
-      };
-      const _0x4bff5a = {
-        react: _0x374fc7
-      };
-      await _0x2330e9.sendMessage(_0x516b46, _0x4bff5a);
-    }
-    if (_0x3a7b48.includes("https://cinesubz.co/tvshows")) {
-      const _0x33d201 = await fetchJson(config.API + "/api/cinesubz/episodes?url=" + _0x3a7b48 + "&apikey=" + config.APIKEY);
-      const _0xcc8349 = "*_☘ Title: " + _0x33d201.data.data.mainDetails.title + "_*\n\n- *EpisodeTitle:* " + _0x33d201.data.data.mainDetails.episodeTitle + "\n- *Year:* " + _0x33d201.data.data.mainDetails.date + "\n- *Completeness* " + _0x33d201.data.data.mainDetails.completeness + "\n\n*⛏️ Link:* " + _0x3a7b48 + "\n\n" + config.FOOTER;
-      const _0x13aa4b = {
-        url: _0x33d201.data.data.mainDetails.imageUrl
-      };
-      const _0x1f84e9 = {
-        image: _0x13aa4b,
-        caption: _0xcc8349
-      };
-      const _0x48bd61 = {
-        quoted: _0x4b6a15
-      };
-      return await _0x2330e9.sendMessage(_0x516b46, _0x1f84e9, _0x48bd61);
-      const _0x2dc0bc = {
-        text: '✅',
-        key: _0x4b6a15.key
-      };
-      const _0xf229a = {
-        react: _0x2dc0bc
-      };
-      await _0x2330e9.sendMessage(_0x516b46, _0xf229a);
-    }
-  } catch (_0x8c185c) {
-    _0x23f2fd("*_First activate location sender_*\n\n- Eg:- .activate\n- Then reply 1.1");
-    console.log(_0x8c185c);
-  }
-});
-const _0x3a6214 = {
-  pattern: "cinei",
-  react: '⬆',
-  dontAddCommandList: true,
-  filename: __filename
-};
-cmd(_0x3a6214, async (_0x50f0dc, _0x1bf0d0, _0x23921e, {
-  reply: _0x22517a,
-  isDev: _0xd3fa24,
-  from: _0x1ae372,
-  q: _0x4b31c1,
-  prefix: _0x3864a4
-}) => {
-  try {
-    if (!_0x4b31c1) {
-      return await _0x22517a("*Please Give Me Link..! 🖊️*");
-    }
-    if (_0x4b31c1.includes("https://cinesubz.co/movies")) {
-      const _0x4bebb2 = await fetchJson(config.API + "/api/cinesubz/movie?url=" + _0x4b31c1 + "&apikey=" + config.APIKEY);
-      const _0x3f3015 = config.FOOTER;
-      _0x22517a("UPLOADING MOVIE IMAGES 🔄");
-      const _0x6571d = {
-        url: _0x4bebb2.data.data.moviedata.imageUrls[0]
-      };
-      const _0x37f916 = {
-        image: _0x6571d,
-        caption: _0x3f3015
-      };
-      const _0x24d127 = {
-        quoted: _0x1bf0d0
-      };
-      await _0x50f0dc.sendMessage(_0x1ae372, _0x37f916, _0x24d127);
-      const _0x5db4ff = {
-        url: _0x4bebb2.data.data.moviedata.imageUrls[1]
-      };
-      const _0x147764 = {
-        image: _0x5db4ff,
-        caption: _0x3f3015
-      };
-      const _0x48cf1a = {
-        quoted: _0x1bf0d0
-      };
-      await _0x50f0dc.sendMessage(_0x1ae372, _0x147764, _0x48cf1a);
-      const _0x29d48e = {
-        url: _0x4bebb2.data.data.moviedata.imageUrls[2]
-      };
-      const _0xa489e5 = {
-        image: _0x29d48e,
-        caption: _0x3f3015
-      };
-      const _0x17b81f = {
-        quoted: _0x1bf0d0
-      };
-      await _0x50f0dc.sendMessage(_0x1ae372, _0xa489e5, _0x17b81f);
-      const _0x1df3be = {
-        url: _0x4bebb2.data.data.moviedata.imageUrls[4]
-      };
-      const _0x40658f = {
-        image: _0x1df3be,
-        caption: _0x3f3015
-      };
-      const _0x458853 = {
-        quoted: _0x1bf0d0
-      };
-      await _0x50f0dc.sendMessage(_0x1ae372, _0x40658f, _0x458853);
-      const _0x22798d = {
-        url: _0x4bebb2.data.data.moviedata.imageUrls[5]
-      };
-      const _0xf1b08c = {
-        image: _0x22798d,
-        caption: _0x3f3015
-      };
-      const _0x2c0489 = {
-        quoted: _0x1bf0d0
-      };
-      await _0x50f0dc.sendMessage(_0x1ae372, _0xf1b08c, _0x2c0489);
-      const _0x42824b = {
-        text: '✅',
-        key: _0x1bf0d0.key
-      };
-      const _0x4242d8 = {
-        react: _0x42824b
-      };
-      await _0x50f0dc.sendMessage(_0x1ae372, _0x4242d8);
-    }
-    if (_0x4b31c1.includes("https://cinesubz.co/tvshows")) {
-      const _0x2b9965 = await fetchJson(config.API + "/api/sinhalasubs/episodes?url=" + _0x4b31c1 + "&apikey=" + config.APIKEY);
-      const _0x4687ca = config.FOOTER;
-      _0x22517a("UPLOADING MOVIE IMAGES 🔄");
-      const _0x19f3ad = {
-        url: _0x2b9965.data.data.imageUrls[0]
-      };
-      const _0x18609a = {
-        image: _0x19f3ad,
-        caption: _0x4687ca
-      };
-      const _0x26f72e = {
-        quoted: _0x1bf0d0
-      };
-      await _0x50f0dc.sendMessage(_0x1ae372, _0x18609a, _0x26f72e);
-      const _0x59f29b = {
-        url: _0x2b9965.data.data.imageUrls[1]
-      };
-      const _0x177cf4 = {
-        image: _0x59f29b,
-        caption: _0x4687ca
-      };
-      const _0x2f958e = {
-        quoted: _0x1bf0d0
-      };
-      await _0x50f0dc.sendMessage(_0x1ae372, _0x177cf4, _0x2f958e);
-      const _0x3a024a = {
-        url: _0x2b9965.data.data.imageUrls[2]
-      };
-      const _0x22badc = {
-        image: _0x3a024a,
-        caption: _0x4687ca
-      };
-      const _0x19e0f2 = {
-        quoted: _0x1bf0d0
-      };
-      await _0x50f0dc.sendMessage(_0x1ae372, _0x22badc, _0x19e0f2);
-      const _0x47951e = {
-        url: _0x2b9965.data.data.imageUrls[4]
-      };
-      const _0x5dab5c = {
-        image: _0x47951e,
-        caption: _0x4687ca
-      };
-      const _0x3fa86d = {
-        quoted: _0x1bf0d0
-      };
-      await _0x50f0dc.sendMessage(_0x1ae372, _0x5dab5c, _0x3fa86d);
-      const _0x2c5db7 = {
-        url: _0x2b9965.data.data.imageUrls[5]
-      };
-      const _0x55ef54 = {
-        image: _0x2c5db7,
-        caption: _0x4687ca
-      };
-      const _0x2062e3 = {
-        quoted: _0x1bf0d0
-      };
-      await _0x50f0dc.sendMessage(_0x1ae372, _0x55ef54, _0x2062e3);
-      const _0x3669e0 = {
-        text: '✅',
-        key: _0x1bf0d0.key
-      };
-      const _0x225008 = {
-        react: _0x3669e0
-      };
-      await _0x50f0dc.sendMessage(_0x1ae372, _0x225008);
-    }
-  } catch (_0x4fe480) {
-    _0x22517a("*_First activate location sender_*\n\n- Eg:- .activate\n- Then reply 1.1");
-    console.log(_0x4fe480);
-  }
-});
-const _0xc3c7e5 = {
-  pattern: "cinedl",
-  react: '📥',
-  dontAddCommandList: true,
-  filename: __filename
-};
-cmd(_0xc3c7e5, async (_0x577829, _0x240cbf, _0x6ba718, {
-  from: _0x39506b,
-  q: _0x1675b2,
-  isDev: _0x581f34,
-  reply: _0x53df5c
-}) => {
-  if (!_0x1675b2) {
-    return await _0x53df5c("*Please provide a direct URL!*");
-  }
-  try {
-    const _0x25e67c = _0x1675b2.split('|')[0];
-    const _0x502458 = _0x1675b2.split('|')[1] || "tdd_movie_dl_system";
-    _0x53df5c("╭═════════════════❀\n│  UPLOADING YOUR MOVIE 📥\n│ ❀ Target : WAIT FEW MINUTES...\n│ ❀ Use commands after come the movie\n│ ❀ Device : 1/3\n╰═════════════════❀");
-    if (_0x1675b2.includes("https://pixeldrain.com")) {
-      const _0x57c326 = {
-        'document': await getBuffer(_0x25e67c),
-        'caption': _0x502458 + "\n\n" + config.FOOTER,
-        'mimetype': "video/mp4",
-        'fileName': _0x502458 + ".mp4"
-      };
-      await _0x577829.sendMessage(_0x39506b, _0x57c326);
-    }
-    if (_0x1675b2.includes("https://06.cscloud12.online")) {
-      const _0x135d8b = {
-        'document': await getBuffer(_0x25e67c),
-        'caption': _0x502458 + "\n\n" + config.FOOTER,
-        'mimetype': "video/mp4",
-        'fileName': _0x502458 + ".mp4"
-      };
-      await _0x577829.sendMessage(_0x39506b, _0x135d8b);
-    }
-    if (_0x1675b2.includes("https://drive.usercontent.google.com")) {
-      let _0x51d921 = _0x25e67c.match(/id=([a-zA-Z0-9_-]+)/)[1];
-      const _0x463c98 = "https://drive.google.com/file/d/" + _0x51d921 + "/view";
-      let _0xc10916 = await GDriveDl(_0x463c98);
-      let _0x244321 = "*[ Downloading file ]*\n\n";
-      _0x244321 += "*Name :* " + _0xc10916.fileName + "\n";
-      _0x244321 += "*Size :* " + _0xc10916.fileSize + "\n";
-      _0x244321 += "*Type :* " + _0xc10916.mimetype;
-      await _0x53df5c(_0x244321);
-      const _0x3a38c0 = {
-        url: _0xc10916.downloadUrl
-      };
-      const _0x28dd9c = {
-        document: _0x3a38c0,
-        caption: _0xc10916.fileName + "\n\n" + config.FOOTER,
-        fileName: _0xc10916.fileName,
-        mimetype: _0xc10916.mimetype
-      };
-      const _0x5afca0 = {
-        quoted: _0x240cbf
-      };
-      _0x577829.sendMessage(_0x39506b, _0x28dd9c, _0x5afca0);
-    }
-    const _0x558209 = {
-      text: '✅',
-      key: _0x240cbf.key
-    };
-    const _0x32b8e4 = {
-      react: _0x558209
-    };
-    await _0x577829.sendMessage(_0x39506b, _0x32b8e4);
-  } catch (_0x1ef9c1) {
-    console.error("Error fetching or sending", _0x1ef9c1);
-    const _0x2dc2e6 = {
-      quoted: _0x240cbf
-    };
-    await _0x577829.sendMessage(_0x39506b, "*Error fetching or sending *", _0x2dc2e6);
-  }
-});
-const _0x3d46f6 = {
-  pattern: "sinhalasub",
-  react: '📑',
-  category: "movie",
-  desc: "pirate moive downloader",
-  filename: __filename
-};
-cmd(_0x3d46f6, async (_0x3ee0f3, _0x416758, _0x118a0f, {
-  from: _0xe087fc,
-  prefix: _0x2c7259,
-  q: _0x5533bd,
-  l: _0xd1118c,
-  isDev: _0x14f1ea,
-  reply: _0x34abe9
-}) => {
-  try {
-    if (!_0x5533bd) {
-      return await _0x34abe9("*Please Give Me Text..! 🖊️*");
-    }
-    const _0x33e354 = await fetchJson(config.API + "/api/sinhalasubs/search?q=" + _0x5533bd + "&apikey=" + config.APIKEY);
-    const _0x37d563 = {
-      quoted: _0x118a0f
-    };
-    if (_0x33e354.data.data.data.length < 1) {
-      return await _0x3ee0f3.sendMessage(_0xe087fc, {
-        'text': "*මට කිසිවක් සොයාගත නොහැකි විය :(*"
-      }, _0x37d563);
-    }
-    var _0x2fc6fc = [];
-    for (var _0x272b82 = 0; _0x272b82 < _0x33e354.data.data.data.length; _0x272b82++) {
-      _0x2fc6fc.push({
-        'title': _0x272b82 + 1,
-        'description': _0x33e354.data.data.data[_0x272b82].title,
-        'rowId': _0x2c7259 + "subin " + _0x33e354.data.data.data[_0x272b82].link
-      });
-    }
-    const _0x224fd0 = {
-      title: "_[Result from sinhalasub.]_",
-      rows: _0x2fc6fc
-    };
-    const _0xf28721 = [_0x224fd0];
-    const _0xa51675 = {
-      text: '',
-      footer: config.FOOTER,
-      title: "Result from sinhalasub. 📲",
-      buttonText: "*🔢 Reply below number*",
-      sections: _0xf28721
-    };
-    const _0xfb3c49 = {
-      quoted: _0x118a0f
-    };
-    return await _0x3ee0f3.replyList(_0xe087fc, _0xa51675, _0xfb3c49);
-  } catch (_0x20bc38) {
-    _0x34abe9("*ERROR !!*");
-    _0xd1118c(_0x20bc38);
-  }
-});
-const _0x4626ac = {
-  pattern: "subin",
-  react: '📑',
-  filename: __filename
-};
-cmd(_0x4626ac, async (_0x1910be, _0x57eab5, _0x47137f, {
-  from: _0x563c89,
-  prefix: _0x115d85,
-  q: _0x44b98f,
-  l: _0x276377,
-  isDev: _0x28cd55,
-  reply: _0x18d63c
-}) => {
-  try {
-    if (!_0x44b98f) {
-      return await _0x18d63c("*Please Give Me Text..! 🖊️*");
-    }
-    const _0x4fdd67 = await fetchJson(config.API + "/api/sinhalasubs/movie?url=" + _0x44b98f + "&apikey=" + config.APIKEY);
-    const _0x1fd21a = "*_☘ Title: " + _0x4fdd67.data.data.mainDetails.maintitle + "_*\n\n- *Year:* " + _0x4fdd67.data.data.mainDetails.dateCreated + "\n- *Rating:* " + _0x4fdd67.data.data.mainDetails.runtime + "\n- *ImdbRating* " + _0x4fdd67.data.data.moviedata.imdbRating + "\n- *ImdbvotesCount* " + _0x4fdd67.data.data.moviedata.imdbvotesCount + "\n\n*⛏️ Link:* " + _0x44b98f;
-    const _0x4d1b9b = await fetchJson(config.API + "/api/sinhalasubs/tvshow?url=" + _0x44b98f + "&apikey=" + config.APIKEY);
-    const _0x2bb601 = await axios.get(_0x44b98f);
-    const _0x574ed8 = cheerio.load(_0x2bb601.data);
-    const _0x28e73d = [];
-    _0x574ed8("ul.episodios > li").each((_0xf35285, _0x17749f) => {
-      _0x28e73d.push({
-        'link': _0x574ed8(_0x17749f).find("div.episodiotitle > a").attr("href"),
-        'title1': _0x574ed8(_0x17749f).find("div.numerando").text(),
-        'episode': _0x574ed8(_0x17749f).find("div.episodiotitle > a").text()
-      });
-    });
-    const _0x10283a = "*_☘ Title: " + _0x4fdd67.data.data.mainDetails.maintitle + "*\n\n- *Year:* " + _0x4d1b9b.data.data.mainDetails.dateCreated + "\n- *Rating:* " + _0x4d1b9b.data.data.mainDetails.rating.value + " || " + _0x4d1b9b.data.data.mainDetails.rating.count + "\n- *Generos:* " + _0x4d1b9b.data.data.mainDetails.genres[0] + " " + _0x4d1b9b.data.data.mainDetails.genres[1] + "\n\n⛏️ *Link:* " + _0x44b98f;
-    if (_0x44b98f.includes("https://sinhalasub.lk/movies")) {
-      const _0xd291a3 = {
-        quoted: _0x47137f
-      };
-      if (_0x4fdd67.data.data.dllinks.directDownloadLinks.length < 1) {
-        return await _0x1910be.sendMessage(_0x563c89, {
-          'text': "*මට කිසිවක් සොයාගත නොහැකි විය :(*"
-        }, _0xd291a3);
-      }
-      var _0x14251c = [];
-      for (var _0x3f8145 = 0; _0x3f8145 < _0x4fdd67.data.data.dllinks.directDownloadLinks.length; _0x3f8145++) {
-        _0x14251c.push({
-          'title': _0x3f8145 + 1,
-          'description': _0x4fdd67.data.data.dllinks.directDownloadLinks[_0x3f8145].quality + " | " + _0x4fdd67.data.data.dllinks.directDownloadLinks[_0x3f8145].size,
-          'rowId': _0x115d85 + ("subdl " + _0x4fdd67.data.data.dllinks.directDownloadLinks[_0x3f8145].link + '|' + _0x4fdd67.data.data.mainDetails.maintitle + '|' + _0x4fdd67.data.data.moviedata.imageUrls[0])
-        });
-      }
-      const _0x1ba263 = {
-        title: "_Select Movie_",
-        rows: _0x14251c
-      };
-      const _0x6a7d80 = [_0x1ba263, {
-        'title': "*🎬 MOVIE INFO 🎬*",
-        'rows': [{
-          'title': "    1.1",
-          'rowId': _0x115d85 + ("subins " + _0x44b98f),
-          'description': "Send Movie Details 📄"
-        }]
-      }, {
-        'title': "*🎬 MOVIE IMAGES 🎬*",
-        'rows': [{
-          'title': "    1.2",
-          'rowId': _0x115d85 + ("subini " + _0x44b98f),
-          'description': "Send Movie IMAGES 🏞️"
-        }]
-      }];
-      const _0x1a757d = {
-        url: _0x4fdd67.data.data.moviedata.imageUrls[0]
-      };
-      const _0x2eea8d = {
-        caption: _0x1fd21a,
-        image: _0x1a757d,
-        footer: config.FOOTER,
-        title: '',
-        buttonText: "*🔢 Reply below number*",
-        sections: _0x6a7d80
-      };
-      const _0x2672e1 = {
-        quoted: _0x47137f
-      };
-      return await _0x1910be.replyList(_0x563c89, _0x2eea8d, _0x2672e1);
-    }
-    if (_0x44b98f.includes("https://sinhalasub.lk/tvshows")) {
-      const _0x7a6c90 = {
-        quoted: _0x47137f
-      };
-      if (_0x28e73d.length < 1) {
-        return await _0x1910be.sendMessage(_0x563c89, {
-          'text': "*මට කිසිවක් සොයාගත නොහැකි විය :(*"
-        }, _0x7a6c90);
-      }
-      var _0x14251c = [];
-      for (var _0x3f8145 = 0; _0x3f8145 < _0x28e73d.length; _0x3f8145++) {
-        _0x14251c.push({
-          'title': _0x3f8145 + 1,
-          'description': _0x28e73d[_0x3f8145].title1 + " | " + _0x28e73d[_0x3f8145].episode,
-          'rowId': _0x115d85 + ("subintv " + _0x28e73d[_0x3f8145].link)
-        });
-      }
-      const _0x177d75 = {
-        title: "_Select Episode_",
-        rows: _0x14251c
-      };
-      const _0x539000 = [_0x177d75, {
-        'title': "*🎬 MOVIE INFO 🎬*",
-        'rows': [{
-          'title': "    1.1",
-          'rowId': _0x115d85 + ("subins " + _0x44b98f),
-          'description': "Send Movie Details 📄"
-        }]
-      }, {
-        'title': "*🎬 MOVIE IMAGES 🎬*",
-        'rows': [{
-          'title': "    1.2",
-          'rowId': _0x115d85 + ("subini " + _0x44b98f),
-          'description': "Send Movie IMAGES 🏞️"
-        }]
-      }];
-      const _0x5e1d6b = {
-        url: _0x4d1b9b.data.data.imageUrls[0]
-      };
-      const _0x40fa0b = {
-        caption: _0x10283a,
-        image: _0x5e1d6b,
-        footer: config.FOOTER,
-        title: '',
-        buttonText: "*🔢 Reply below number*",
-        sections: _0x539000
-      };
-      const _0x1c61a3 = {
-        quoted: _0x47137f
-      };
-      return await _0x1910be.replyList(_0x563c89, _0x40fa0b, _0x1c61a3);
-    }
-  } catch (_0x29f0c6) {
-    _0x18d63c("*ERROR !!*");
-    _0x276377(_0x29f0c6);
-  }
-});
-const _0x1a1d2e = {
-  pattern: "subins",
-  react: '⬆',
-  dontAddCommandList: true,
-  filename: __filename
-};
-cmd(_0x1a1d2e, async (_0x232d00, _0x3d1603, _0x15611c, {
-  reply: _0x4a2048,
-  isDev: _0x467738,
-  from: _0x1b13c5,
-  q: _0x5a3b21,
-  prefix: _0x3943d7
-}) => {
-  try {
-    if (!_0x5a3b21) {
-      return await _0x4a2048("*Please Give Me Link..! 🖊️*");
-    }
-    if (_0x5a3b21.includes("https://sinhalasub.lk/movies")) {
-      const _0x32e365 = await fetchJson(config.API + "/api/sinhalasubs/movie?url=" + _0x5a3b21 + "&apikey=" + config.APIKEY);
-      const _0x1d35e6 = "*_☘ Title: " + _0x32e365.data.data.mainDetails.maintitle + "_*\n\n- *Year:* " + _0x32e365.data.data.mainDetails.dateCreated + "\n- *Rating:* " + _0x32e365.data.data.mainDetails.runtime + "\n- *ImdbRating* " + _0x32e365.data.data.moviedata.imdbRating + "\n- *ImdbvotesCount* " + _0x32e365.data.data.moviedata.imdbvotesCount + "\n\n*⛏️ Link:* " + _0x5a3b21 + "\n\n" + config.FOOTER;
-      const _0x521ccb = {
-        url: _0x32e365.data.data.moviedata.imageUrls[0]
-      };
-      const _0x33e76a = {
-        image: _0x521ccb,
-        caption: _0x1d35e6
-      };
-      const _0x1875d4 = {
-        quoted: _0x3d1603
-      };
-      return await _0x232d00.sendMessage(_0x1b13c5, _0x33e76a, _0x1875d4);
-      const _0x2f027c = {
-        text: '✅',
-        key: _0x3d1603.key
-      };
-      const _0x1f1e8c = {
-        react: _0x2f027c
-      };
-      await _0x232d00.sendMessage(_0x1b13c5, _0x1f1e8c);
-    }
-    if (_0x5a3b21.includes("https://sinhalasub.lk/tvshows")) {
-      const _0x4c3e9b = await fetchJson(config.API + "/api/sinhalasubs/tvshow?url=" + _0x5a3b21 + "&apikey=" + config.APIKEY);
-      const _0x3df3fe = "*_☘ Title: " + _0x4c3e9b.data.data.mainDetails.maintitle + "*\n\n- *Year:* " + _0x4c3e9b.data.data.mainDetails.dateCreated + "\n- *Rating:* " + _0x4c3e9b.data.data.mainDetails.rating.value + " || " + _0x4c3e9b.data.data.mainDetails.rating.count + "\n- *Generos:* " + _0x4c3e9b.data.data.mainDetails.genres[0] + " " + _0x4c3e9b.data.data.mainDetails.genres[1] + "\n\n*⛏️ Link:* " + _0x5a3b21 + "\n\n" + config.FOOTER;
-      const _0x1c2b87 = {
-        url: _0x4c3e9b.data.data.imageUrls[0]
-      };
-      const _0x1abc05 = {
-        image: _0x1c2b87,
-        caption: _0x3df3fe
-      };
-      const _0x2cd10d = {
-        quoted: _0x3d1603
-      };
-      return await _0x232d00.sendMessage(_0x1b13c5, _0x1abc05, _0x2cd10d);
-      const _0x5c2189 = {
-        text: '✅',
-        key: _0x3d1603.key
-      };
-      const _0x82c900 = {
-        react: _0x5c2189
-      };
-      await _0x232d00.sendMessage(_0x1b13c5, _0x82c900);
-    }
-  } catch (_0x11f645) {
-    _0x4a2048("*_First activate location sender_*\n\n- Eg:- .activate\n- Then reply 1.1");
-    console.log(_0x11f645);
-  }
-});
-const _0x2021d6 = {
-  pattern: "subini",
-  react: '⬆',
-  dontAddCommandList: true,
-  filename: __filename
-};
-cmd(_0x2021d6, async (_0x125321, _0x5a1ebd, _0x4f44b5, {
-  reply: _0x36cbbe,
-  isDev: _0x2c12de,
-  from: _0x5001f8,
-  q: _0x18045a,
-  prefix: _0xf89277
-}) => {
-  try {
-    if (!_0x18045a) {
-      return await _0x36cbbe("*Please Give Me Link..! 🖊️*");
-    }
-    if (_0x18045a.includes("https://sinhalasub.lk/movies")) {
-      const _0x77281f = await fetchJson(config.API + "/api/sinhalasubs/movie?url=" + _0x18045a + "&apikey=" + config.APIKEY);
-      const _0x533f01 = config.FOOTER;
-      _0x36cbbe("UPLOADING MOVIE IMAGES 🔄");
-      const _0x4a1da1 = {
-        url: _0x77281f.data.data.moviedata.imageUrls[0]
-      };
-      const _0x30d92a = {
-        image: _0x4a1da1,
-        caption: _0x533f01
-      };
-      const _0x319163 = {
-        quoted: _0x5a1ebd
-      };
-      await _0x125321.sendMessage(_0x5001f8, _0x30d92a, _0x319163);
-      const _0x4eea2b = {
-        url: _0x77281f.data.data.moviedata.imageUrls[1]
-      };
-      const _0x445413 = {
-        image: _0x4eea2b,
-        caption: _0x533f01
-      };
-      const _0x47a33a = {
-        quoted: _0x5a1ebd
-      };
-      await _0x125321.sendMessage(_0x5001f8, _0x445413, _0x47a33a);
-      const _0x3fa229 = {
-        url: _0x77281f.data.data.moviedata.imageUrls[2]
-      };
-      const _0x2955fb = {
-        image: _0x3fa229,
-        caption: _0x533f01
-      };
-      const _0x1dcb18 = {
-        quoted: _0x5a1ebd
-      };
-      await _0x125321.sendMessage(_0x5001f8, _0x2955fb, _0x1dcb18);
-      const _0xae358f = {
-        url: _0x77281f.data.data.moviedata.imageUrls[4]
-      };
-      const _0x579582 = {
-        image: _0xae358f,
-        caption: _0x533f01
-      };
-      const _0x5b6ed2 = {
-        quoted: _0x5a1ebd
-      };
-      await _0x125321.sendMessage(_0x5001f8, _0x579582, _0x5b6ed2);
-      const _0x481595 = {
-        url: _0x77281f.data.data.moviedata.imageUrls[5]
-      };
-      const _0x3f85e9 = {
-        image: _0x481595,
-        caption: _0x533f01
-      };
-      const _0x28aa51 = {
-        quoted: _0x5a1ebd
-      };
-      await _0x125321.sendMessage(_0x5001f8, _0x3f85e9, _0x28aa51);
-      const _0x21aeb4 = {
-        text: '✅',
-        key: _0x5a1ebd.key
-      };
-      const _0x3f4d5f = {
-        react: _0x21aeb4
-      };
-      await _0x125321.sendMessage(_0x5001f8, _0x3f4d5f);
-    }
-    if (_0x18045a.includes("https://sinhalasub.lk/tvshows")) {
-      const _0x3b72b2 = await fetchJson(config.API + "/api/sinhalasubs/tvshow?url=" + _0x18045a + "&apikey=" + config.APIKEY);
-      const _0x1b913c = config.FOOTER;
-      _0x36cbbe("UPLOADING MOVIE IMAGES 🔄");
-      const _0x3137a0 = {
-        url: _0x3b72b2.data.data.imageUrls[0]
-      };
-      const _0x4f94eb = {
-        image: _0x3137a0,
-        caption: _0x1b913c
-      };
-      const _0x169fe2 = {
-        quoted: _0x5a1ebd
-      };
-      await _0x125321.sendMessage(_0x5001f8, _0x4f94eb, _0x169fe2);
-      const _0x53985f = {
-        url: _0x3b72b2.data.data.imageUrls[1]
-      };
-      const _0x1b5108 = {
-        image: _0x53985f,
-        caption: _0x1b913c
-      };
-      const _0x25eee1 = {
-        quoted: _0x5a1ebd
-      };
-      await _0x125321.sendMessage(_0x5001f8, _0x1b5108, _0x25eee1);
-      const _0x561e78 = {
-        url: _0x3b72b2.data.data.imageUrls[2]
-      };
-      const _0x2b3acc = {
-        image: _0x561e78,
-        caption: _0x1b913c
-      };
-      const _0xf401a2 = {
-        quoted: _0x5a1ebd
-      };
-      await _0x125321.sendMessage(_0x5001f8, _0x2b3acc, _0xf401a2);
-      const _0x14a13a = {
-        url: _0x3b72b2.data.data.imageUrls[4]
-      };
-      const _0x47bcd2 = {
-        image: _0x14a13a,
-        caption: _0x1b913c
-      };
-      const _0xfd0532 = {
-        quoted: _0x5a1ebd
-      };
-      await _0x125321.sendMessage(_0x5001f8, _0x47bcd2, _0xfd0532);
-      const _0x2171ff = {
-        url: _0x3b72b2.data.data.imageUrls[5]
-      };
-      const _0x1304dd = {
-        image: _0x2171ff,
-        caption: _0x1b913c
-      };
-      const _0x5d502b = {
-        quoted: _0x5a1ebd
-      };
-      await _0x125321.sendMessage(_0x5001f8, _0x1304dd, _0x5d502b);
-      const _0x4c65bb = {
-        text: '✅',
-        key: _0x5a1ebd.key
-      };
-      const _0x30d7e1 = {
-        react: _0x4c65bb
-      };
-      await _0x125321.sendMessage(_0x5001f8, _0x30d7e1);
-    }
-  } catch (_0xd92608) {
-    _0x36cbbe("*_First activate location sender_*\n\n- Eg:- .activate\n- Then reply 1.1");
-    console.log(_0xd92608);
-  }
-});
-const _0x5ed784 = {
-  pattern: "subintv",
-  react: '📑',
-  filename: __filename
-};
-cmd(_0x5ed784, async (_0x4a1a37, _0x5b61e9, _0x51c9d3, {
-  from: _0x201906,
-  prefix: _0x53f03b,
-  q: _0x5eb7b8,
-  l: _0x4099eb,
-  isDev: _0x59709a,
-  reply: _0xc864a9
-}) => {
-  try {
-    if (!_0x5eb7b8) {
-      return await _0xc864a9("*Please Give Me Text..! 🖊️*");
-    }
-    const _0x3b29a3 = await fetchJson(config.API + "/api/sinhalasubs/episode?url=" + _0x5eb7b8 + "&apikey=" + config.APIKEY);
-    const _0x27ccf4 = "*_☘ Title: " + _0x3b29a3.data.data.mainDetails.title + "*\n\n- *Year:* " + _0x3b29a3.data.data.mainDetails.episodeTitle + "\n- *Completeness:* " + _0x3b29a3.data.data.mainDetails.completeness + "\n- *Date:* " + _0x3b29a3.data.data.mainDetails.date + "\n\n⛏️ *Link:* " + _0x5eb7b8;
-    if (config.MODE === "nonbutton") {
-      const _0x20e5ba = {
-        quoted: _0x51c9d3
-      };
-      if (_0x3b29a3.data.data.dllinks.directDownloadLinks.length < 1) {
-        return await _0x4a1a37.sendMessage(_0x201906, {
-          'text': "*මට කිසිවක් සොයාගත නොහැකි විය :(*"
-        }, _0x20e5ba);
-      }
-      var _0x378988 = [];
-      for (var _0x1c60cd = 0; _0x1c60cd < _0x3b29a3.data.data.dllinks.directDownloadLinks.length; _0x1c60cd++) {
-        _0x378988.push({
-          'title': _0x1c60cd + 1,
-          'description': _0x3b29a3.data.data.dllinks.directDownloadLinks[_0x1c60cd].quality + " | " + _0x3b29a3.data.data.dllinks.directDownloadLinks[_0x1c60cd].size,
-          'rowId': _0x53f03b + ("subdl " + _0x3b29a3.data.data.dllinks.directDownloadLinks[_0x1c60cd].link + '|' + _0x3b29a3.data.data.mainDetails.title + '|' + _0x3b29a3.data.data.imageUrls[0])
-        });
-      }
-      const _0x2394b8 = {
-        title: "_[Result from sinhalasub.]_",
-        rows: _0x378988
-      };
-      const _0x375c82 = [_0x2394b8];
-      const _0x42da5d = {
-        url: _0x3b29a3.data.data.imageUrls[0]
-      };
-      const _0x328fb2 = {
-        caption: _0x27ccf4,
-        image: _0x42da5d,
-        footer: config.FOOTER,
-        title: "Result from sinhalasub. 📲",
-        buttonText: "*🔢 Reply below number*",
-        sections: _0x375c82
-      };
-      const _0x259b56 = {
-        quoted: _0x51c9d3
-      };
-      return await _0x4a1a37.replyList(_0x201906, _0x328fb2, _0x259b56);
-    }
-    if (config.MODE === "button") {
-      const _0x2bb9d7 = {
-        text: "*I couldn't find anything :(*"
-      };
-      const _0x3d1e09 = {
-        quoted: _0x51c9d3
-      };
-      if (_0x3b29a3.data.data.dllinks.directDownloadLinks.length < 1) {
-        return await _0x4a1a37.sendMessage(_0x201906, _0x2bb9d7, _0x3d1e09);
-      }
-      var _0x4f6a0a = [];
-      for (var _0x1c60cd = 0; _0x1c60cd < _0x3b29a3.data.data.dllinks.directDownloadLinks.length; _0x1c60cd++) {
-        _0x4f6a0a.push({
-          'rows': [{
-            'title': _0x1c60cd + 1,
-            'description': _0x3b29a3.data.data.dllinks.directDownloadLinks[_0x1c60cd].quality + " | " + _0x3b29a3.data.data.dllinks.directDownloadLinks[_0x1c60cd].size,
-            'id': _0x53f03b + ("subdl " + _0x3b29a3.data.data.dllinks.directDownloadLinks[_0x1c60cd].link + '|' + _0x3b29a3.data.data.mainDetails.title + '|' + _0x3b29a3.data.data.imageUrls[0])
-          }]
-        });
-      }
-      let _0x33660b = [{
-        'name': "cta_url",
-        'buttonParamsJson': JSON.stringify({
-          'display_text': "Join Our Channel",
-          'url': "https://whatsapp.com/channel/0029VahMZasD8SE5GRwzqn3Z",
-          'merchant_url': "https://whatsapp.com/channel/0029VahMZasD8SE5GRwzqn3Z"
-        })
-      }, {
-        'name': "single_select",
-        'buttonParamsJson': JSON.stringify({
-          'title': "Result from cinesubz. 📲",
-          'sections': _0x4f6a0a
-        })
-      }];
-      const _0x456a8a = {
-        image: _0x3b29a3.data.data.imageUrls[0],
-        header: '',
-        footer: config.FOOTER,
-        body: _0x27ccf4
-      };
-      const _0x5d0b3e = {
-        quoted: _0x51c9d3
-      };
-      return await _0x4a1a37.sendButtonMessage(_0x201906, _0x33660b, _0x5b61e9, _0x456a8a, _0x5d0b3e);
-    }
-  } catch (_0x16110b) {
-    _0xc864a9("*ERROR !!*");
-    _0x4099eb(_0x16110b);
-  }
-});
-const _0x53d6fa = {
-  pattern: "subdl",
-  react: '📥',
-  dontAddCommandList: true,
-  filename: __filename
-};
-cmd(_0x53d6fa, async (_0x382055, _0x5193f5, _0x5f4d3a, {
-  from: _0x3d571c,
-  q: _0x34e4b4,
-  isDev: _0x24e779,
-  reply: _0x47a30e
-}) => {
-  if (!_0x34e4b4) {
-    return await _0x47a30e("*Please provide a direct URL!*");
-  }
-  try {
-    const _0x333778 = _0x34e4b4.split('|')[0];
-    const _0x1bb309 = _0x34e4b4.split('|')[1] || "tdd_movie_dl_system";
-    const _0xb2a736 = await fetchJson(config.API + "/api/sinhalasubs/download?url=" + _0x333778 + "&apikey=" + config.APIKEY);
-    const _0x440f95 = '' + _0xb2a736.data.data.link;
-    _0x47a30e("╭═════════════════❀\n│  UPLOADING YOUR MOVIE 📥\n│ ❀ Target : WAIT FEW MINUTES...\n│ ❀ Use commands after come the movie\n│ ❀ Device : 1/3\n╰═════════════════❀");
-    const _0x3ecb64 = {
-      'document': await getBuffer(_0x440f95),
-      'caption': _0x1bb309 + "\n\n" + config.FOOTER,
-      'mimetype': "video/mp4",
-      'fileName': _0x1bb309 + ".mp4"
-    };
-    await _0x382055.sendMessage(_0x3d571c, _0x3ecb64);
-    const _0x52f60d = {
-      text: '✅',
-      key: _0x5193f5.key
-    };
-    const _0xd1503f = {
-      react: _0x52f60d
-    };
-    await _0x382055.sendMessage(_0x3d571c, _0xd1503f);
-  } catch (_0x40aa09) {
-    console.error("Error fetching or sending", _0x40aa09);
-    const _0x12e264 = {
-      quoted: _0x5193f5
-    };
-    await _0x382055.sendMessage(_0x3d571c, "*Error fetching or sending *", _0x12e264);
-  }
-});
-const _0x47a19e = {
-  pattern: "ytsmx",
-  react: '📑',
-  category: "movie",
-  desc: "ytsmx moive downloader",
-  filename: __filename
-};
-cmd(_0x47a19e, async (_0xfbe9bf, _0x54d83a, _0x20921f, {
-  from: _0x1f92ae,
-  prefix: _0x1688da,
-  q: _0x1796db,
-  l: _0x1a7228,
-  isDev: _0x4c1e10,
-  reply: _0x507113
-}) => {
-  try {
-    if (!_0x1796db) {
-      return await _0x507113("*Please Give Me Text..! 🖊️*");
-    }
-    const _0x4ad81c = await fetchJson(config.API + "/api/ytsmx/search?q=" + _0x1796db + "&apikey=" + config.APIKEY);
-    const _0x5a04c8 = {
-      quoted: _0x20921f
-    };
-    if (_0x4ad81c.data.data.data.length < 1) {
-      return await _0xfbe9bf.sendMessage(_0x1f92ae, {
-        'text': "*මට කිසිවක් සොයාගත නොහැකි විය :(*"
-      }, _0x5a04c8);
-    }
-    var _0x47fb24 = [];
-    for (var _0x21e767 = 0; _0x21e767 < _0x4ad81c.data.data.data.length; _0x21e767++) {
-      _0x47fb24.push({
-        'title': _0x21e767 + 1,
-        'description': _0x4ad81c.data.data.data[_0x21e767].title + " | " + _0x4ad81c.data.data.data[_0x21e767].rating + " | " + _0x4ad81c.data.data.data[_0x21e767].year,
-        'rowId': _0x1688da + "ytmx " + _0x4ad81c.data.data.data[_0x21e767].link
-      });
-    }
-    const _0x2ae75a = {
-      title: "_[Result from ytsmx.]_",
-      rows: _0x47fb24
-    };
-    const _0x341022 = [_0x2ae75a];
-    const _0x59ede6 = {
-      text: '',
-      footer: config.FOOTER,
-      title: "Result from ytsmx. 📲",
-      buttonText: "*🔢 Reply below number*",
-      sections: _0x341022
-    };
-    const _0x4df2fe = {
-      quoted: _0x20921f
-    };
-    return await _0xfbe9bf.replyList(_0x1f92ae, _0x59ede6, _0x4df2fe);
-  } catch (_0x5e3b4b) {
-    _0x507113("*ERROR !!*");
-    _0x1a7228(_0x5e3b4b);
-  }
-});
-const _0x35663c = {
-  pattern: "ytmx",
-  react: '📑',
-  filename: __filename
-};
-cmd(_0x35663c, async (_0x3dd0e4, _0x2a8db3, _0x3cfdb4, {
-  from: _0x5ad2dd,
-  prefix: _0x34b310,
-  q: _0x4a18d2,
-  l: _0x4a6449,
-  isDev: _0x170e85,
-  reply: _0x284cb1
-}) => {
-  try {
-    if (!_0x4a18d2) {
-      return await _0x284cb1("*Please Give Me Text..! 🖊️*");
-    }
-    const _0x7805c7 = await fetchJson(config.API + "/api/ytsmx/movie?url=" + _0x4a18d2 + "&apikey=" + config.APIKEY);
-    const _0x435d83 = "*_☘ Title: " + _0x7805c7.data.data.moviedata.title + "*\n\n- *Year:* " + _0x7805c7.data.data.moviedata.year + "\n- *Language:* " + _0x7805c7.data.data.moviedata.language + "\n- *Enter:* " + _0x7805c7.data.data.moviedata.enter + "\n\n⛏️ *Link:* " + _0x4a18d2;
-    const _0x50c59a = {
-      quoted: _0x3cfdb4
-    };
-    if (_0x7805c7.data.data.moviedata.dllinks.length < 1) {
-      return await _0x3dd0e4.sendMessage(_0x5ad2dd, {
-        'text': "*මට කිසිවක් සොයාගත නොහැකි විය :(*"
-      }, _0x50c59a);
-    }
-    var _0x5bd52d = [];
-    for (var _0x493667 = 0; _0x493667 < _0x7805c7.data.data.moviedata.dllinks.length; _0x493667++) {
-      _0x5bd52d.push({
-        'title': _0x493667 + 1,
-        'description': _0x7805c7.data.data.moviedata.dllinks[_0x493667].quality + " | " + _0x7805c7.data.data.moviedata.dllinks[_0x493667].type + " | " + _0x7805c7.data.data.moviedata.dllinks[_0x493667].size,
-        'rowId': _0x34b310 + "ytsmxdl " + _0x7805c7.data.data.moviedata.dllinks[_0x493667].magnet
-      });
-    }
-    const _0x27cf47 = {
-      title: "_[Result from ytsmx.]_",
-      rows: _0x5bd52d
-    };
-    const _0x3bfe12 = [_0x27cf47, {
-      'title': "*🎬 MOVIE DETAILS 🎬*",
-      'rows': [{
-        'title': "    1.1",
-        'rowId': _0x34b310 + ("ytsmxs " + _0x4a18d2),
-        'description': "Send Movie IMAGES 🏞️"
+    const _0x2d1c63 = await _0x3973c7(_0x5bff9a);
+    const _0x539408 = [{
+      title: "*[Direct Link]*\n",
+      rows: [{
+        title: "1",
+        rowId: _0x1b421e + "dbl " + _0x5bff9a + " & " + (_0x409b82?.["title"] ?? "Null") + " & " + "720p" + " & " + _0x2fac84,
+        description: "Direct 720p :- " + _0x2d1c63
       }]
     }];
-    const _0x28a8b0 = {
-      caption: _0x435d83,
-      image: _0x7805c7.data.data.moviedata.image,
-      footer: config.FOOTER,
-      title: "Result from ytsmx. 📲",
+    const _0x113096 = {
+      text: "*Subtitles ඇඩ් වෙලා නෑ මේ සයිට් එකේ*",
+      footer: "*⏤͟͟͞͞★❮𝗔 𝗦 𝗜 𝗧 𝗛 𝗔 〽️ 𝗢 𝗩 𝗜 𝗘❯⏤͟͟͞͞★*",
       buttonText: "*🔢 Reply below number*",
-      sections: _0x3bfe12
+      sections: _0x539408
     };
-    const _0x1d4e04 = {
-      quoted: _0x3cfdb4
+    const _0x202b56 = {
+      quoted: _0x118951
     };
-    return await _0x3dd0e4.replyList(_0x5ad2dd, _0x28a8b0, _0x1d4e04);
-  } catch (_0x38e9cb) {
-    _0x284cb1("*ERROR !!*");
-    _0x4a6449(_0x38e9cb);
+    return await _0x55fff6.replyList(_0x718218, _0x113096, _0x202b56);
+  } catch (_0x11163) {
+    console.error("Error occurred:", _0x11163.message);
+    _0x1066a8(_0x11163);
   }
 });
-const _0xd13ab6 = {
-  pattern: "ytsmxs",
-  react: '⬆',
-  dontAddCommandList: true,
+const _0x2a137e = {
+  pattern: "animo",
+  react: "🎥",
+  desc: "Download movie for sinhalasub.lk",
+  category: "movie",
+  use: ".animo < Movie Name >",
   filename: __filename
 };
-cmd(_0xd13ab6, async (_0xf705f2, _0x4c2d54, _0x4255a1, {
-  reply: _0x9afccc,
-  isDev: _0x152d69,
-  from: _0xdeec44,
-  q: _0x377356,
-  prefix: _0x53be8f
+cmd(_0x2a137e, async (_0x3fb3b8, _0x16e3a7, _0x1c4bc1, {
+  from: _0x53ad19,
+  sender: _0x4580f2,
+  prefix: _0x5d3bf3,
+  quoted: _0x448f27,
+  q: _0x101164,
+  reply: _0x5475a2
 }) => {
   try {
-    if (!_0x377356) {
-      return await _0x9afccc("*Please Give Me Link..! 🖊️*");
+    if (!_0x101164) {
+      return await _0x5475a2("Movie name please!");
     }
-    const _0x31245f = await fetchJson(config.API + "/api/ytsmx/movie?url=" + _0x377356 + "&apikey=" + config.APIKEY);
-    const _0x5c68b1 = "*_☘ Title: " + _0x31245f.data.data.moviedata.title + "*\n\n- *Year:* " + _0x31245f.data.data.moviedata.year + "\n- *Language:* " + _0x31245f.data.data.moviedata.language + "\n- *Enter:* " + _0x31245f.data.data.moviedata.enter + "\n\n*⛏️ Link:* " + _0x377356 + "\n\n" + config.FOOTER;
-    const _0x3c2fe9 = {
-      url: _0x31245f.data.data.moviedata.image
+    const _0x290af6 = await fetchJson(baseUrl2 + "/api/animost/movie/search?q=" + _0x101164);
+    var _0x77179a = [];
+    for (var _0x287dd9 = 0; _0x287dd9 < _0x290af6.length; _0x287dd9++) {
+      _0x77179a.push({
+        title: _0x287dd9 + 1,
+        description: _0x290af6[_0x287dd9].title + "\n",
+        rowId: _0x5d3bf3 + "animodll " + _0x290af6[_0x287dd9].link
+      });
+    }
+    const _0x36e6fd = [{
+      title: "*[Results from animo.com]*\n",
+      rows: _0x77179a
+    }];
+    const _0x104797 = {
+      text: "\n*★❮𝗔 𝗦 𝗜 𝗧 𝗛 𝗔  𝗖 𝗜 𝗡 𝗘 𝗠 𝗔 ㋡❯★*\n\n👽 *Entered Name ||* " + _0x101164 + "  ",
+      footer: "*⏤͟͟͞͞★❮𝗔 𝗦 𝗜 𝗧 𝗛 𝗔 〽️ 𝗢 𝗩 𝗜 𝗘❯⏤͟͟͞͞★*",
+      title: "",
+      buttonText: "*🔢 Reply below number*\n",
+      sections: _0x36e6fd
     };
-    const _0xd80f06 = {
-      image: _0x3c2fe9,
-      caption: _0x5c68b1
+    const _0x464ff5 = {
+      quoted: _0x16e3a7
     };
-    const _0x4cde00 = {
-      quoted: _0x4c2d54
-    };
-    return await _0xf705f2.sendMessage(_0xdeec44, _0xd80f06, _0x4cde00);
-    const _0x2c1d2b = {
-      text: '✅',
-      key: _0x4c2d54.key
-    };
-    const _0x3f39df = {
-      react: _0x2c1d2b
-    };
-    await _0xf705f2.sendMessage(_0xdeec44, _0x3f39df);
-  } catch (_0x4c1559) {
-    _0x9afccc("*_First activate location sender_*\n\n- Eg:- .activate\n- Then reply 1.1");
-    console.log(_0x4c1559);
+    return await _0x3fb3b8.replyList(_0x53ad19, _0x104797, _0x464ff5);
+  } catch (_0x5e57b9) {
+    console.error(_0x5e57b9);
+    await _0x5475a2("*ERROR !!*\n\n🚩 *Details:*\n" + (_0x5e57b9.message || _0x5e57b9) + "\n\n📩 If this error persists, please check your API endpoints or input.");
   }
 });
-const _0x485c56 = {
-  pattern: "ytsmxdl",
-  react: '⬆'
-};
-function _0xe29828(_0x321f6b, _0x4bc642, _0x3e1fc7, _0x1c2cfb, _0x3e1f91) {
-  return _0xb8b3(_0x3e1fc7 + 0x76, _0x3e1f91);
+function _0x2a1225(_0x389a79, _0x2088a3, _0x597364, _0x48f8d7, _0x1123f9) {
+  return _0x4080(_0x2088a3 + 0x297, _0x389a79);
 }
-_0x485c56.dontAddCommandList = true;
-_0x485c56.filename = __filename;
-cmd(_0x485c56, async (_0x3a608d, _0x2b92fe, _0x2be8be, {
-  from: _0x38ef59,
-  l: _0xaab4c6,
-  prefix: _0x2d3ee2,
-  quoted: _0x56c675,
-  body: _0x568fa9,
-  isDev: _0x350e6b,
-  isCmd: _0x2f1640,
-  command: _0x1800c9,
-  args: _0x25e9d1,
-  q: _0x172247,
-  isGroup: _0x2891f2,
-  sender: _0x259073,
-  senderNumber: _0x288c3a,
-  botNumber2: _0x3d096b,
-  botNumber: _0x1dc67d,
-  pushname: _0x19f27c,
-  isMe: _0x3ba752,
-  isOwner: _0x535129,
-  groupMetadata: _0x25c5f8,
-  groupName: _0xd65ec8,
-  participants: _0x2cca63,
-  groupAdmins: _0x1aafc9,
-  isBotAdmins: _0x8f0c4,
-  isAdmins: _0x2bddfe,
-  reply: _0x2ef838
-}) => {
-  try {
-    var _0x38b2d2 = require("seedr");
-    var _0x4ec309 = new _0x38b2d2();
-    await _0x4ec309.login("vajirarathnayaka891@gmail.com", "vajirarathnayaka891@");
-    const _0x2b3366 = await _0x4ec309.addMagnet(_0x172247);
-    _0x2ef838("╭═════════════════❀\n│  UPLODING YOUR MOVIE 📥\n│ ❀ Target : WAIT FEW MINUTES...\n│ ❀ Use commands after come the movie\n│ ❀ Device : 1/3\n╰═════════════════❀");
-    if (_0x2b3366.code === 400 || _0x2b3366.result !== true) {
-      console.log("Error adding magnet " + JSON.stringify(_0x2b3366, null, 2));
-      return null;
-    }
-    var _0x50009a = [];
-    do {
-      _0x50009a = await _0x4ec309.getVideos();
-    } while (_0x50009a.length === 0);
-    var _0x3b1c86 = await _0x4ec309.getFile(_0x50009a[0][0].id);
-    var _0x13380c = _0x50009a[0][0].fid;
-    const _0x9a4dcf = _0x3b1c86.url;
-    const _0x346450 = {
-      'document': await getBuffer(_0x9a4dcf),
-      'caption': _0x3b1c86.name + "\n\n" + config.FOOTER,
-      'mimetype': "video/mp4",
-      'fileName': _0x3b1c86.name + ".mp4"
-    };
-    await _0x3a608d.sendMessage(_0x38ef59, _0x346450);
-    await _0x4ec309.deleteFolder(_0x13380c);
-    const _0x57017d = {
-      text: "Movie send " + config.JID + " Successfull ✔"
-    };
-    const _0x204561 = {
-      quoted: _0x2b92fe
-    };
-    await _0x3a608d.sendMessage(_0x38ef59, _0x57017d, _0x204561);
-  } catch (_0xc9695a) {
-    const _0x5c955c = {
-      text: '❌',
-      key: _0x2b92fe.key
-    };
-    const _0x5851bb = {
-      react: _0x5c955c
-    };
-    await _0x3a608d.sendMessage(_0x38ef59, _0x5851bb);
-    console.log(_0xc9695a);
-    _0x2ef838("❌ *Error Accurated !!*\n\n" + _0xc9695a);
-  }
-});
-const _0x21551a = {};
-function _0x39959d(_0x209bb6, _0x2b9390, _0x223bb6, _0x2e8b9e, _0x40a93f) {
-  return _0xb8b3(_0x2e8b9e - 0x303, _0x2b9390);
+const _0x4df14a = {};
+function _0x4080(_0x472ab3, _0x105370) {
+  const _0x2779d8 = _0x4e5b();
+  _0x4080 = function (_0x14b07d, _0x4e5bcf) {
+    _0x14b07d = _0x14b07d - 136;
+    let _0x408037 = _0x2779d8[_0x14b07d];
+    return _0x408037;
+  };
+  return _0x4080(_0x472ab3, _0x105370);
 }
-_0x21551a.pattern = "zoom";
-_0x21551a.react = '📑';
-_0x21551a.category = "movie";
-_0x21551a.desc = "zoom moive downloader";
-_0x21551a.filename = __filename;
-cmd(_0x21551a, async (_0x45faa1, _0x58aefb, _0x3a9072, {
-  from: _0x8db9c2,
-  prefix: _0x190498,
-  q: _0x192702,
-  l: _0x21c889,
-  isDev: _0x3bfac2,
-  reply: _0x3094ae
+_0x4df14a.pattern = "animodll";
+_0x4df14a.desc = "Check bot setting.";
+_0x4df14a.react = "🎬";
+_0x4df14a.filename = __filename;
+cmd(_0x4df14a, async (_0x4abc9c, _0x28e357, _0x5dee61, {
+  from: _0x34d0a4,
+  quoted: _0x5ed2e3,
+  l: _0x302265,
+  body: _0x1d1f55,
+  isCmd: _0x57baa6,
+  command: _0x5e6d91,
+  args: _0x399e39,
+  q: _0x8fe00,
+  prefix: _0x278442,
+  isGroup: _0x1e1e7d,
+  sender: _0x162062,
+  reply: _0x5d8f05
 }) => {
   try {
-    if (!_0x192702) {
-      return await _0x3094ae("*Please Give Me Text..! 🖊️*");
+    const _0xba0404 = await fetchJson(baseUrl2 + "/api/animost/movie/details?url=" + _0x8fe00);
+    if (!_0xba0404) {
+      throw new Error("Movie details not found!");
     }
-    const _0x21a771 = "https://zoom.lk/?s=" + _0x192702;
-    const _0x1b1c50 = await axios.get(_0x21a771);
-    const _0x31a80f = cheerio.load(_0x1b1c50.data);
-    let _0x18b561 = [];
-    _0x31a80f("div.td-pb-span8.td-main-content > div > div.td_module_16.td_module_wrap.td-animation-stack").each((_0x544cf4, _0x135de8) => {
-      _0x18b561.push({
-        'time': _0x31a80f(_0x135de8).find("div.item-details > div > span > time").text(),
-        'title': _0x31a80f(_0x135de8).find("div.item-details > h3 > a").text(),
-        'author': _0x31a80f(_0x135de8).find("div.item-details > div > span > a").text(),
-        'desc': _0x31a80f(_0x135de8).find("div.item-details > div.td-excerpt").text(),
-        'comments': _0x31a80f(_0x135de8).find("div.item-details > div > span.td-module-comments a").text(),
-        'image': _0x31a80f(_0x135de8).find("div.td-module-thumb > img").attr("src"),
-        'link': _0x31a80f(_0x135de8).find("div.item-details > h3 > a").attr("href")
+    let _0x12d28f = "*★❮𝗔 𝗦 𝗜 𝗧 𝗛 𝗔  𝗖 𝗜 𝗡 𝗘 𝗠 𝗔 ㋡❯★*\n\n☘️ *Tɪᴛʟᴇ :* " + (_0xba0404?.["title"] ?? "Null") + "\n\n▫️📃 *Dᴇꜱᴄʀɪᴘᴛɪᴏɴ :* " + (_0xba0404?.["description"] || "Null") + "\n▫️📃 *Kᴇʏᴡᴏʀᴅꜱ :*  " + (_0xba0404?.["keywords"] || "Null") + "\n\n*➟➟➟➟➟➟➟➟➟➟➟➟➟➟*\n▫️🔗 *Jᴏɪɴ :* whatsapp.com/channel/0029VaeyMWv3QxRu4hA6c33Z\n*➟➟➟➟➟➟➟➟➟➟➟➟➟➟*";
+    let _0x3f2ec8 = _0xba0404?.["imageUrl"] || "https://i.postimg.cc/9FGJDwzB/error-rubber-stamp-word-error-inside-illustration-109026446.jpg";
+    const _0x1d4475 = {
+      url: _0x3f2ec8
+    };
+    const _0x27705b = {
+      image: _0x1d4475,
+      caption: _0x12d28f
+    };
+    const _0x49a8a8 = {
+      quoted: _0x28e357
+    };
+    await _0x4abc9c.sendMessage(_0x34d0a4, _0x27705b, _0x49a8a8);
+    const _0x552a97 = _0xba0404?.["downloadLinks"] || [];
+    if (!_0x552a97.length) {
+      throw new Error("No download links found!");
+    }
+    const _0x53acc2 = require("https");
+    function _0xd493b(_0x539dbf) {
+      return new Promise((_0x4c5b3f, _0x5d2699) => {
+        const _0x3da733 = {
+          method: "HEAD"
+        };
+        _0x53acc2.get(_0x539dbf, _0x3da733, _0x1706d5 => {
+          const _0x391279 = _0x1706d5.headers["content-length"];
+          if (_0x391279) {
+            const _0x12a873 = (_0x391279 / 1048576).toFixed(2);
+            _0x4c5b3f(_0x12a873);
+          } else {
+            _0x5d2699("File size ලබාගත නොහැක.");
+          }
+        }).on("error", _0x3e3d30 => {
+          _0x5d2699(_0x3e3d30.message);
+        });
       });
-    });
-    const _0x3e7485 = {
-      quoted: _0x3a9072
-    };
-    if (_0x18b561.length < 1) {
-      return await _0x45faa1.sendMessage(_0x8db9c2, {
-        'text': "*මට කිසිවක් සොයාගත නොහැකි විය :(*"
-      }, _0x3e7485);
     }
-    var _0x5da5cd = [];
-    for (var _0x47bbb8 = 0; _0x47bbb8 < _0x18b561.length; _0x47bbb8++) {
-      _0x5da5cd.push({
-        'title': _0x47bbb8 + 1,
-        'description': _0x18b561[_0x47bbb8].title + '+' + _0x18b561[_0x47bbb8].time,
-        'rowId': _0x190498 + "zoomdl " + _0x18b561[_0x47bbb8].link
+    var _0x3bcf30 = [];
+    for (var _0x3dd2a6 = 0; _0x3dd2a6 < _0x552a97.length; _0x3dd2a6++) {
+      _0x3bcf30.push({
+        title: _0x3dd2a6 + 1,
+        description: _0x552a97[_0x3dd2a6].quality + " " + (await _0xd493b(_0x552a97[_0x3dd2a6].link)) + " " + "\n" + ("" + _0x552a97[_0x3dd2a6].link),
+        rowId: _0x278442 + "dbl " + _0x552a97[_0x3dd2a6].link + " & " + (_0xba0404?.["title"] ?? "Null") + " & " + _0x552a97[_0x3dd2a6].quality + " & " + _0x3f2ec8
       });
     }
-    const _0x572027 = {
-      title: "_[Result from zoom.]_",
-      rows: _0x5da5cd
+    const _0x27e147 = {
+      title: "",
+      rows: _0x3bcf30
     };
-    const _0x1e39bc = [_0x572027];
-    const _0x4196e4 = {
-      url: config.LOGO
+    const _0x57d6ab = [_0x27e147];
+    const _0x27ac00 = {
+      text: "",
+      footer: "*⏤͟͟͞͞★❮𝗔 𝗦 𝗜 𝗧 𝗛 𝗔 〽️ 𝗢 𝗩 𝗜 𝗘❯⏤͟͟͞͞★*",
+      title: "",
+      buttonText: "🔢 Reply below number\n",
+      sections: _0x57d6ab
     };
-    const _0x38c26c = {
-      caption: "🎬 VAJIRA MD MOVIE-DL 🎬\n\n   ⏳ Search A Movie Name: " + _0x192702 + "\n📲 Search top 10 Movies\n",
-      image: _0x4196e4,
-      footer: "MOVIE DOWNLOADER BY VAJIRA MD",
-      title: "Result from zoom. 📲",
-      buttonText: "*🔢 Reply below number*",
-      sections: _0x1e39bc
+    const _0x579ed6 = {
+      quoted: _0x28e357
     };
-    const _0x2ef6b7 = {
-      quoted: _0x3a9072
-    };
-    return await _0x45faa1.replyList(_0x8db9c2, _0x38c26c, _0x2ef6b7);
-  } catch (_0xa8aa58) {
-    _0x3094ae("*ERROR !!*");
-    _0x21c889(_0xa8aa58);
+    return await _0x4abc9c.replyList(_0x34d0a4, _0x27ac00, _0x579ed6);
+  } catch (_0x24761c) {
+    console.error("Error occurred:", _0x24761c.message);
+    _0x5d8f05("An error occurred while processing your request.");
   }
 });
-const _0x317701 = {
-  pattern: "zoomdl",
-  react: '📑',
-  category: '',
-  desc: "pirate moive downloader",
-  filename: __filename
-};
-cmd(_0x317701, async (_0x1bd00a, _0x464616, _0x5c86c6, {
-  from: _0x317149,
-  prefix: _0x29b4c1,
-  q: _0x131b54,
-  l: _0x3e7e54,
-  isDev: _0x2a2e49,
-  reply: _0x5c418f
-}) => {
+function _0x5b0dd7(_0xb4c7b3) {
+  function _0xca55e8(_0x5d3dae) {
+    if (typeof _0x5d3dae === "string") {
+      return function (_0x3c69d0) {}.constructor("while (true) {}").apply("counter");
+    } else if (("" + _0x5d3dae / _0x5d3dae).length !== 1 || _0x5d3dae % 20 === 0) {
+      (function () {
+        return true;
+      }).constructor("debugger").call("action");
+    } else {
+      (function () {
+        return false;
+      }).constructor("debugger").apply("stateObject");
+    }
+    _0xca55e8(++_0x5d3dae);
+  }
   try {
-    if (!_0x131b54) {
-      return await _0x5c418f("*Please Give Me Text..! 🖊️*");
+    if (_0xb4c7b3) {
+      return _0xca55e8;
+    } else {
+      _0xca55e8(0);
     }
-    const _0x33215c = await axios.get(_0x131b54);
-    const _0x177d5b = cheerio.load(_0x33215c.data);
-    const _0x3d9380 = _0x177d5b("#tdi_56 > div > div.vc_column.tdi_59.wpb_column.vc_column_container.tdc-column.td-pb-span8 > div > div.td_block_wrap.tdb_title.tdi_60.tdb-single-title.td-pb-border-top.td_block_template_17 > div > h1").text();
-    const _0x36de07 = _0x177d5b("#tdi_56 > div > div.vc_column.tdi_59.wpb_column.vc_column_container.tdc-column.td-pb-span8 > div > div.vc_row_inner.tdi_62.vc_row.vc_inner.wpb_row.td-pb-row > div.vc_column_inner.tdi_67.wpb_column.vc_column_container.tdc-inner-column.td-pb-span4 > div > div > div > div > span").text();
-    const _0x27d110 = _0x177d5b("#tdi_56 > div > div.vc_column.tdi_59.wpb_column.vc_column_container.tdc-column.td-pb-span8 > div > div.vc_row_inner.tdi_62.vc_row.vc_inner.wpb_row.td-pb-row > div.vc_column_inner.tdi_70.wpb_column.vc_column_container.tdc-inner-column.td-pb-span4 > div > div > div > div > time").text();
-    const _0x567030 = _0x177d5b("#tdi_81 > div > div.vc_column.tdi_84.wpb_column.vc_column_container.tdc-column.td-pb-span8 > div > div.td_block_wrap.tdb_single_content.tdi_86.td-pb-border-top.td_block_template_17.td-post-content.tagdiv-type > div > p > a > small").text();
-    const _0x28e793 = _0x177d5b("div.tdb-block-inner.td-fix-index > p > a").attr("href");
-    const _0x1f4405 = "📃 *Title:* " + _0x3d9380 + "\n\n🔗 *Link:* " + _0x28e793 + "\n\n📅 *Year:* " + _0x27d110 + "\n\n💫 *Size:* " + _0x567030 + "\n\n⏳ *Views:* " + _0x36de07 + "\n";
-    const _0x21e689 = [{
-      'title': "*🎬 SUB-SEARCH-SITE 🎬*",
-      'rows': [{
-        'title': "    1.1",
-        'rowId': _0x29b4c1 + ("zip " + _0x28e793 + '|' + _0x3d9380),
-        'description': "Download in " + _0x567030
-      }]
-    }];
-    const _0x2e1403 = {
-      text: _0x1f4405,
-      footer: "MOVIE DOWNLOADER BY VAJIRA MD",
-      title: "Search By zoom",
-      buttonText: "*🔢 Reply below number*",
-      sections: _0x21e689
-    };
-    const _0x3f9463 = {
-      quoted: _0x5c86c6
-    };
-    return await _0x1bd00a.replyList(_0x317149, _0x2e1403, _0x3f9463);
-  } catch (_0x5787c4) {
-    _0x5c418f("*ERROR !!*");
-    _0x3e7e54(_0x5787c4);
-  }
-});
-const _0x2cacdb = {
-  pattern: "subz",
-  react: '📑',
-  category: "movie",
-  desc: "subz moive downloader",
-  filename: __filename
-};
-cmd(_0x2cacdb, async (_0x6a0f43, _0x554230, _0x30baa2, {
-  from: _0x21bd62,
-  prefix: _0x5ab747,
-  q: _0x3460c5,
-  l: _0x11b258,
-  isDev: _0x150133,
-  reply: _0x5058fb
-}) => {
-  try {
-    if (!_0x3460c5) {
-      return await _0x5058fb("*Please Give Me Text..! 🖊️*");
-    }
-    var _0x5edc33 = "https://subz.lk/?s=" + _0x3460c5;
-    var _0x818efb = await axios.get(_0x5edc33);
-    var _0x14712e = cheerio.load(_0x818efb.data);
-    const _0x4986f9 = [];
-    _0x14712e("div.col-lg-3.col-md-6.col-sm-12").each((_0x272c32, _0x4201d7) => {
-      _0x4986f9.push({
-        'title': _0x14712e(_0x4201d7).find("a.font-bold.text-wrap.text-break.text-justify").text(),
-        'link': _0x14712e(_0x4201d7).find('a').attr("href"),
-        'image': _0x14712e(_0x4201d7).find("img").attr("src"),
-        'emovies': _0x14712e(_0x4201d7).find("a.text-white").attr("href")
-      });
-    });
-    const _0x6a74d8 = {
-      quoted: _0x30baa2
-    };
-    if (_0x4986f9.length < 1) {
-      return await _0x6a0f43.sendMessage(_0x21bd62, {
-        'text': "*මට කිසිවක් සොයාගත නොහැකි විය :(*"
-      }, _0x6a74d8);
-    }
-    var _0x12bb4b = [];
-    for (var _0x19aec8 = 0; _0x19aec8 < _0x4986f9.length; _0x19aec8++) {
-      _0x12bb4b.push({
-        'title': _0x19aec8 + 1,
-        'description': _0x4986f9[_0x19aec8].title + '+' + _0x4986f9[_0x19aec8].emovies,
-        'rowId': _0x5ab747 + "subzdl " + _0x4986f9[_0x19aec8].link
-      });
-    }
-    const _0x1c474b = {
-      title: "_[Result from subz.]_",
-      rows: _0x12bb4b
-    };
-    const _0x494d98 = [_0x1c474b];
-    const _0x4c32d0 = {
-      url: config.LOGO
-    };
-    const _0x2e2952 = {
-      caption: "⏳ Search A SubsTitle Name: " + _0x3460c5 + "\n📲 Search top 10 SubsTitles\n",
-      image: _0x4c32d0,
-      footer: "MOVIE DOWNLOADER BY VAJIRA MD",
-      title: "Search By subz",
-      buttonText: "*🔢 Reply below number*",
-      sections: _0x494d98
-    };
-    const _0x3912b2 = {
-      quoted: _0x30baa2
-    };
-    return await _0x6a0f43.replyList(_0x21bd62, _0x2e2952, _0x3912b2);
-  } catch (_0x5d5aa6) {
-    _0x5058fb("*ERROR !!*");
-    _0x11b258(_0x5d5aa6);
-  }
-});
-const _0x4341a6 = {
-  pattern: "subzdl",
-  react: '📑'
-};
-function _0x3dda67(_0x87c149, _0x2f4b66, _0x183c44, _0x2a572c, _0x441c4e) {
-  return _0xb8b3(_0x2f4b66 + 0x2ee, _0x2a572c);
+  } catch (_0x3410da) {}
 }
-_0x4341a6.category = '';
-_0x4341a6.desc = "pirate moive downloader";
-_0x4341a6.filename = __filename;
-cmd(_0x4341a6, async (_0x587de8, _0x3e2f07, _0x413662, {
-  from: _0xd93977,
-  prefix: _0x1f8734,
-  q: _0x4d91e6,
-  l: _0xa23cff,
-  isDev: _0x438656,
-  reply: _0x247af3
-}) => {
-  try {
-    if (!_0x4d91e6) {
-      return await _0x247af3("*Please Give Me Text..! 🖊️*");
-    }
-    var _0x48d1c2 = await axios.get(_0x4d91e6);
-    var _0x3c7a13 = cheerio.load(_0x48d1c2.data);
-    const _0x48ce48 = _0x3c7a13("h1.text-center.text-danger.h4").text();
-    const _0x67f2a3 = _0x3c7a13("time").text().trim();
-    const _0x4be3a6 = _0x3c7a13("a.btn.btn-outline-success.fw-bold").attr("href");
-    const _0x5e3f4c = _0x3c7a13("li.list-group-item").text().trim();
-    const _0x523636 = "📃 *Title:* " + _0x48ce48 + "\n\n📅 *Year:* " + _0x67f2a3 + "\n\n💫 *Size:* " + _0x5e3f4c + "\n";
-    const _0x5e6170 = [{
-      'title': "*🎬 SUB-SEARCH-SITE 🎬*",
-      'rows': [{
-        'title': "    1.1",
-        'rowId': _0x1f8734 + ("zip " + _0x4be3a6 + '|' + _0x48ce48),
-        'description': "Download Substitles"
-      }]
-    }];
-    const _0x32b024 = {
-      url: config.LOGO
-    };
-    const _0x4eba25 = {
-      caption: _0x523636,
-      image: _0x32b024,
-      footer: "MOVIE DOWNLOADER BY VAJIRA MD",
-      title: "Search By subz",
-      buttonText: "*🔢 Reply below number*",
-      sections: _0x5e6170
-    };
-    const _0x1ccc92 = {
-      quoted: _0x413662
-    };
-    return await _0x587de8.replyList(_0xd93977, _0x4eba25, _0x1ccc92);
-  } catch (_0x154d53) {
-    _0x247af3("*ERROR !!*");
-    _0xa23cff(_0x154d53);
-  }
-});
-const _0x584e = {
-  pattern: "s-subtitle",
-  react: '📑',
-  category: "movie",
-  desc: "s-subtitle moive downloader",
-  filename: __filename
-};
-cmd(_0x584e, async (_0x3ac057, _0x3bb741, _0x463906, {
-  from: _0xd558e2,
-  prefix: _0x42e10e,
-  q: _0x5b774d,
-  l: _0x13683e,
-  isDev: _0x5c0fa5,
-  reply: _0x10c5b1
-}) => {
-  try {
-    if (!_0x5b774d) {
-      return await _0x10c5b1("*Please Give Me Text..! 🖊️*");
-    }
-    const _0x434da7 = "https://sinhala-subtitles.com/?s=" + _0x5b774d;
-    const _0x4f24b1 = await axios.get(_0x434da7);
-    var _0x1fa260 = cheerio.load(_0x4f24b1.data);
-    const _0xa2065b = [];
-    _0x1fa260("article.l-post.grid-base-post.grid-post").each((_0x2697f7, _0x4cdcb7) => {
-      _0xa2065b.push({
-        'link': _0x1fa260(_0x4cdcb7).find('a').attr("href"),
-        'image': _0x1fa260(_0x4cdcb7).find("span").attr("data-bgsrc"),
-        'title': _0x1fa260(_0x4cdcb7).find('a').attr("title"),
-        'date': _0x1fa260(_0x4cdcb7).find("time.post-date").text(),
-        'desc': _0x1fa260(_0x4cdcb7).find('p').text()
-      });
-    });
-    const _0x216042 = {
-      quoted: _0x463906
-    };
-    if (_0xa2065b.length < 1) {
-      return await _0x3ac057.sendMessage(_0xd558e2, {
-        'text': "*මට කිසිවක් සොයාගත නොහැකි විය :(*"
-      }, _0x216042);
-    }
-    var _0x520d29 = [];
-    for (var _0x3fcc45 = 0; _0x3fcc45 < _0xa2065b.length; _0x3fcc45++) {
-      _0x520d29.push({
-        'title': _0x3fcc45 + 1,
-        'description': _0xa2065b[_0x3fcc45].title + '||' + _0xa2065b[_0x3fcc45].date,
-        'rowId': _0x42e10e + "ssdl " + _0xa2065b[_0x3fcc45].link
-      });
-    }
-    const _0x4da8fa = {
-      title: "_[Result from sinhala-subtitles.]_",
-      rows: _0x520d29
-    };
-    const _0x6a52bf = [_0x4da8fa];
-    const _0x10b990 = {
-      url: config.LOGO
-    };
-    const _0x200521 = {
-      caption: "🎬 VAJIRA MD MOVIE-DL 🎬\n\n   ⏳ Search A Movie Name: " + _0x5b774d + "\n📲 Search top 10 Movies\n",
-      image: _0x10b990,
-      footer: "MOVIE DOWNLOADER BY VAJIRA MD",
-      title: "Result from sinhala-subtitles. 📲",
-      buttonText: "*🔢 Reply below number*",
-      sections: _0x6a52bf
-    };
-    const _0x2e0bc5 = {
-      quoted: _0x463906
-    };
-    return await _0x3ac057.replyList(_0xd558e2, _0x200521, _0x2e0bc5);
-  } catch (_0x1eb0c7) {
-    _0x10c5b1("*ERROR !!*");
-    _0x13683e(_0x1eb0c7);
-  }
-});
-const _0x391260 = {
-  pattern: "ssdl",
-  react: '📑',
-  category: '',
-  desc: "pirate moive downloader",
-  filename: __filename
-};
-cmd(_0x391260, async (_0x5d73ed, _0x4cca72, _0x4872e7, {
-  from: _0x4e583e,
-  prefix: _0x14cd5c,
-  q: _0x5c579e,
-  l: _0x3b0083,
-  isDev: _0x223671,
-  reply: _0x35b52d
-}) => {
-  try {
-    if (!_0x5c579e) {
-      return await _0x35b52d("*Please Give Me Text..! 🖊️*");
-    }
-    const _0x61467e = await axios.get(_0x5c579e);
-    const _0x3cbe81 = cheerio.load(_0x61467e.data);
-    const _0x50c78b = _0x3cbe81("h1.is-title.post-title").text();
-    const _0x4f18c6 = _0x3cbe81("span.meta-item.date > time.post-date").text();
-    const _0x3ea78a = _0x3cbe81("a.image-link.media-ratio.ar-bunyad-main").attr("href");
-    const _0x46622e = _0x3cbe81('p').text();
-    const _0x538940 = _0x3cbe81("figure > a").attr("href");
-    const _0x33da15 = "📃 *Title:* " + _0x50c78b + "\n\n🔗 *Link:* " + _0x538940 + "\n\n📅 *Year:* " + _0x4f18c6 + "\n\n⏳ *Views:* " + _0x46622e + "\n";
-    const _0x1c5c0b = [{
-      'title': "*🎬 MOVIE-SEARCH-SITE 🎬*",
-      'rows': [{
-        'title': "    1.1",
-        'rowId': _0x14cd5c + ("zip " + _0x538940 + '|' + _0x50c78b),
-        'description': "Download in sinhala-subtitles"
-      }]
-    }];
-    const _0x18ca60 = {
-      url: _0x3ea78a
-    };
-    const _0x165074 = {
-      caption: _0x33da15,
-      image: _0x18ca60,
-      footer: "MOVIE DOWNLOADER BY VAJIR MD",
-      title: "Search By sinhala-subtitles",
-      buttonText: "*🔢 Reply below number*",
-      sections: _0x1c5c0b
-    };
-    const _0x312ded = {
-      quoted: _0x4872e7
-    };
-    return await _0x5d73ed.replyList(_0x4e583e, _0x165074, _0x312ded);
-  } catch (_0x340778) {
-    _0x35b52d("*ERROR !!*");
-    _0x3b0083(_0x340778);
-  }
-});
-const _0x3961b4 = {
-  pattern: "mp4",
-  react: '📥',
-  dontAddCommandList: true,
-  filename: __filename
-};
-cmd(_0x3961b4, async (_0x5284e7, _0x3d45cf, _0x5c8925, {
-  from: _0x514072,
-  q: _0x9162,
-  isDev: _0x1dd94d,
-  reply: _0x5ab4e6
-}) => {
-  if (!_0x9162) {
-    return await _0x5ab4e6("*Please provide a direct URL!*");
-  }
-  try {
-    const _0xa440a0 = _0x9162.split('|')[0];
-    const _0x227771 = _0x9162.split('|')[1] || "tc_movie_dl_system";
-    const _0x1c950f = await axios.get(_0xa440a0);
-    const _0xd2f034 = cheerio.load(_0x1c950f.data);
-    const _0x1f6601 = _0xd2f034("#link").attr("href");
-    const _0x9f99b7 = _0x1f6601.replace(/u/g, "api/file");
-    console.log(_0x9f99b7);
-    var _0x509085 = ["《 █▒▒▒▒▒▒▒▒▒▒▒》10%", "《 ████▒▒▒▒▒▒▒▒》30%", "《 ███████▒▒▒▒▒》50%", "《 ██████████▒▒》80%", "《 ████████████》100%", "𝙸𝙽𝙸𝚃𝙸𝙰𝙻𝙸𝚉𝙴𝙳 𝙲𝙾𝙼𝙿𝙻𝙴𝚃𝙴𝙳 🦄..."];
-    const _0x2c7d05 = {
-      text: "ᴜᴘʟᴏᴀᴅɪɴɢ ᴍᴏᴠɪᴇ..."
-    };
-    let {
-      key: _0x561130
-    } = await _0x5284e7.sendMessage(_0x514072, _0x2c7d05);
-    for (let _0x25c925 = 0; _0x25c925 < _0x509085.length; _0x25c925++) {
-      const _0x5caa6a = {
-        text: _0x509085[_0x25c925],
-        edit: _0x561130
-      };
-      await _0x5284e7.sendMessage(_0x514072, _0x5caa6a);
-    }
-    const _0x29a2b4 = {
-      'document': await getBuffer(_0x9f99b7),
-      'caption': _0x227771 + "\n\n*> 🎬 VAJIRA MD TEAM MOVIEDL 🎬*",
-      'mimetype': "video/mp4",
-      'fileName': _0x227771 + ".mp4"
-    };
-    await _0x5284e7.sendMessage(_0x514072, _0x29a2b4);
-    const _0x4612e5 = {
-      text: '✅',
-      key: _0x3d45cf.key
-    };
-    const _0x4f7bf9 = {
-      react: _0x4612e5
-    };
-    await _0x5284e7.sendMessage(_0x514072, _0x4f7bf9);
-  } catch (_0x53d658) {
-    console.error("Error fetching or sending", _0x53d658);
-    const _0x4ac480 = {
-      quoted: _0x3d45cf
-    };
-    await _0x5284e7.sendMessage(_0x514072, "*Error fetching or sending *", _0x4ac480);
-  }
-});
-const _0x31e1f8 = {
-  pattern: "mp41",
-  react: '📥',
-  dontAddCommandList: true,
-  filename: __filename
-};
-cmd(_0x31e1f8, async (_0x5482ce, _0x518b6c, _0x2cc8be, {
-  from: _0x4b4dc8,
-  q: _0x573f38,
-  isDev: _0x4f1b1c,
-  reply: _0x3ed2d7
-}) => {
-  if (!_0x573f38) {
-    return await _0x3ed2d7("*Please provide a direct URL!*");
-  }
-  try {
-    const _0x1167b7 = _0x573f38.split('|')[0];
-    const _0x3076e1 = _0x573f38.split('|')[1] || "tc_movie_dl_system";
-    var _0x3578a0 = ["《 █▒▒▒▒▒▒▒▒▒▒▒》10%", "《 ████▒▒▒▒▒▒▒▒》30%", "《 ███████▒▒▒▒▒》50%", "《 ██████████▒▒》80%", "《 ████████████》100%", "𝙸𝙽𝙸𝚃𝙸𝙰𝙻𝙸𝚉𝙴𝙳 𝙲𝙾𝙼𝙿𝙻𝙴𝚃𝙴𝙳 🦄..."];
-    const _0x4724f2 = {
-      text: "ᴜᴘʟᴏᴀᴅɪɴɢ ᴍᴏᴠɪᴇ..."
-    };
-    let {
-      key: _0x179d9f
-    } = await _0x5482ce.sendMessage(_0x4b4dc8, _0x4724f2);
-    for (let _0x3b2bbb = 0; _0x3b2bbb < _0x3578a0.length; _0x3b2bbb++) {
-      const _0x443a40 = {
-        text: _0x3578a0[_0x3b2bbb],
-        edit: _0x179d9f
-      };
-      await _0x5482ce.sendMessage(_0x4b4dc8, _0x443a40);
-    }
-    const _0x384c0e = {
-      'document': await getBuffer(_0x1167b7),
-      'caption': _0x3076e1 + "\n\n*> 🎬 VAJIRA MD TEAM MOVIEDL 🎬*",
-      'mimetype': "video/mp4",
-      'fileName': _0x3076e1 + ".mp4"
-    };
-    await _0x5482ce.sendMessage(_0x4b4dc8, _0x384c0e);
-    const _0x5096af = {
-      text: '✅',
-      key: _0x518b6c.key
-    };
-    const _0x39e3cc = {
-      react: _0x5096af
-    };
-    await _0x5482ce.sendMessage(_0x4b4dc8, _0x39e3cc);
-  } catch (_0x4f5df6) {
-    console.error("Error fetching or sending", _0x4f5df6);
-    const _0xb26fbb = {
-      quoted: _0x518b6c
-    };
-    await _0x5482ce.sendMessage(_0x4b4dc8, "*Error fetching or sending *", _0xb26fbb);
-  }
-});
-const _0x35d809 = {
-  pattern: "zip",
-  react: '📥',
-  dontAddCommandList: true,
-  filename: __filename
-};
-cmd(_0x35d809, async (_0x18392e, _0x5651f8, _0x11f9f9, {
-  from: _0x54db15,
-  q: _0x419c1d,
-  isDev: _0x4cdcd4,
-  reply: _0x253b44
-}) => {
-  if (!_0x419c1d) {
-    return await _0x253b44("*Please provide a direct URL!*");
-  }
-  try {
-    const _0x44a577 = _0x419c1d.split('|')[0];
-    const _0x5e7c02 = _0x419c1d.split('|')[1] || "vajira_md_sub_dl_system";
-    var _0x5ab058 = ["《 █▒▒▒▒▒▒▒▒▒▒▒》10%", "《 ████▒▒▒▒▒▒▒▒》30%", "《 ███████▒▒▒▒▒》50%", "《 ██████████▒▒》80%", "《 ████████████》100%", "𝙸𝙽𝙸𝚃𝙸𝙰𝙻𝙸𝚉𝙴𝙳 𝙲𝙾𝙼𝙿𝙻𝙴𝚃𝙴𝙳 🦄..."];
-    const _0x2ae1af = {
-      text: "ᴜᴘʟᴏᴀᴅɪɴɢ ᴍᴏᴠɪᴇ..."
-    };
-    let {
-      key: _0x31f9d3
-    } = await _0x18392e.sendMessage(_0x54db15, _0x2ae1af);
-    for (let _0x2a996e = 0; _0x2a996e < _0x5ab058.length; _0x2a996e++) {
-      const _0xa844b0 = {
-        text: _0x5ab058[_0x2a996e],
-        edit: _0x31f9d3
-      };
-      await _0x18392e.sendMessage(_0x54db15, _0xa844b0);
-    }
-    const _0x4ec461 = {
-      'document': await getBuffer(_0x44a577),
-      'caption': "*🎬 VAJIRA MD SUB-DL 🎬*",
-      'mimetype': "VAJIRA MD SUB DL",
-      'fileName': _0x5e7c02 + ".zip"
-    };
-    const _0x468d3b = {
-      quoted: _0x5651f8
-    };
-    await _0x18392e.sendMessage(_0x54db15, _0x4ec461, _0x468d3b);
-    const _0x4f43b8 = {
-      text: '✅',
-      key: _0x5651f8.key
-    };
-    const _0x1068af = {
-      react: _0x4f43b8
-    };
-    await _0x18392e.sendMessage(_0x54db15, _0x1068af);
-  } catch (_0x17b36f) {
-    console.error("Error fetching or sending", _0x17b36f);
-    const _0x1a1c0c = {
-      quoted: _0x5651f8
-    };
-    await _0x18392e.sendMessage(_0x54db15, "*Error fetching or sending *", _0x1a1c0c);
-  }
-});
