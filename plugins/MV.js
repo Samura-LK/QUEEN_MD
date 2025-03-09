@@ -60,7 +60,7 @@ const _0x28b4ec = function () {
 const {
   cmd,
   commands
-} = require("../lib/command");
+} = require("../lib/commands");
 function _0x3a0049(_0x7457d0, _0x28f664, _0x34afa9, _0x3d8203, _0x5e9987) {
   return _0x4080(_0x34afa9 - "0x359", _0x5e9987);
 }
